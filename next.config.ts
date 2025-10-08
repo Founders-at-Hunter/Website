@@ -1,13 +1,15 @@
 import type { NextConfig } from "next";
-import { createMDX } from "fumadocs-mdx/next";
-
-const withMDX = createMDX();
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  turbopack: {
-    root: process.cwd(),
+  // Fix for WSL file watching
+  webpack: (config) => {
+    config.watchOptions = {
+      poll: 1000,
+      aggregateTimeout: 300,
+    };
+    return config;
   },
 };
 
-export default withMDX(nextConfig);
+export default nextConfig;
