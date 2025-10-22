@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  // Fix for WSL file watching
+  // Required for WSL file watching
   webpack: (config) => {
     config.watchOptions = {
       poll: 1000,
