@@ -10,10 +10,12 @@ export default function Landing() {
       {/* About Section */}
       <section className="container mx-auto px-4 py-20 bg-[#F5F1E8]">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6 text-center text-[#522D80]">Who We Are</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center text-[#522D80]">
+            Who We Are
+          </h2>
           <p className="text-lg text-[#522D80]/80 text-center mb-12">
-            We are a community of student entrepreneurs at Hunter College dedicated to
-            learning, building, and growing together.
+            We are a community of student entrepreneurs at Hunter College
+            dedicated to learning, building, and growing together.
           </p>
 
           <div className="grid gap-6 md:grid-cols-3">
@@ -23,7 +25,8 @@ export default function Landing() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-[#522D80]/70">
-                  Workshops, talks, and resources to develop your entrepreneurial skills
+                  Workshops, talks, and resources to develop your
+                  entrepreneurial skills
                 </p>
               </CardContent>
             </Card>
