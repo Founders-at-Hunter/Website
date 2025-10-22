@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import { RootProvider } from "fumadocs-ui/provider";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Founders @ Hunter",
@@ -13,8 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
-        {children}
+      <body className={inter.className} id="portal-root">
+        <RootProvider>{children}</RootProvider>
       </body>
     </html>
   );
