@@ -1,0 +1,65 @@
+[
+  {
+    "title": "Weather Dashboard",
+    "tags": ["Intermediate", "API Integration", "JavaScript"],
+    "subtitle": "A simple dashboard that lets users check real-time weather data for any city. It uses the OpenWeather API and includes features like temperature graphs and location search history.",
+    "logo": "https://placehold.co/500x500/d5d5d5/d5d5d5.png",
+    "image": "https://placehold.co/1920x1080/e5e5e5/e5e5e5.png"
+  },
+  {
+    "title": "Campus Connect",
+    "tags": ["Medium", "Full Stack", "Node.js"],
+    "subtitle": "A community platform for students to find study groups, buy and sell used books, and share campus events. Built with Node.js, Express, and MongoDB.",
+    "logo": "https://placehold.co/500x500/d5d5d5/d5d5d5.png",
+    "image": "https://placehold.co/1920x1080/e5e5e5/e5e5e5.png"
+  },
+  {
+    "title": "Portfolio Builder",
+    "tags": ["Easy", "HTML/CSS", "Beginner Project"],
+    "subtitle": "A customizable personal website template for students to showcase their projects, resume, and contact info. Designed to help beginners learn the basics of web layouts and styling.",
+    "logo": "https://placehold.co/500x500/d5d5d5/d5d5d5.png",
+    "image": "https://placehold.co/1920x1080/e5e5e5/e5e5e5.png"
+  },
+  {
+    "title": "Smart Budget Tracker",
+    "tags": ["Intermediate", "React", "Finance App"],
+    "subtitle": "A personal finance tracker that helps users categorize expenses, visualize spending trends, and set savings goals. Built with React and Chart.js.",
+    "logo": "https://placehold.co/500x500/d5d5d5/d5d5d5.png",
+    "image": "https://placehold.co/1920x1080/e5e5e5/e5e5e5.png"
+  },
+  {
+    "title": "Study Timer App",
+    "tags": ["Easy", "Python", "Desktop App"],
+    "subtitle": "A Pomodoro-style study timer built using Python and Tkinter. It tracks focus sessions, break times, and daily productivity stats in a simple interface.",
+    "logo": "https://placehold.co/500x500/d5d5d5/d5d5d5.png",
+    "image": "https://placehold.co/1920x1080/e5e5e5/e5e5e5.png"
+  },
+  {
+    "title": "Eventify",
+    "tags": ["Advanced", "React Native", "Mobile App"],
+    "subtitle": "A mobile app for discovering and organizing local events. It includes RSVP management, event maps, and real-time chat for attendees.",
+    "logo": "https://placehold.co/500x500/d5d5d5/d5d5d5.png",
+    "image": "https://placehold.co/1920x1080/e5e5e5/e5e5e5.png"
+  },
+  {
+    "title": "AI Notes Assistant",
+    "tags": ["Advanced", "Machine Learning", "Python"],
+    "subtitle": "An AI-powered note summarizer that extracts key points from long lectures or text documents. Uses natural language processing to generate concise summaries.",
+    "logo": "https://placehold.co/500x500/d5d5d5/d5d5d5.png",
+    "image": "https://placehold.co/1920x1080/e5e5e5/e5e5e5.png"
+  },
+  {
+    "title": "Quiz Master",
+    "tags": ["Easy", "JavaScript", "Frontend"],
+    "subtitle": "A fun quiz app that pulls random trivia questions from an API. Tracks user scores and includes a leaderboard feature for friendly competition.",
+    "logo": "https://placehold.co/500x500/d5d5d5/d5d5d5.png",
+    "image": "https://placehold.co/1920x1080/e5e5e5/e5e5e5.png"
+  },
+  {
+    "title": "Virtual Garden",
+    "tags": ["Creative", "3D Web", "Three.js"],
+    "subtitle": "An interactive 3D garden simulation built with Three.js. Users can plant virtual flowers, adjust lighting, and explore the environment in real-time.",
+    "logo": "https://placehold.co/500x500/d5d5d5/d5d5d5.png",
+    "image": "https://placehold.co/1920x1080/e5e5e5/e5e5e5.png"
+  }
+]

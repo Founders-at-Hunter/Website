@@ -176,3 +176,11 @@ body {
 .docs-body a {
   color: #60a5fa;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

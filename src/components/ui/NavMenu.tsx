@@ -49,8 +49,8 @@ export default function NavMenu() {
   }, []);
 
   return (
-    <nav className="p-4 bg-white/90 backdrop-blur-xl backdrop-saturate-200 fixed top-0 w-full z-20">
-      <div className="flex items-center justify-between max-w-7xl m-auto">
+    <nav className="bg-white/90 backdrop-blur-xl backdrop-saturate-200 fixed top-0 w-full z-20">
+      <div className="flex items-center justify-between max-w-7xl m-auto p-4">
         <Link href="/" className="flex items-center justify-center gap-2">
           <Image
             src="/founders_logo_icon.png"
