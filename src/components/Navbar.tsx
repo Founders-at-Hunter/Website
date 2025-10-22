@@ -46,7 +46,7 @@ export default function Navbar() {
             />
             <Link
               href='/'
-              className={`absolute font-medium ${pathname === '/' ? 'border-b-[2px] border-white' : ''}`}
+              className={`absolute font-medium ${pathname === '/' ? 'border-b-[2px] border-white' : ''} text-white`}
               style={{
                 left: '675px',
                 top: '48px',
@@ -60,7 +60,7 @@ export default function Navbar() {
             </Link>
             <Link
               href='/about'
-              className={`absolute font-medium ${pathname === '/about' ? 'border-b border-white' : ''}`}
+              className={`absolute font-medium ${pathname === '/about' ? 'border-b border-white' : ''} text-white`}
               style={{
                 left: '822px',
                 top: '48px',
@@ -75,7 +75,7 @@ export default function Navbar() {
             </Link>
             <Link
               href='/projects'
-              className={`absolute font-medium ${pathname === '/projects' ? 'border-b border-white' : ''}`}
+              className={`absolute font-medium ${pathname === '/projects' ? 'border-b border-white' : ''} text-white`}
               style={{
                 left: '971px',
                 top: '48px',
@@ -90,7 +90,7 @@ export default function Navbar() {
             </Link>
             <Link
               href='/contact'
-              className={`absolute font-medium ${pathname === '/contact' ? 'border-b border-white' : ''}`}
+              className={`absolute font-medium ${pathname === '/contact' ? 'border-b border-white' : ''} text-white`}
               style={{
                 left: '1153px',
                 top: '48px',
