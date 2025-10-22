@@ -6,15 +6,16 @@ import UpcomingEvents from "@/components/UpcomingEvents";
 import JoinKickOff from "@/components/JoinKickOff";
 import Footer from "@/components/Footer";
 import HeroCarousel from "@/components/HeroCarousel";
+import { AppleCardsCarouselDemo } from "@/components/AppleCardsCarouselDemo";
 
 export default function Landing() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       {/* Navbar - absolute positioned over hero */}
       <Navbar />
 
       {/* Hero Section with Animations */}
-      <HeroCarousel />
+      <AppleCardsCarouselDemo />
 
       {/* What We Offer Section */}
       <WhatWeOffer />

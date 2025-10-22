@@ -10,6 +10,18 @@ const nextConfig: NextConfig = {
     };
     return config;
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 's29068.pcdn.co',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.huntercollegeathletics.com',
+      },
+    ],
+  },
 };
 
 export default nextConfig;
