@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <div>
-      <NavMenu />
       {/* mt-[105px] (NavMenu: 81px) */}
+      <NavMenu />
       <main className="mt-[81px] max-w-7xl m-auto">
         <ProjectsHeader />
         <Projects />

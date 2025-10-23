@@ -29,8 +29,7 @@ export default function NavMenu() {
   useEffect(() => {
     if (!windowWidth) return;
     clearQueueScrollLocks();
-    if (navOpened && windowWidth < 640) {
-      console.log("DISABLED PAGE");
+    if (navOpened && windowWidth < 768) {
       disablePageScroll();
     } else {
       enablePageScroll();
@@ -63,10 +62,10 @@ export default function NavMenu() {
             alt="Founders Logo Text"
             width={137.6}
             height={40}
-            className="sm:block hidden"
+            className="md:block hidden"
           />
         </Link>
-        <div className="sm:flex items-center justify-center gap-8 hidden">
+        <div className="md:flex items-center justify-center gap-8 hidden">
           {navigationLinks.map(({ title, href }, index) => (
             <Link
               href={href}
@@ -85,14 +84,14 @@ export default function NavMenu() {
           <button
             className={`bg-black hover:bg-black/80 active:bg-black/80 py-2 px-4 rounded-full text-white cursor-pointer transition-all duration-300 ${
               navOpened
-                ? "sm:visible sm:opacity-100 invisible opacity-0"
+                ? "md:visible md:opacity-100 invisible opacity-0"
                 : "opacity-100 visible"
             }`}
           >
             Register
           </button>
           <button
-            className="text-black text-2xl sm:hidden block cursor-pointer hover:scale-95 active:scale-95 transition-all"
+            className="text-black text-2xl md:hidden block cursor-pointer hover:scale-95 active:scale-95 transition-all"
             onClick={() => {
               setNavOpened((prev) => !prev);
             }}

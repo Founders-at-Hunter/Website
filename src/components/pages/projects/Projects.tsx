@@ -14,12 +14,12 @@ export default function Projects() {
               <div className="relative">
                 <img
                   src={project.image}
-                  alt=""
+                  alt="Project Banner"
                   className="rounded-2xl w-full"
                 />
                 <img
                   src={project.logo}
-                  alt=""
+                  alt="Project Logo"
                   className="rounded-full absolute top-4 right-4 size-5 drop-shadow-sm"
                 />
               </div>

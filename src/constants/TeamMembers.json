@@ -1,0 +1,65 @@
+[
+  {
+    "image": "https://placehold.co/500x500/d7c8e7/d7c8e7.png",
+    "name": "Jane Doe",
+    "position": "President",
+    "major": "Computer Science",
+    "linkedin": "",
+    "instagram": "",
+    "email": ""
+  },
+  {
+    "image": "https://placehold.co/500x500/d7c8e7/d7c8e7.png",
+    "name": "John Doe",
+    "position": "Vice President",
+    "major": "Business Administration",
+    "linkedin": "",
+    "instagram": "",
+    "email": ""
+  },
+  {
+    "image": "https://placehold.co/500x500/d7c8e7/d7c8e7.png",
+    "name": "Joe Doe",
+    "position": "Event Coordinator",
+    "major": "Computer Science",
+    "linkedin": "",
+    "instagram": "",
+    "email": ""
+  },
+  {
+    "image": "https://placehold.co/500x500/d7c8e7/d7c8e7.png",
+    "name": "Jake Doe",
+    "position": "Social Media Manager",
+    "major": "Marketing",
+    "linkedin": "",
+    "instagram": "",
+    "email": ""
+  },
+  {
+    "image": "https://placehold.co/500x500/d7c8e7/d7c8e7.png",
+    "name": "Josh Doe",
+    "position": "Tech Lead",
+    "major": "Computer Science",
+    "linkedin": "",
+    "instagram": "",
+    "email": ""
+  },
+  {
+    "image": "https://placehold.co/500x500/d7c8e7/d7c8e7.png",
+    "name": "Jame Doe",
+    "position": "Graphic Designer",
+    "major": "Media",
+    "linkedin": "",
+    "instagram": "",
+    "email": ""
+  },
+  {
+    "image": "https://placehold.co/500x500/d7c8e7/d7c8e7.png",
+    "name": "Josh Doe",
+    "position": "Secretary",
+    "major": "Business Administration",
+    "linkedin": "",
+    "instagram": "",
+    "email": ""
+  }
+]
