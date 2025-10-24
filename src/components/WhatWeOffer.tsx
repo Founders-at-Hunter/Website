@@ -55,23 +55,24 @@ export default function WhatWeOffer() {
   };
 
   return (
-    <section className="py-8 sm:py-12 md:py-16 lg:py-20 overflow-hidden" style={{ marginTop: '100vh' }}>
-      {/* Header Section with constrained width */}
-      <div className="px-4 sm:px-6 md:px-8 lg:px-12 mb-6 sm:mb-8 md:mb-10 lg:mb-12">
-        <div className="max-w-7xl">
-          <h2 className="text-[24px] sm:text-[28px] md:text-[34px] lg:text-[38px] font-semibold text-gray-900 mb-3 sm:mb-4 md:mb-5 lg:mb-6" style={{ fontFamily: 'Inter, sans-serif' }}>
-            What We Offer:
-          </h2>
-          <p className="text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-light text-gray-600 max-w-full sm:max-w-xl md:max-w-2xl lg:max-w-3xl leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            dolor sit amet, consectetur adipiscing elit.
-          </p>
+    <section className="py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8 lg:px-12 overflow-hidden" style={{ marginTop: '100vh' }}>
+      {/* Main Frame - centered container */}
+      <div className="w-full max-w-[1806px] mx-auto">
+        {/* Header Section with constrained width */}
+        <div className="mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+          <div className="max-w-7xl">
+            <h2 className="text-[24px] sm:text-[28px] md:text-[34px] lg:text-[38px] font-semibold text-gray-900 mb-3 sm:mb-4 md:mb-5 lg:mb-6" style={{ fontFamily: 'Inter, sans-serif' }}>
+              What We Offer:
+            </h2>
+            <p className="text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-light text-gray-600 max-w-full sm:max-w-xl md:max-w-2xl lg:max-w-3xl leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
         </div>
-      </div>
 
-      {/* Cards Container with Arrow Navigation */}
-      <div className="relative">
-        <div className="px-4 sm:px-6 md:px-8 lg:px-12">
+        {/* Cards Container with Arrow Navigation */}
+        <div className="relative">
           <div
             ref={scrollContainerRef}
             className="overflow-x-auto pb-4 scrollbar-hide"
@@ -112,9 +113,8 @@ export default function WhatWeOffer() {
               ))}
             </div>
           </div>
-        </div>
 
-        {/* Navigation Arrows - Only show on larger screens */}
+          {/* Navigation Arrows - Only show on larger screens */}
         <button
           onClick={() => scroll('left')}
           className="hidden lg:flex absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-2 md:p-3 shadow-lg transition-all hover:scale-110 z-10"
@@ -133,6 +133,7 @@ export default function WhatWeOffer() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </button>
+        </div>
       </div>
 
       <style jsx>{`

@@ -18,10 +18,21 @@ export default function Navbar() {
   const [navOpened, setNavOpened] = useState(false)
   const [portalRoot, setPortalRoot] = useState<HTMLElement | null>(null)
   const [windowWidth, setWindowWidth] = useState<number | null>(null)
+  const [isInAboutSection, setIsInAboutSection] = useState(false)
+  const [isInWhatWeOfferSection, setIsInWhatWeOfferSection] = useState(false)
 
     useEffect(() => {
       const handleScroll = () => {
-        setScrollY(window.scrollY)
+        const scrollPosition = window.scrollY
+        setScrollY(scrollPosition)
+
+        // Check if we're past the first viewport (about section starts)
+        const aboutSectionStart = window.innerHeight // 100vh
+        setIsInAboutSection(scrollPosition >= aboutSectionStart)
+
+        // Check if we're in the "What We Offer" section (starts at ~100vh based on marginTop)
+        const whatWeOfferStart = window.innerHeight // 100vh
+        setIsInWhatWeOfferSection(scrollPosition >= whatWeOfferStart)
       }
 
       window.addEventListener('scroll', handleScroll)
@@ -66,7 +77,7 @@ export default function Navbar() {
             {/* Logo Section - Left */}
             <div className="flex items-center gap-2 md:gap-4 justify-start">
               <img
-                src="/Logo.svg"
+                src={isInWhatWeOfferSection ? "/founders_logo_icon.png" : "/Logo.svg"}
                 alt="Founders @ Hunter Logo"
                 className="transition-all duration-300"
                 style={{
@@ -89,34 +100,33 @@ export default function Navbar() {
 
             {/* Navigation Links - Center */}
             <div
-              className="hidden md:flex items-center justify-center gap-4 lg:gap-8 font-medium text-white"
+              className={`hidden md:flex items-center justify-center gap-4 lg:gap-8 font-medium transition-colors duration-300 ${isInAboutSection ? 'text-black' : 'text-white'}`}
               style={{
                 fontSize: 'clamp(14px, 0.8vw, 15.6px)',
-                fontFamily: 'Inter',
-                opacity: textOpacity
+                fontFamily: 'Inter'
               }}
             >
               <Link
                 href='/'
-                className={`hover:opacity-80 transition-opacity ${pathname === '/' ? 'border-b-2 border-white' : ''}`}
+                className={`hover:opacity-80 transition-opacity ${pathname === '/' ? `border-b-2 ${isInAboutSection ? 'border-black' : 'border-white'}` : ''}`}
               >
                 Home
               </Link>
               <Link
                 href='/about'
-                className={`hover:opacity-80 transition-opacity ${pathname === '/about' ? 'border-b-2 border-white' : ''}`}
+                className={`hover:opacity-80 transition-opacity ${pathname === '/about' ? `border-b-2 ${isInAboutSection ? 'border-black' : 'border-white'}` : ''}`}
               >
                 About
               </Link>
               <Link
                 href='/projects'
-                className={`hover:opacity-80 transition-opacity ${pathname === '/projects' ? 'border-b-2 border-white' : ''}`}
+                className={`hover:opacity-80 transition-opacity ${pathname === '/projects' ? `border-b-2 ${isInAboutSection ? 'border-black' : 'border-white'}` : ''}`}
               >
                 Projects
               </Link>
               <Link
                 href='/contact'
-                className={`hover:opacity-80 transition-opacity ${pathname === '/contact' ? 'border-b-2 border-white' : ''}`}
+                className={`hover:opacity-80 transition-opacity ${pathname === '/contact' ? `border-b-2 ${isInAboutSection ? 'border-black' : 'border-white'}` : ''}`}
               >
                 Contact
               </Link>
@@ -131,8 +141,7 @@ export default function Navbar() {
                   padding: 'clamp(6px, 0.5vw, 8px) clamp(16px, 1.2vw, 24px)',
                   fontSize: 'clamp(14px, 0.8vw, 15.6px)',
                   fontFamily: 'Inter',
-                  borderRadius: '100px',
-                  opacity: textOpacity
+                  borderRadius: '100px'
                 }}
               >
                 Register
