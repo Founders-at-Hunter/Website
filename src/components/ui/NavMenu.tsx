@@ -54,13 +54,13 @@ export default function NavMenu() {
           <Image
             src="/founders_logo_icon.png"
             alt="Founders Logo Icon"
-            width={39.5}
+            width={40}
             height={50}
           />
           <Image
             src="/founders_logo_text.png"
             alt="Founders Logo Text"
-            width={137.6}
+            width={138}
             height={40}
             className="md:block hidden"
           />

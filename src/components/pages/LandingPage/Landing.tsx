@@ -1,21 +1,20 @@
 import Navbar from "@/components/Navbar";
-import { Component as HeroSection } from "@/components/hero-section";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import WhatWeOffer from "@/components/WhatWeOffer";
 import UpcomingEvents from "@/components/UpcomingEvents";
 import JoinKickOff from "@/components/JoinKickOff";
-import Footer from "@/components/Footer";
-import HeroCarousel from "@/components/HeroCarousel";
+import Footer from "@/components/ui/Footer";
 import { AppleCardsCarouselDemo } from "@/components/AppleCardsCarouselDemo";
 
 export default function Landing() {
   return (
     <div className="min-h-screen overflow-x-hidden">
-      {/* Navbar - absolute positioned over hero */}
+
+      {/* Navbar - fixed positioned over hero */}
       <Navbar />
 
-      {/* Hero Section with Animations */}
+      {/* Hero Section with Animations - Absolute positioned at top */}
       <AppleCardsCarouselDemo />
+
 
       {/* What We Offer Section */}
       <WhatWeOffer />
@@ -23,12 +22,9 @@ export default function Landing() {
       {/* Upcoming Events Section */}
       <UpcomingEvents />
 
-      {/* Join Kick Off CTA */}
-      <JoinKickOff />
-
       {/* Footer */}
       <Footer />
-    </div>
+      </div>
   );
 }
 

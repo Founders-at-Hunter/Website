@@ -55,20 +55,22 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
 
   const scrollLeft = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: -566, behavior: "smooth" });
+      const cardWidth = Math.min(550, window.innerWidth * 0.85) + 16;
+      carouselRef.current.scrollBy({ left: -cardWidth, behavior: "smooth" });
     }
   };
 
   const scrollRight = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: 566, behavior: "smooth" });
+      const cardWidth = Math.min(550, window.innerWidth * 0.85) + 16;
+      carouselRef.current.scrollBy({ left: cardWidth, behavior: "smooth" });
     }
   };
 
   const handleScroll = () => {
     checkScrollability();
     if (carouselRef.current) {
-      const cardWidth = 550 + 16;
+      const cardWidth = Math.min(550, window.innerWidth * 0.85) + 16;
       const newIndex = Math.round(carouselRef.current.scrollLeft / cardWidth);
       setCurrentIndex(newIndex);
     }
@@ -134,8 +136,10 @@ export const Card = ({
     <div
       className="rounded-3xl overflow-hidden flex flex-col items-start justify-start relative"
       style={{
-        width: '550px',
-        height: '750px'
+        width: 'min(550px, 85vw)',
+        height: 'min(750px, 70vh)',
+        minWidth: '300px',
+        minHeight: '400px'
       }}
     >
       {/* Purple tint overlay */}
@@ -150,6 +154,7 @@ export const Card = ({
         src={card.src}
         alt={card.title}
         fill
+        sizes="(max-width: 768px) 85vw, 550px"
         className="object-cover absolute z-10 inset-0"
       />
     </div>
