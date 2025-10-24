@@ -12,11 +12,14 @@ import {
   enablePageScroll,
   clearQueueScrollLocks,
 } from "scroll-lock";
+import PopUp from "./PopUp";
+import { AiOutlineClose } from "react-icons/ai";
 
 export default function NavMenu() {
   const [navOpened, setNavOpened] = useState(false);
   const [portalRoot, setPortalRoot] = useState<HTMLElement | null>(null);
   const [windowWidth, setWindowWidth] = useState<number | null>(null);
+  const [registerValues, setRegisterValues] = useState({ name: "", email: "" });
 
   const pathname = usePathname();
 
@@ -81,15 +84,84 @@ export default function NavMenu() {
           ))}
         </div>
         <aside className="flex items-center gap-4">
-          <button
-            className={`bg-black hover:bg-black/80 active:bg-black/80 py-2 px-4 rounded-full text-white cursor-pointer transition-all duration-300 ${
+          <PopUp
+            content={(togglePopUp) => (
+              <>
+                <header className="flex items-center justify-between gap-8 mb-1.5">
+                  <h3 className="text-xl text-charcoal font-semibold">
+                    Register to the Club:
+                  </h3>
+                  <button
+                    onClick={togglePopUp}
+                    className="text-red-500 hover:saturate-75 text-xl cursor-pointer"
+                  >
+                    <AiOutlineClose aria-label="Close pop up" />
+                  </button>
+                </header>
+                <form onSubmit={() => {}} className="flex flex-col gap-2">
+                  <hr className="opacity-20" />
+                  <div className="flex flex-col gap-1 w-full">
+                    <label htmlFor="register-name" className="text-black/60">
+                      Your name:
+                    </label>
+                    <input
+                      type="text"
+                      id="register-name"
+                      placeholder="Enter name..."
+                      value={registerValues.name}
+                      onChange={(e) =>
+                        setRegisterValues((prev) => ({
+                          ...prev,
+                          name: e.target.value,
+                        }))
+                      }
+                      className="bg-white rounded-md p-2 hover:placeholder:text-black/60 focus:placeholder:text-black/25 placeholder:text-black/40 focus:outline-main/50 outline-transparent outline -outline-offset-1"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-1 w-full">
+                    <label htmlFor="register-email" className="text-black/60">
+                      Your email:
+                    </label>
+                    <input
+                      type="email"
+                      id="register-email"
+                      placeholder="Enter email..."
+                      value={registerValues.email}
+                      onChange={(e) =>
+                        setRegisterValues((prev) => ({
+                          ...prev,
+                          email: e.target.value,
+                        }))
+                      }
+                      className="bg-white rounded-md p-2 hover:placeholder:text-black/60 focus:placeholder:text-black/25 placeholder:text-black/40 focus:outline-main/50 outline-transparent outline -outline-offset-1"
+                    />
+                  </div>
+                  <hr className="opacity-20" />
+                  <div className="flex items-center justify-end gap-2">
+                    <button
+                      className="outline outline-main -outline-offset-1 text-main py-2 px-4 rounded-full cursor-pointer transition-all duration-300"
+                      type="button"
+                      onClick={togglePopUp}
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      className="bg-main hover:bg-main/80 active:bg-main/80 py-2 px-4 rounded-full text-white cursor-pointer transition-all duration-300"
+                      type="submit"
+                    >
+                      Register
+                    </button>
+                  </div>
+                </form>
+              </>
+            )}
+            trigger={<>Register</>}
+            triggerContainerCN={`bg-black hover:bg-black/80 active:bg-black/80 py-2 px-4 rounded-full text-white cursor-pointer transition-all duration-300 ${
               navOpened
                 ? "md:visible md:opacity-100 invisible opacity-0"
                 : "opacity-100 visible"
             }`}
-          >
-            Register
-          </button>
+          />
           <button
             className="text-black text-2xl md:hidden block cursor-pointer hover:scale-95 active:scale-95 transition-all"
             onClick={() => {
@@ -130,9 +202,86 @@ export default function NavMenu() {
                 ))}
               </div>
               <div className="p-4 w-full">
-                <button className="p-4 w-full bg-black text-white hover:bg-black/80 active:bg-black/80 transition-all duration-300 cursor-pointer">
-                  Register
-                </button>
+                <PopUp
+                  content={(togglePopUp) => (
+                    <>
+                      <header className="flex items-center justify-between gap-8 mb-1.5">
+                        <h3 className="text-xl text-charcoal font-semibold">
+                          Register to the Club:
+                        </h3>
+                        <button
+                          onClick={togglePopUp}
+                          className="text-red-500 hover:saturate-75 text-xl cursor-pointer"
+                        >
+                          <AiOutlineClose aria-label="Close pop up" />
+                        </button>
+                      </header>
+                      <form onSubmit={() => {}} className="flex flex-col gap-2">
+                        <hr className="opacity-20" />
+                        <div className="flex flex-col gap-1 w-full">
+                          <label
+                            htmlFor="register-name"
+                            className="text-black/60"
+                          >
+                            Your name:
+                          </label>
+                          <input
+                            type="text"
+                            id="register-name"
+                            placeholder="Enter name..."
+                            value={registerValues.name}
+                            onChange={(e) =>
+                              setRegisterValues((prev) => ({
+                                ...prev,
+                                name: e.target.value,
+                              }))
+                            }
+                            className="bg-white rounded-md p-2 hover:placeholder:text-black/60 focus:placeholder:text-black/25 placeholder:text-black/40 focus:outline-main/50 outline-transparent outline -outline-offset-1"
+                          />
+                        </div>
+                        <div className="flex flex-col gap-1 w-full">
+                          <label
+                            htmlFor="register-email"
+                            className="text-black/60"
+                          >
+                            Your email:
+                          </label>
+                          <input
+                            type="email"
+                            id="register-email"
+                            placeholder="Enter email..."
+                            value={registerValues.email}
+                            onChange={(e) =>
+                              setRegisterValues((prev) => ({
+                                ...prev,
+                                email: e.target.value,
+                              }))
+                            }
+                            className="bg-white rounded-md p-2 hover:placeholder:text-black/60 focus:placeholder:text-black/25 placeholder:text-black/40 focus:outline-main/50 outline-transparent outline -outline-offset-1"
+                          />
+                        </div>
+                        <hr className="opacity-20" />
+                        <div className="flex items-center justify-end gap-2">
+                          <button
+                            className="outline outline-main -outline-offset-1 text-main py-2 px-4 rounded-full cursor-pointer transition-all duration-300"
+                            type="button"
+                            onClick={togglePopUp}
+                          >
+                            Cancel
+                          </button>
+                          <button
+                            className="bg-main hover:bg-main/80 active:bg-main/80 py-2 px-4 rounded-full text-white cursor-pointer transition-all duration-300"
+                            type="submit"
+                          >
+                            Register
+                          </button>
+                        </div>
+                      </form>
+                    </>
+                  )}
+                  trigger={<>Register</>}
+                  triggerContainerCN="p-4 w-full bg-black text-white hover:bg-black/80 active:bg-black/80 transition-all duration-300 cursor-pointer"
+                />
               </div>
             </div>,
             portalRoot
