@@ -1,25 +1,43 @@
 [
   {
     "image": "https://placehold.co/500x500/d7c8e7/d7c8e7.png",
-    "name": "Jane Doe",
+    "name": "Samuel Michnik",
     "position": "President",
     "major": "Computer Science",
-    "linkedin": "",
+    "linkedin": "https://www.linkedin.com/in/samuel-michnik/",
     "instagram": "",
     "email": ""
   },
   {
     "image": "https://placehold.co/500x500/d7c8e7/d7c8e7.png",
-    "name": "John Doe",
+    "name": "Angst Gregory",
     "position": "Vice President",
-    "major": "Business Administration",
+    "major": "Computer Science",
+    "linkedin": "https://www.linkedin.com/in/angst-gregory/",
+    "instagram": "",
+    "email": ""
+  },
+  {
+    "image": "https://placehold.co/500x500/d7c8e7/d7c8e7.png",
+    "name": "Josiah Balkissoon",
+    "position": "Treasurer",
+    "major": "Economics",
+    "linkedin": "https://www.linkedin.com/in/josiah-balkissoon/",
+    "instagram": "",
+    "email": ""
+  },
+  {
+    "image": "https://placehold.co/500x500/d7c8e7/d7c8e7.png",
+    "name": "Omar Chowdhury",
+    "position": "Secretary",
+    "major": "-",
     "linkedin": "",
     "instagram": "",
     "email": ""
   },
   {
     "image": "https://placehold.co/500x500/d7c8e7/d7c8e7.png",
-    "name": "Joe Doe",
+    "name": "Don Suhanda",
     "position": "Event Coordinator",
     "major": "Computer Science",
     "linkedin": "",
@@ -28,36 +46,18 @@
   },
   {
     "image": "https://placehold.co/500x500/d7c8e7/d7c8e7.png",
-    "name": "Jake Doe",
-    "position": "Social Media Manager",
-    "major": "Marketing",
-    "linkedin": "",
+    "name": "Saad Kashif",
+    "position": "Workshop Lead",
+    "major": "Computer Science",
+    "linkedin": "https://www.linkedin.com/in/saad220905/",
     "instagram": "",
     "email": ""
   },
   {
     "image": "https://placehold.co/500x500/d7c8e7/d7c8e7.png",
-    "name": "Josh Doe",
+    "name": "Ray Chu",
     "position": "Tech Lead",
     "major": "Computer Science",
-    "linkedin": "",
-    "instagram": "",
-    "email": ""
-  },
-  {
-    "image": "https://placehold.co/500x500/d7c8e7/d7c8e7.png",
-    "name": "Jame Doe",
-    "position": "Graphic Designer",
-    "major": "Media",
-    "linkedin": "",
-    "instagram": "",
-    "email": ""
-  },
-  {
-    "image": "https://placehold.co/500x500/d7c8e7/d7c8e7.png",
-    "name": "Josh Doe",
-    "position": "Secretary",
-    "major": "Business Administration",
     "linkedin": "",
     "instagram": "",
     "email": ""
