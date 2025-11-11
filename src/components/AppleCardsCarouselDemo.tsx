@@ -145,38 +145,38 @@ const data = [
   {
     category: "Artificial Intelligence",
     title: "You can do more with AI.",
-    src: "https://s29068.pcdn.co/wp-content/uploads/hunter-campus.jpg.optimal.jpg",
+    src: "/DSC00774.JPG",
     content: <DummyContent />,
   },
   {
     category: "Productivity",
     title: "Enhance your productivity.",
-    src: "https://s29068.pcdn.co/wp-content/uploads/68th-street-campus-5-1600x900-1.jpg.optimal.jpg",
+    src: "/DSC00879.JPG",
     content: <DummyContent />,
   },
   {
     category: "Product",
     title: "Launching the new Apple Vision Pro.",
-    src: "https://s29068.pcdn.co/wp-content/uploads/students-skybridge-walking.jpg.optimal.jpg",
+    src: "/DSC00881.JPG",
     content: <DummyContent />,
   },
 
   {
     category: "Product",
     title: "Maps for your iPhone 15 Pro Max.",
-    src: "https://s29068.pcdn.co/wp-content/uploads/2022-commencement-cover.jpg.optimal.jpg",
+    src: "/DSC00870.JPG",
     content: <DummyContent />,
   },
   {
     category: "iOS",
     title: "Photography just got better.",
-    src: "https://s29068.pcdn.co/wp-content/uploads/discover-athletics-vb.jpg.optimal.jpg",
+    src: "/DSC00840.JPG",
     content: <DummyContent />,
   },
   {
     category: "Hiring",
     title: "Hiring for a Staff Software Engineer",
-    src: "https://www.huntercollegeathletics.com/images/2016/8/3/FitnessCenter05.jpg",
+    src: "/DSC00768.JPG",
     content: <DummyContent />,
   },
 ];
