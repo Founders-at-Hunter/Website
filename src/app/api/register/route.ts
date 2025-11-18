@@ -1,9 +1,8 @@
 import { createClient } from "@/utils/supabase/server";
 import { NextResponse } from "next/server";
 
-const supabase = await createClient();
-
 export async function GET() {
+  const supabase = await createClient();
   const { data, error } = await supabase.from("Emails").select();
 
   return NextResponse.json(JSON.stringify({ data, error }), {
@@ -12,6 +11,7 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
+  const supabase = await createClient();
   const body = await request.json();
   const { name, email } = body;
   const { data, error } = await supabase

@@ -2,9 +2,9 @@
 import Link  from 'next/link'
 import { useState, useEffect} from 'react'
 import { usePathname } from 'next/navigation'
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { TbMenuDeep } from 'react-icons/tb'
 import { MdArrowRightAlt } from 'react-icons/md'
+import { AiOutlineClose } from 'react-icons/ai'
 import { createPortal } from 'react-dom'
 import {
   disablePageScroll,
@@ -20,6 +20,7 @@ export default function Navbar() {
   const [windowWidth, setWindowWidth] = useState<number | null>(null)
   const [isInAboutSection, setIsInAboutSection] = useState(false)
   const [isInWhatWeOfferSection, setIsInWhatWeOfferSection] = useState(false)
+  const [registerValues, setRegisterValues] = useState({ name: "", email: "" })
 
     useEffect(() => {
       const handleScroll = () => {
@@ -164,14 +165,81 @@ export default function Navbar() {
           </div>
         </nav>
 
-        <Dialog open={isRegisterOpen} onOpenChange={setIsRegisterOpen}>
-          <DialogContent>
-            <DialogHeader>
-              <DialogTitle>Register</DialogTitle>
-            </DialogHeader>
-            {/* Your registration form will go here */}
-          </DialogContent>
-        </Dialog>
+        {isRegisterOpen && portalRoot &&
+          createPortal(
+            <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[500] flex items-center justify-center p-4">
+              <section className="p-6 bg-white/85 backdrop-blur-lg backdrop-saturate-200 rounded-xl md:max-w-2xl w-4/5">
+                <header className="flex items-center justify-between gap-8 mb-1.5">
+                  <h3 className="text-xl text-charcoal font-semibold">
+                    Register to the Club:
+                  </h3>
+                  <button
+                    onClick={() => setIsRegisterOpen(false)}
+                    className="text-red-500 hover:saturate-75 text-xl cursor-pointer"
+                  >
+                    <AiOutlineClose aria-label="Close pop up" />
+                  </button>
+                </header>
+                <form onSubmit={() => {}} className="flex flex-col gap-2">
+                  <hr className="opacity-20" />
+                  <div className="flex flex-col gap-1 w-full">
+                    <label htmlFor="register-name" className="text-black/60">
+                      Your name:
+                    </label>
+                    <input
+                      type="text"
+                      id="register-name"
+                      placeholder="Enter name..."
+                      value={registerValues.name}
+                      onChange={(e) =>
+                        setRegisterValues((prev) => ({
+                          ...prev,
+                          name: e.target.value,
+                        }))
+                      }
+                      className="bg-white rounded-md p-2 hover:placeholder:text-black/60 focus:placeholder:text-black/25 placeholder:text-black/40 focus:outline-main/50 outline-transparent outline -outline-offset-1"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-1 w-full">
+                    <label htmlFor="register-email" className="text-black/60">
+                      Your email:
+                    </label>
+                    <input
+                      type="email"
+                      id="register-email"
+                      placeholder="Enter email..."
+                      value={registerValues.email}
+                      onChange={(e) =>
+                        setRegisterValues((prev) => ({
+                          ...prev,
+                          email: e.target.value,
+                        }))
+                      }
+                      className="bg-white rounded-md p-2 hover:placeholder:text-black/60 focus:placeholder:text-black/25 placeholder:text-black/40 focus:outline-main/50 outline-transparent outline -outline-offset-1"
+                    />
+                  </div>
+                  <hr className="opacity-20" />
+                  <div className="flex items-center justify-end gap-2">
+                    <button
+                      className="outline outline-main -outline-offset-1 text-main py-2 px-4 rounded-full cursor-pointer transition-all duration-300"
+                      type="button"
+                      onClick={() => setIsRegisterOpen(false)}
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      className="bg-main hover:bg-main/80 active:bg-main/80 py-2 px-4 rounded-full text-white cursor-pointer transition-all duration-300"
+                      type="submit"
+                    >
+                      Register
+                    </button>
+                  </div>
+                </form>
+              </section>
+            </div>,
+            portalRoot
+          )
+        }
 
         {/* Mobile Menu */}
         {portalRoot &&
