@@ -14,14 +14,34 @@ import {
 } from "scroll-lock";
 import PopUp from "./PopUp";
 import { AiOutlineClose } from "react-icons/ai";
+import { toast } from "sonner";
 
 export default function NavMenu() {
   const [navOpened, setNavOpened] = useState(false);
   const [portalRoot, setPortalRoot] = useState<HTMLElement | null>(null);
   const [windowWidth, setWindowWidth] = useState<number | null>(null);
   const [registerValues, setRegisterValues] = useState({ name: "", email: "" });
+  const [registeredEmail, setRegisteredEmail] = useState("");
 
   const pathname = usePathname();
+
+  const handleFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const res = await fetch("/api/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(registerValues),
+    });
+    console.log(await res.json());
+    if (res.ok) {
+      document.cookie = `registeredEmail=${registerValues.email};`;
+      setRegisteredEmail(registerValues.email);
+      setRegisterValues({ name: "", email: "" });
+      toast.success("Successfully registered to the club!");
+    } else {
+      toast.error("Failed to register. Please try again.");
+    }
+  };
 
   useEffect(() => {
     // Runs only on client
@@ -48,6 +68,17 @@ export default function NavMenu() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
+  }, []);
+
+  useEffect(() => {
+    const cookies = document.cookie.split(";");
+    const registeredEmailCookie = cookies.find((cookie) =>
+      cookie.trim().startsWith("registeredEmail=")
+    );
+    if (registeredEmailCookie) {
+      const email = registeredEmailCookie.split("=")[1];
+      setRegisteredEmail(decodeURIComponent(email));
+    }
   }, []);
 
   return (
@@ -88,9 +119,16 @@ export default function NavMenu() {
             content={(togglePopUp) => (
               <>
                 <header className="flex items-center justify-between gap-8 mb-1.5">
-                  <h3 className="text-xl text-charcoal font-semibold">
-                    Register to the Club:
-                  </h3>
+                  <div>
+                    <h3 className="text-lg text-charcoal font-semibold">
+                      Register to the Club:
+                    </h3>
+                    <p className="text-black/40 text-xs">
+                      {registeredEmail
+                        ? `You have registered with: "${registeredEmail}"`
+                        : "Join over 50 people who have registered as well."}
+                    </p>
+                  </div>
                   <button
                     onClick={togglePopUp}
                     className="text-red-500 hover:saturate-75 text-xl cursor-pointer"
@@ -98,7 +136,10 @@ export default function NavMenu() {
                     <AiOutlineClose aria-label="Close pop up" />
                   </button>
                 </header>
-                <form onSubmit={() => {}} className="flex flex-col gap-2">
+                <form
+                  onSubmit={handleFormSubmit}
+                  className="flex flex-col gap-2"
+                >
                   <hr className="opacity-20" />
                   <div className="flex flex-col gap-1 w-full">
                     <label htmlFor="register-name" className="text-black/60">
@@ -109,6 +150,7 @@ export default function NavMenu() {
                       id="register-name"
                       placeholder="Enter name..."
                       value={registerValues.name}
+                      required
                       onChange={(e) =>
                         setRegisterValues((prev) => ({
                           ...prev,
@@ -127,6 +169,7 @@ export default function NavMenu() {
                       id="register-email"
                       placeholder="Enter email..."
                       value={registerValues.email}
+                      required
                       onChange={(e) =>
                         setRegisterValues((prev) => ({
                           ...prev,
