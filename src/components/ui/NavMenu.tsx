@@ -17,6 +17,7 @@ export default function NavMenu() {
   const [windowWidth, setWindowWidth] = useState<number | null>(null);
   const [registerValues, setRegisterValues] = useState({ name: "", email: "" });
   const [registeredEmail, setRegisteredEmail] = useState("");
+  const [registerCount, setRegisterCount] = useState<number | null>(null);
 
   const pathname = usePathname();
 
@@ -27,7 +28,6 @@ export default function NavMenu() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(registerValues),
     });
-    console.log(await res.json());
     if (res.ok) {
       document.cookie = `registeredEmail=${registerValues.email};`;
       setRegisteredEmail(registerValues.email);
@@ -37,6 +37,23 @@ export default function NavMenu() {
       toast.error("Failed to register. Please try again.");
     }
   };
+
+  useEffect(() => {
+    const fetchRegisterCount = async () => {
+      const res = await fetch("/api/register", {
+        method: "GET",
+      });
+      const { data, error } = JSON.parse(await res.json());
+      if (error) {
+        toast.error("An error occurred", {
+          description: "Failed to fetch register user count.",
+        });
+        return;
+      }
+      setRegisterCount(data);
+    };
+    fetchRegisterCount();
+  }, []);
 
   useEffect(() => {
     // Runs only on client
@@ -111,7 +128,9 @@ export default function NavMenu() {
                     <p className="text-black/40 text-xs">
                       {registeredEmail
                         ? `You have registered with: "${registeredEmail}"`
-                        : "Join over 50 people who have registered as well."}
+                        : `Join over ${
+                            registerCount ? registerCount : "--"
+                          } people who have registered as well.`}
                     </p>
                   </div>
                   <button
