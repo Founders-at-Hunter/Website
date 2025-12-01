@@ -4,9 +4,9 @@ export default function Mission() {
   return (
     <section className="flex flex-col gap-2 p-4">
       <img
-        src="https://placehold.co/1809x370/d5d5d5/d5d5d5.png"
+        src="/about_mission_banner.JPG"
         alt="Mission Banner"
-        className="rounded-md"
+        className="rounded-md saturate-0"
       />
       <h6 className="font-semibold uppercase text-xs text-black/40 mt-1">
         Our mission

@@ -196,3 +196,7 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.bg-fd-secondary\/50.p-3.empty\:hidden {
+  display: none;
+}

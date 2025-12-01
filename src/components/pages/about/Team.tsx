@@ -13,7 +13,7 @@ export default function Team() {
       <Heading
         headerCN="mb-1"
         title="Meet the team:"
-        subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        subtitle="E-board + Members"
       />
       <div className="flex flex-wrap gap-6 justify-center">
         {TeamMembers.map((teamMember, index) => (

@@ -6,11 +6,6 @@ import { TbMenuDeep } from "react-icons/tb";
 import { MdArrowRightAlt } from "react-icons/md";
 import { AiOutlineClose } from "react-icons/ai";
 import { createPortal } from "react-dom";
-import {
-  disablePageScroll,
-  enablePageScroll,
-  clearQueueScrollLocks,
-} from "scroll-lock";
 
 export default function Navbar() {
   const [scrollY, setScrollY] = useState(0);
@@ -45,16 +40,6 @@ export default function Navbar() {
     const el = document.getElementById("portal-root");
     setPortalRoot(el);
   }, []);
-
-  useEffect(() => {
-    if (!windowWidth) return;
-    clearQueueScrollLocks();
-    if (navOpened && windowWidth < 768) {
-      disablePageScroll();
-    } else {
-      enablePageScroll();
-    }
-  }, [navOpened, windowWidth]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -288,8 +273,6 @@ export default function Navbar() {
                     : "text-black/60 hover:text-main/60"
                 }`}
                 onClick={() => {
-                  clearQueueScrollLocks();
-                  enablePageScroll();
                   setNavOpened(false);
                 }}
               >
@@ -304,8 +287,6 @@ export default function Navbar() {
                     : "text-black/60 hover:text-main/60"
                 }`}
                 onClick={() => {
-                  clearQueueScrollLocks();
-                  enablePageScroll();
                   setNavOpened(false);
                 }}
               >
@@ -320,8 +301,6 @@ export default function Navbar() {
                     : "text-black/60 hover:text-main/60"
                 }`}
                 onClick={() => {
-                  clearQueueScrollLocks();
-                  enablePageScroll();
                   setNavOpened(false);
                 }}
               >
@@ -336,8 +315,6 @@ export default function Navbar() {
                     : "text-black/60 hover:text-main/60"
                 }`}
                 onClick={() => {
-                  clearQueueScrollLocks();
-                  enablePageScroll();
                   setNavOpened(false);
                 }}
               >

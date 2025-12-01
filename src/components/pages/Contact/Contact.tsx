@@ -1,108 +1,121 @@
-import NavMenu from "@/components/ui/NavMenu";
-import Footer from "@/components/ui/Footer";
+"use client";
+import { useState } from "react";
+import { toast } from "sonner";
+
+const DEFAULT_CONTACT_VALUES = {
+  name: "",
+  email: "",
+  message: "",
+};
 
 export default function Contact() {
+  const [contactValues, setContactValues] = useState(DEFAULT_CONTACT_VALUES);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    // HANDLE FORM SUBMISSION (SAVE TO DB + RESEND EMAIL FUNCTIONALITY)
+    setContactValues(DEFAULT_CONTACT_VALUES);
+    toast.success("Message submitted successfully.", {
+      description: "You'll hear back within 3-5 business days.",
+    });
+  };
   return (
-    <div className="min-h-screen flex flex-col">
-      {/* Navigation */}
-      <NavMenu />
-
-      {/* Contact Content */}
-      <main className="flex-1 pt-24 pb-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 lg:px-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center justify-items-center">
-            {/* Left Side - Form */}
-            <div className="w-full max-w-2xl">
-              <h1 className="text-2xl sm:text-3xl md:text-[40px] font-semibold text-gray-900 mb-4 sm:mb-6 text-center px-2" style={{ fontFamily: 'Inter, sans-serif' }}>
-                Get in Touch:
-              </h1>
-              <p className="text-base sm:text-lg text-gray-600 mb-8 sm:mb-12 text-center">
-                Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
-              </p>
-
-              {/* Contact Form */}
-              <form className="space-y-4 sm:space-y-6">
-                <div className="grid gap-4 sm:gap-6 md:grid-cols-2">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                  placeholder="Your name"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                  placeholder="your.email@example.com"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                Subject
-              </label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                placeholder="What's this about?"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={6}
-                className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent resize-none"
-                placeholder="Your message..."
-              />
-            </div>
-
-                <div className="flex justify-center">
-                  <button
-                    type="submit"
-                    className="w-[144px] h-[53px] text-sm sm:text-base text-white font-medium rounded-lg transition-colors hover:opacity-90"
-                    style={{ backgroundColor: '#5F259F' }}
-                  >
-                    Submit
-                  </button>
-                </div>
-              </form>
-            </div>
-
-            {/* Right Side - Image */}
-            <div className="hidden lg:flex w-full max-w-[782px] justify-center items-center">
-              <div className="w-full aspect-[782/750] bg-gray-200 rounded-lg overflow-hidden">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Hunter_College_North_Building.jpg/1024px-Hunter_College_North_Building.jpg"
-                  alt="Hunter College North Building"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
+    <div className="flex justify-center items-center px-10 min-h-[100dvh] py-24">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12 lg:gap-24 items-center justify-items-center">
+        <aside className="sm:hidden block">
+          <img
+            src="/team.jpg"
+            alt="Contact"
+            className="saturate-0 rounded-lg"
+          />
+        </aside>
+        <form onSubmit={handleSubmit} className="flex flex-col gap-2 w-full">
+          <header>
+            <h1 className="text-xl font-medium">Talk to Us:</h1>
+            <p className="text-black/40 mb-3 text-xs">
+              We&apos;d love to hear from you. Send us a message and we&apos;ll
+              respond as soon as possible.
+            </p>
+          </header>
+          <div className="flex flex-col gap-1 w-full">
+            <label
+              htmlFor="contact-name"
+              className="text-black/60 font-light text-xs"
+            >
+              Your name:
+            </label>
+            <input
+              type="text"
+              id="contact-name"
+              placeholder="Enter name..."
+              value={contactValues.name}
+              onChange={(e) =>
+                setContactValues((prev) => ({
+                  ...prev,
+                  name: e.target.value,
+                }))
+              }
+              required
+              className="bg-white rounded-md p-2 hover:placeholder:text-black/40 hover:outline-black/20 focus:placeholder:text-black/25 placeholder:text-black/25 focus:outline-main/60 focus:outline-dashed outline-black/10 outline -outline-offset-1 text-xs"
+            />
           </div>
-        </div>
-      </main>
-
-      {/* Footer */}
-      <Footer />
+          <div className="flex flex-col gap-1 w-full">
+            <label
+              htmlFor="contact-email"
+              className="text-black/60 font-light text-xs"
+            >
+              Your email:
+            </label>
+            <input
+              type="email"
+              id="contact-email"
+              placeholder="Enter email..."
+              value={contactValues.email}
+              onChange={(e) =>
+                setContactValues((prev) => ({
+                  ...prev,
+                  email: e.target.value,
+                }))
+              }
+              required
+              className="bg-white rounded-md p-2 hover:placeholder:text-black/40 hover:outline-black/20 focus:placeholder:text-black/25 placeholder:text-black/25 focus:outline-main/60 focus:outline-dashed outline-black/10 outline -outline-offset-1 text-xs"
+            />
+          </div>
+          <div className="flex flex-col gap-1 w-full mb-3">
+            <label
+              htmlFor="contact-message"
+              className="text-black/60 font-light text-xs"
+            >
+              Your message:
+            </label>
+            <textarea
+              id="contact-message"
+              placeholder="Enter message..."
+              value={contactValues.message}
+              onChange={(e) =>
+                setContactValues((prev) => ({
+                  ...prev,
+                  message: e.target.value,
+                }))
+              }
+              required
+              className="bg-white rounded-md p-2 hover:placeholder:text-black/40 hover:outline-black/20 focus:placeholder:text-black/25 placeholder:text-black/25 focus:outline-main/60 focus:outline-dashed outline-black/10 outline -outline-offset-1 text-xs h-32"
+            />
+          </div>
+          <div className="flex items-center justify-end">
+            <button className="bg-black hover:bg-black/80 hover:outline-black/80 active:bg-black/80 active:outline-black/80 py-2 px-4 rounded-full text-white cursor-pointer transition-all duration-300 outline-2 outline-transparent outline-offset-2 opacity-100 visible text-sm">
+              Submit
+            </button>
+          </div>
+        </form>
+        <aside className="sm:block hidden">
+          <img
+            src="/team.JPG"
+            alt="Contact"
+            className="saturate-0 rounded-lg"
+          />
+        </aside>
+      </div>
     </div>
   );
 }

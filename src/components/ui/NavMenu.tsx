@@ -7,11 +7,6 @@ import { usePathname } from "next/navigation";
 import { TbMenuDeep } from "react-icons/tb";
 import { createPortal } from "react-dom";
 import { MdArrowRightAlt } from "react-icons/md";
-import {
-  disablePageScroll,
-  enablePageScroll,
-  clearQueueScrollLocks,
-} from "scroll-lock";
 import PopUp from "./PopUp";
 import { AiOutlineClose } from "react-icons/ai";
 import { toast } from "sonner";
@@ -48,16 +43,6 @@ export default function NavMenu() {
     const el = document.getElementById("portal-root");
     setPortalRoot(el);
   }, []);
-
-  useEffect(() => {
-    if (!windowWidth) return;
-    clearQueueScrollLocks();
-    if (navOpened && windowWidth < 768) {
-      disablePageScroll();
-    } else {
-      enablePageScroll();
-    }
-  }, [navOpened, windowWidth]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -142,7 +127,10 @@ export default function NavMenu() {
                 >
                   <hr className="opacity-20" />
                   <div className="flex flex-col gap-1 w-full">
-                    <label htmlFor="register-name" className="text-black/60">
+                    <label
+                      htmlFor="register-name"
+                      className="text-black/60 font-light text-xs"
+                    >
                       Your name:
                     </label>
                     <input
@@ -157,11 +145,14 @@ export default function NavMenu() {
                           name: e.target.value,
                         }))
                       }
-                      className="bg-white rounded-md p-2 hover:placeholder:text-black/60 focus:placeholder:text-black/25 placeholder:text-black/40 focus:outline-main/50 outline-transparent outline -outline-offset-1"
+                      className="bg-white/50 rounded-md p-2 hover:placeholder:text-black/40 hover:outline-black/20 focus:placeholder:text-black/25 placeholder:text-black/25 focus:outline-main/60 focus:outline-dashed outline-black/10 outline -outline-offset-1 text-xs"
                     />
                   </div>
                   <div className="flex flex-col gap-1 w-full">
-                    <label htmlFor="register-email" className="text-black/60">
+                    <label
+                      htmlFor="register-email"
+                      className="text-black/60 font-light text-xs"
+                    >
                       Your email:
                     </label>
                     <input
@@ -176,7 +167,7 @@ export default function NavMenu() {
                           email: e.target.value,
                         }))
                       }
-                      className="bg-white rounded-md p-2 hover:placeholder:text-black/60 focus:placeholder:text-black/25 placeholder:text-black/40 focus:outline-main/50 outline-transparent outline -outline-offset-1"
+                      className="bg-white/50 rounded-md p-2 hover:placeholder:text-black/40 hover:outline-black/20 focus:placeholder:text-black/25 placeholder:text-black/25 focus:outline-main/60 focus:outline-dashed outline-black/10 outline -outline-offset-1 text-xs"
                     />
                   </div>
                   <hr className="opacity-20" />
@@ -199,7 +190,7 @@ export default function NavMenu() {
               </>
             )}
             trigger={<>Register</>}
-            triggerContainerCN={`bg-black hover:bg-black/80 active:bg-black/80 py-2 px-4 rounded-full text-white cursor-pointer transition-all duration-300 ${
+            triggerContainerCN={`bg-black hover:bg-black/80 hover:outline-black/80 active:bg-black/80 active:outline-black/80 py-2 px-4 rounded-full text-white cursor-pointer transition-all duration-300 outline-2 outline-black outline-offset-2 ${
               navOpened
                 ? "md:visible md:opacity-100 invisible opacity-0"
                 : "opacity-100 visible"
@@ -234,8 +225,6 @@ export default function NavMenu() {
                         : "text-black/60 hover:text-main/60"
                     }`}
                     onClick={() => {
-                      clearQueueScrollLocks();
-                      enablePageScroll();
                       setNavOpened(false);
                     }}
                   >
@@ -323,7 +312,7 @@ export default function NavMenu() {
                     </>
                   )}
                   trigger={<>Register</>}
-                  triggerContainerCN="p-4 w-full bg-black text-white hover:bg-black/80 active:bg-black/80 transition-all duration-300 cursor-pointer"
+                  triggerContainerCN="p-4 w-full bg-black text-white hover:bg-black/80 active:bg-black/80 hover:outline-black/80 active:outline-black/80 transition-all duration-300 cursor-pointer outline-2 outline-black outline-offset-2"
                 />
               </div>
             </div>,
