@@ -15,19 +15,19 @@ export default function WhatWeOffer() {
   const offerings: Offering[] = [
     {
       title: "Meet Other Entrepreneurs",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description: "Connect with like-minded founders, share experiences, and build meaningful relationships that can lead to partnerships and collaborations.",
       image:
         "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=1000&auto=format&fit=crop",
     },
     {
       title: "Career Development",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description: "Access mentorship, resources, and guidance to level up your skills and navigate the challenges of building and scaling your startup.",
       image:
         "https://images.unsplash.com/photo-1531554694128-c4c6665f59c2?q=80&w=1000&auto=format&fit=crop",
     },
     {
       title: "Student Workshops",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      description: "Participate in hands-on workshops covering essential startup topics from product development to fundraising and marketing strategies.",
       image:
         "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=1000&auto=format&fit=crop",
     },
@@ -69,8 +69,7 @@ export default function WhatWeOffer() {
               What We Offer:
             </h2>
             <p className="text-gray-600 md:text-lg font-light max-w-full sm:max-w-xl md:max-w-2xl lg:max-w-3xl leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. dolor sit
-              amet, consectetur adipiscing elit.
+              Join a thriving community designed to accelerate your entrepreneurial journey with networking, learning, and growth opportunities.
             </p>
           </div>
         </div>

@@ -50,7 +50,7 @@ export default function UpcomingEvents() {
           {/* Right Side - Luma Event Embed */}
           <div className="w-full lg:w-auto lg:flex-1 lg:max-w-[838px] h-[450px] sm:h-[500px] lg:h-[595px] relative rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] overflow-hidden flex-shrink-0">
             <iframe
-              src="https://luma.com/embed/event/evt-k3qaqvnEEocLRFI/simple"
+              src="https://luma.com/embed/event/evt-5dergvcwo80xjhg/simple"
               className="w-full h-full"
               style={{ border: "none" }}
               allow="fullscreen; payment"
