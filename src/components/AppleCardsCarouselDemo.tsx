@@ -81,7 +81,7 @@ export function AppleCardsCarouselDemo() {
             lineHeight: "1.1",
           }}
         >
-          Sed ut Perspiciatis Unde Omnis Doloremque Laudantium.
+          Building the Next Generation of Student Entrepreneurs
         </h1>
 
         {/* Paragraph */}
@@ -96,8 +96,7 @@ export function AppleCardsCarouselDemo() {
             fontFamily: "Inter",
           }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. dolor sit
-          amet, consectetur adipiscing elit psum dolor sit a.
+          Connect with like-minded founders, learn from industry leaders, and turn your ideas into reality through our workshops, events, and community.
         </p>
       </div>
 
