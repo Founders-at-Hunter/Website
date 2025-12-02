@@ -4,7 +4,7 @@ export default function UpcomingEvents() {
   const events = [
     { date: "November 4", name: "Club Kickoff" },
     { date: "November 13", name: "Vibe-Code & Deploy Workshop" },
-    { date: "TBD", name: "Financial Strategies Workshop" },
+    { date: "December 5", name: "Movie Night" },
     { date: "TBD", name: "Marketing Workshop" },
     { date: "TBD", name: "Case Study Night" },
   ];
@@ -16,17 +16,13 @@ export default function UpcomingEvents() {
         <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-[58px] xl:gap-[190px] items-stretch">
           {/* Left Content Group - Events Roadmap */}
           <div className="w-full lg:w-[778px] flex flex-col justify-start h-auto lg:h-[595px]">
-            <h2
-              className="text-[20px] sm:text-[24px] md:text-[30px] lg:text-[38px] font-semibold text-gray-900 mb-3 sm:mb-4 lg:mb-6"
-              style={{ fontFamily: 'Inter, sans-serif' }}
-            >
-              Our Upcoming Events:
+            <h2 className="md:text-3xl text-2xl font-semibold text-gray-900 mb-1.5">
+              Our Events:
             </h2>
-            <p
-              className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[24px] font-light text-gray-600 leading-relaxed mb-6 sm:mb-8"
-              style={{ fontFamily: 'Inter, sans-serif' }}
-            >
-              Join us for an exciting lineup of events designed to help you grow as an entrepreneur.
+
+            <p className="text-gray-600 md:text-lg font-light max-w-full sm:max-w-xl md:max-w-2xl lg:max-w-3xl leading-relaxed mb-6">
+              Join us for an exciting lineup of events designed to help you grow
+              as an entrepreneur.
             </p>
 
             {/* Event Roadmap - scrollable if needed */}
@@ -56,7 +52,7 @@ export default function UpcomingEvents() {
             <iframe
               src="https://luma.com/embed/event/evt-k3qaqvnEEocLRFI/simple"
               className="w-full h-full"
-              style={{ border: 'none' }}
+              style={{ border: "none" }}
               allow="fullscreen; payment"
               aria-hidden="false"
               tabIndex={0}

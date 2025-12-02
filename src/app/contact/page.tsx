@@ -1,6 +1,5 @@
-import Contact from "@/components/pages/Contact/Contact";
+import ContactForm from "@/components/pages/Contact/ContactForm";
 import Footer from "@/components/ui/Footer";
-import NavMenu from "@/components/ui/NavMenu";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -9,13 +8,11 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div>
-      {/* mt-[105px] (NavMenu: 81px) */}
-      <NavMenu />
-      <main className="max-w-7xl m-auto">
-        <Contact />
+    <>
+      <main className="max-w-[1560px] m-auto">
+        <ContactForm />
         <Footer />
       </main>
-    </div>
+    </>
   );
 }

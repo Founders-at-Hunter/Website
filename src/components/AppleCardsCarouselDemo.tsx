@@ -12,27 +12,31 @@ export function AppleCardsCarouselDemo() {
   ));
 
   const scrollToIndex = (index: number) => {
-    const carousel = carouselRef.current?.querySelector('[data-carousel-container]') as HTMLElement;
+    const carousel = carouselRef.current?.querySelector(
+      "[data-carousel-container]"
+    ) as HTMLElement;
     if (carousel) {
       const cardWidth = Math.min(550, window.innerWidth * 0.85) + 16;
       carousel.scrollTo({
         left: index * cardWidth,
-        behavior: "smooth"
+        behavior: "smooth",
       });
       setCurrentIndex(index);
     }
   };
 
   React.useEffect(() => {
-    const carousel = carouselRef.current?.querySelector('[data-carousel-container]');
+    const carousel = carouselRef.current?.querySelector(
+      "[data-carousel-container]"
+    );
     if (carousel) {
       const handleScroll = () => {
         const cardWidth = Math.min(550, window.innerWidth * 0.85) + 16;
         const newIndex = Math.round(carousel.scrollLeft / cardWidth);
         setCurrentIndex(Math.min(newIndex, 5));
       };
-      carousel.addEventListener('scroll', handleScroll);
-      return () => carousel.removeEventListener('scroll', handleScroll);
+      carousel.addEventListener("scroll", handleScroll);
+      return () => carousel.removeEventListener("scroll", handleScroll);
     }
   }, []);
 
@@ -40,9 +44,10 @@ export function AppleCardsCarouselDemo() {
     <div
       className="absolute top-0 left-0 right-0 overflow-hidden w-full min-h-screen"
       style={{
-        background: 'linear-gradient(to right, rgba(95, 37, 159, 0.75) 0%, rgba(95, 37, 159, 0.75) 100%)',
+        background:
+          "linear-gradient(to right, rgba(95, 37, 159, 0.75) 0%, rgba(95, 37, 159, 0.75) 100%)",
         margin: 0,
-        padding: 0
+        padding: 0,
       }}
     >
       <div className="container mx-auto px-4">
@@ -50,13 +55,13 @@ export function AppleCardsCarouselDemo() {
         <h2
           className="absolute z-50 text-white opacity-60"
           style={{
-            left: '50%',
-            transform: 'translateX(-50%)',
-            top: 'clamp(200px, 35vh, 373px)',
-            fontSize: 'clamp(16px, 1.25vw, 24px)',
-            fontFamily: 'Inter',
-            textAlign: 'center',
-            whiteSpace: 'nowrap'
+            left: "50%",
+            transform: "translateX(-50%)",
+            top: "clamp(200px, 35vh, 373px)",
+            fontSize: "clamp(16px, 1.25vw, 24px)",
+            fontFamily: "Inter",
+            textAlign: "center",
+            whiteSpace: "nowrap",
           }}
         >
           Founders @ Hunter College
@@ -66,14 +71,14 @@ export function AppleCardsCarouselDemo() {
         <h1
           className="absolute z-50 text-white text-center"
           style={{
-            left: '50%',
-            transform: 'translateX(-50%)',
-            top: 'clamp(230px, 38vh, 402px)',
-            width: 'min(90%, 1174px)',
-            fontSize: 'clamp(32px, 4vw, 74px)',
-            fontFamily: 'Inter',
+            left: "50%",
+            transform: "translateX(-50%)",
+            top: "clamp(230px, 38vh, 402px)",
+            width: "min(90%, 1174px)",
+            fontSize: "clamp(32px, 4vw, 74px)",
+            fontFamily: "Inter",
             fontWeight: 900,
-            lineHeight: '1.1',
+            lineHeight: "1.1",
           }}
         >
           Sed ut Perspiciatis Unde Omnis Doloremque Laudantium.
@@ -83,15 +88,16 @@ export function AppleCardsCarouselDemo() {
         <p
           className="absolute z-50 text-white text-center"
           style={{
-            left: '50%',
-            transform: 'translateX(-50%)',
-            top: 'clamp(400px, 55vh, 570px)',
-            width: 'min(85%, 558px)',
-            fontSize: 'clamp(18px, 1.5vw, 29px)',
-            fontFamily: 'Inter',
+            left: "50%",
+            transform: "translateX(-50%)",
+            top: "clamp(400px, 55vh, 570px)",
+            width: "min(85%, 558px)",
+            fontSize: "clamp(18px, 1.5vw, 29px)",
+            fontFamily: "Inter",
           }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. dolor sit amet, consectetur adipiscing elit psum dolor sit a.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. dolor sit
+          amet, consectetur adipiscing elit psum dolor sit a.
         </p>
       </div>
 
@@ -100,7 +106,7 @@ export function AppleCardsCarouselDemo() {
         ref={carouselRef}
         className="absolute w-full"
         style={{
-          top: 'clamp(50px, 8vh, 80px)',
+          top: "clamp(50px, 8vh, 80px)",
         }}
       >
         <Carousel items={cards} />

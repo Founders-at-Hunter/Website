@@ -16,21 +16,24 @@ export default function WhatWeOffer() {
     {
       title: "Meet Other Entrepreneurs",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      image: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=1000&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=1000&auto=format&fit=crop",
     },
     {
       title: "Career Development",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      image: "https://images.unsplash.com/photo-1531554694128-c4c6665f59c2?q=80&w=1000&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1531554694128-c4c6665f59c2?q=80&w=1000&auto=format&fit=crop",
     },
     {
       title: "Student Workshops",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=1000&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=1000&auto=format&fit=crop",
     },
   ];
 
-  const scroll = (direction: 'left' | 'right') => {
+  const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
       // Calculate scroll amount based on screen size
       const getScrollAmount = () => {
@@ -43,30 +46,31 @@ export default function WhatWeOffer() {
 
       const scrollAmount = getScrollAmount();
       const currentScroll = scrollContainerRef.current.scrollLeft;
-      const targetScroll = direction === 'left'
-        ? currentScroll - scrollAmount
-        : currentScroll + scrollAmount;
+      const targetScroll =
+        direction === "left"
+          ? currentScroll - scrollAmount
+          : currentScroll + scrollAmount;
 
       scrollContainerRef.current.scrollTo({
         left: targetScroll,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
 
   return (
-    <section className="py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8 lg:px-12 overflow-hidden" style={{ marginTop: '100vh' }}>
+    <section className="py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8 lg:px-12 overflow-hidden">
       {/* Main Frame - centered container */}
       <div className="w-full max-w-[1806px] mx-auto">
         {/* Header Section with constrained width */}
-        <div className="mb-6 sm:mb-8 md:mb-10 lg:mb-12">
-          <div className="max-w-7xl">
-            <h2 className="text-[24px] sm:text-[28px] md:text-[34px] lg:text-[38px] font-semibold text-gray-900 mb-3 sm:mb-4 md:mb-5 lg:mb-6" style={{ fontFamily: 'Inter, sans-serif' }}>
+        <div className="mb-6">
+          <div>
+            <h2 className="md:text-3xl text-2xl font-semibold text-gray-900 mb-1.5">
               What We Offer:
             </h2>
-            <p className="text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-light text-gray-600 max-w-full sm:max-w-xl md:max-w-2xl lg:max-w-3xl leading-relaxed" style={{ fontFamily: 'Inter, sans-serif' }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              dolor sit amet, consectetur adipiscing elit.
+            <p className="text-gray-600 md:text-lg font-light max-w-full sm:max-w-xl md:max-w-2xl lg:max-w-3xl leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. dolor sit
+              amet, consectetur adipiscing elit.
             </p>
           </div>
         </div>
@@ -77,8 +81,8 @@ export default function WhatWeOffer() {
             ref={scrollContainerRef}
             className="overflow-x-auto pb-4 scrollbar-hide"
             style={{
-              scrollbarWidth: 'none',
-              msOverflowStyle: 'none',
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
             }}
           >
             <div className="flex gap-4 sm:gap-6 md:gap-10 lg:gap-[58px] w-max">
@@ -101,7 +105,10 @@ export default function WhatWeOffer() {
 
                     {/* Text overlay */}
                     <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 md:p-6">
-                      <h3 className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] font-semibold text-white mb-1 sm:mb-2" style={{ fontFamily: 'Inter, sans-serif' }}>
+                      <h3
+                        className="text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] font-semibold text-white mb-1 sm:mb-2"
+                        style={{ fontFamily: "Inter, sans-serif" }}
+                      >
                         {offering.title}
                       </h3>
                       <p className="text-white/90 text-xs sm:text-sm md:text-base leading-relaxed">
@@ -115,24 +122,44 @@ export default function WhatWeOffer() {
           </div>
 
           {/* Navigation Arrows - Only show on larger screens */}
-        <button
-          onClick={() => scroll('left')}
-          className="hidden lg:flex absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-2 md:p-3 shadow-lg transition-all hover:scale-110 z-10"
-          aria-label="Scroll left"
-        >
-          <svg className="w-5 h-5 md:w-6 md:h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <button
-          onClick={() => scroll('right')}
-          className="hidden lg:flex absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-2 md:p-3 shadow-lg transition-all hover:scale-110 z-10"
-          aria-label="Scroll right"
-        >
-          <svg className="w-5 h-5 md:w-6 md:h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
+          <button
+            onClick={() => scroll("left")}
+            className="hidden lg:flex absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-2 md:p-3 shadow-lg transition-all hover:scale-110 z-10"
+            aria-label="Scroll left"
+          >
+            <svg
+              className="w-5 h-5 md:w-6 md:h-6 text-gray-900"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+          <button
+            onClick={() => scroll("right")}
+            className="hidden lg:flex absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white rounded-full p-2 md:p-3 shadow-lg transition-all hover:scale-110 z-10"
+            aria-label="Scroll right"
+          >
+            <svg
+              className="w-5 h-5 md:w-6 md:h-6 text-gray-900"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
         </div>
       </div>
 

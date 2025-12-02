@@ -7,7 +7,11 @@ import React, {
   createContext,
   useContext,
 } from "react";
-import { IconArrowNarrowLeft, IconArrowNarrowRight, IconX } from "@tabler/icons-react";
+import {
+  IconArrowNarrowLeft,
+  IconArrowNarrowRight,
+  IconX,
+} from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Image, { ImageProps } from "next/image";
@@ -87,14 +91,14 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
       <div className="relative w-full">
         <div
           className="flex w-full overflow-x-scroll overscroll-x-auto py-10 md:py-20 scroll-smooth [scrollbar-width:none]"
-          style={{ scrollSnapType: 'x mandatory' }}
+          style={{ scrollSnapType: "x mandatory" }}
           ref={carouselRef}
           onScroll={handleScroll}
           data-carousel-container
         >
-          <div className="flex flex-row justify-start gap-4 pl-4 pr-4 max-w-7xl mx-auto">
+          <div className="flex flex-row justify-start gap-4 pl-4 pr-4 max-w-[1560px] mx-auto">
             {items.map((item, index) => (
-              <div key={"card" + index} style={{ scrollSnapAlign: 'start' }}>
+              <div key={"card" + index} style={{ scrollSnapAlign: "start" }}>
                 {item}
               </div>
             ))}
@@ -136,17 +140,17 @@ export const Card = ({
     <div
       className="rounded-3xl overflow-hidden flex flex-col items-start justify-start relative"
       style={{
-        width: 'min(550px, 85vw)',
-        height: 'min(750px, 70vh)',
-        minWidth: '300px',
-        minHeight: '400px'
+        width: "min(550px, 85vw)",
+        height: "min(750px, 70vh)",
+        minWidth: "300px",
+        minHeight: "400px",
       }}
     >
       {/* Purple tint overlay */}
       <div
         className="absolute inset-0 z-20 pointer-events-none"
         style={{
-          backgroundColor: 'rgba(95, 37, 159, 0.75)'
+          backgroundColor: "rgba(95, 37, 159, 0.75)",
         }}
       />
 

@@ -14,7 +14,6 @@ import { toast } from "sonner";
 export default function NavMenu() {
   const [navOpened, setNavOpened] = useState(false);
   const [portalRoot, setPortalRoot] = useState<HTMLElement | null>(null);
-  const [windowWidth, setWindowWidth] = useState<number | null>(null);
   const [registerValues, setRegisterValues] = useState({ name: "", email: "" });
   const [registeredEmail, setRegisteredEmail] = useState("");
   const [registerCount, setRegisterCount] = useState<number | null>(null);
@@ -62,17 +61,6 @@ export default function NavMenu() {
   }, []);
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  useEffect(() => {
     const cookies = document.cookie.split(";");
     const registeredEmailCookie = cookies.find((cookie) =>
       cookie.trim().startsWith("registeredEmail=")
@@ -84,8 +72,8 @@ export default function NavMenu() {
   }, []);
 
   return (
-    <nav className="bg-white/90 backdrop-blur-xl backdrop-saturate-200 fixed top-0 w-full z-20">
-      <div className="flex items-center justify-between max-w-7xl m-auto p-4">
+    <nav className="bg-white/85 backdrop-blur-xl backdrop-saturate-200 fixed top-0 w-full z-20">
+      <div className="flex items-center justify-between max-w-[1560px] m-auto p-4">
         <Link href="/" className="flex items-center justify-center gap-2">
           <Image
             src="/founders_logo_icon.png"

@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { RootProvider } from "fumadocs-ui/provider";
 import { Toaster } from "sonner";
+import NavMenu from "@/components/ui/NavMenu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className} id="portal-root">
         <RootProvider>
+          <NavMenu />
           {children}
           <Toaster />
         </RootProvider>
