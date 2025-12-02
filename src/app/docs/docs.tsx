@@ -3,6 +3,7 @@ import { DocsPage, DocsBody } from 'fumadocs-ui/page';
 import { useMDXComponents } from '@/mdx-components';
 
 export default function Page() {
+  const components = useMDXComponents({});
   const page = source.getPage([]);
   if (!page) return null;
   const MDX = page.data.body;
@@ -12,7 +13,7 @@ export default function Page() {
       <DocsBody>
         <div className="docs-body">
           <h1>{page.data.title}</h1>
-          <MDX components={useMDXComponents({})} />
+          <MDX components={components} />
         </div>
       </DocsBody>
     </DocsPage>
