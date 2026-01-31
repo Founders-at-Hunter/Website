@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
 
 :root {
   --background: #ffffff;
@@ -9,6 +12,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-main: #5f259f;
+  --color-comp: #ffc72a;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   @keyframes word-appear {
@@ -76,6 +80,17 @@
       opacity: 0.8;
     }
   }
+  --animate-ripple: ripple var(--duration, 2s) ease calc(var(--i, 0) * 0.2s)
+    infinite;
+  @keyframes ripple {
+    0%,
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(0.9);
+    }
+  }
 }
 
 /* Hero Section Animation Classes */
@@ -136,7 +151,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   overflow-x: hidden;
-  overscroll-behavior-y: none;
+  /* overscroll-behavior-y: none; */
   margin: 0;
   padding: 0;
   position: relative;

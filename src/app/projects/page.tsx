@@ -12,7 +12,7 @@ export default function ProjectsPage() {
   return (
     <>
       {/* mt-[105px] (NavMenu: 81px) */}
-      <main className="mt-[81px] max-w-[1560px] m-auto">
+      <main className="mt-[81px] max-w-[1920px] m-auto">
         <ProjectsHeader />
         <Projects />
         <Footer />

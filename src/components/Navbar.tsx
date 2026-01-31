@@ -251,7 +251,7 @@ export default function Navbar() {
               </form>
             </section>
           </div>,
-          portalRoot
+          portalRoot,
         )}
 
       {/* Mobile Menu */}
@@ -334,7 +334,7 @@ export default function Navbar() {
               </button>
             </div>
           </div>,
-          portalRoot
+          portalRoot,
         )}
     </>
   );

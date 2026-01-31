@@ -63,7 +63,7 @@ export default function NavMenu() {
   useEffect(() => {
     const cookies = document.cookie.split(";");
     const registeredEmailCookie = cookies.find((cookie) =>
-      cookie.trim().startsWith("registeredEmail=")
+      cookie.trim().startsWith("registeredEmail="),
     );
     if (registeredEmailCookie) {
       const email = registeredEmailCookie.split("=")[1];
@@ -73,7 +73,7 @@ export default function NavMenu() {
 
   return (
     <nav className="bg-white/85 backdrop-blur-xl backdrop-saturate-200 fixed top-0 w-full z-20">
-      <div className="flex items-center justify-between max-w-[1560px] m-auto p-4">
+      <div className="flex items-center justify-between max-w-[1920px] m-auto py-4 px-8">
         <Link href="/" className="flex items-center justify-center gap-2">
           <Image
             src="/founders_logo_icon.png"
@@ -105,7 +105,7 @@ export default function NavMenu() {
           ))}
         </div>
         <aside className="flex items-center gap-4">
-          <PopUp
+          {/* <PopUp
             content={(togglePopUp) => (
               <>
                 <header className="flex items-center justify-between gap-8 mb-1.5">
@@ -202,7 +202,7 @@ export default function NavMenu() {
                 ? "md:visible md:opacity-100 invisible opacity-0"
                 : "opacity-100 visible"
             }`}
-          />
+          /> */}
           <button
             className="text-black text-2xl md:hidden block cursor-pointer hover:scale-95 active:scale-95 transition-all"
             onClick={() => {
@@ -241,7 +241,7 @@ export default function NavMenu() {
                 ))}
               </div>
               <div className="p-4 w-full">
-                <PopUp
+                {/* <PopUp
                   content={(togglePopUp) => (
                     <>
                       <header className="flex items-center justify-between gap-8 mb-1.5">
@@ -320,10 +320,10 @@ export default function NavMenu() {
                   )}
                   trigger={<>Register</>}
                   triggerContainerCN="p-4 w-full bg-black text-white hover:bg-black/80 active:bg-black/80 hover:outline-black/80 active:outline-black/80 transition-all duration-300 cursor-pointer outline-2 outline-black outline-offset-2"
-                />
+                /> */}
               </div>
             </div>,
-            portalRoot
+            portalRoot,
           )}
       </div>
     </nav>

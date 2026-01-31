@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <main>
         <Hero />
-        <div className="max-w-[1560px] m-auto">
+        <div className="max-w-[1920px] m-auto">
           <WhatWeOffer />
           <UpcomingEvents />
           <Footer />

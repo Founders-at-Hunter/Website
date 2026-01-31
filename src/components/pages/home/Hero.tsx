@@ -9,12 +9,11 @@ export default function Hero() {
           FOUNDERS @ HUNTER COLLEGE
         </p>
         <h1 className="font-black text-4xl text-center text-white mb-2">
-          Building the Next Generation of Student Entrepreneurs
+          Sed ut Perspiciatis Unde Omnis Doloremque Laudantium.
         </h1>
         <p className="text-sm text-center text-white/60 w-4/5 m-auto mb-3">
-          Connect with like-minded founders, learn from industry leaders, and
-          turn your ideas into reality through our workshops, events, and
-          community.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. dolor sit
+          amet, consectetur adipiscing elit psum dolor sit a.
         </p>
         <div className="flex items-center justify-center gap-2">
           <button className="text-sm outline outline-white -outline-offset-1 text-white py-2 px-4 rounded-full cursor-pointer transition-all duration-300">

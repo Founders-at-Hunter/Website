@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <main className="max-w-[1560px] m-auto">
+      <main className="max-w-[1920px] m-auto">
         <ContactForm />
         <Footer />
       </main>

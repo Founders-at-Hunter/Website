@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Sip & Connect",
+    "subtitle": "Grow your Network",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus exercitationem totam voluptatum libero unde minus sapiente eaque accusantium quae.",
+    "date": "Feb 13",
+    "room": "W706",
+    "time": "12 - 1 PM",
+    "photo": "/sip&connect.webp",
+    "link": "/"
+  },
+  {
+    "title": "Game Night",
+    "subtitle": "Unwind and Play",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quos placeat quia veniam veritatis inventore rerum, pariatur illum.",
+    "date": "Mar 7",
+    "room": "W118",
+    "time": "6 - 8 PM",
+    "photo": "/gamenight.jpg",
+    "link": "/"
+  },
+  {
+    "title": "Open Mic Night",
+    "subtitle": "Share Your Talent",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe tempore necessitatibus autem accusantium similique libero.",
+    "date": "Mar 21",
+    "room": "W204",
+    "time": "7 - 9 PM",
+    "photo": "/openmic.jpg",
+    "link": "/"
+  },
+  {
+    "title": "Creative Workshop",
+    "subtitle": "Make Something New",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates repellat ipsum minus dolore consequatur saepe.",
+    "date": "Apr 4",
+    "room": "W309",
+    "time": "3 - 5 PM",
+    "photo": "/creativeworkshop.jfif",
+    "link": "/"
+  }
+]

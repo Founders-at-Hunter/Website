@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <>
-      <main className="mt-[81px] max-w-[1560px] m-auto">
+      <main className="mt-[81px] max-w-[1920px] m-auto">
         <Mission />
         <CoreValues />
         <Team />

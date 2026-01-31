@@ -96,7 +96,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
           onScroll={handleScroll}
           data-carousel-container
         >
-          <div className="flex flex-row justify-start gap-4 pl-4 pr-4 max-w-[1560px] mx-auto">
+          <div className="flex flex-row justify-start gap-4 pl-4 pr-4 max-w-[1920px] mx-auto">
             {items.map((item, index) => (
               <div key={"card" + index} style={{ scrollSnapAlign: "start" }}>
                 {item}
@@ -179,7 +179,7 @@ export const BlurImage = ({
       className={cn(
         "transition duration-300",
         isLoading ? "blur-sm" : "blur-0",
-        className
+        className,
       )}
       onLoad={() => setLoading(false)}
       src={src}
@@ -196,7 +196,7 @@ export const BlurImage = ({
 
 export const useOutsideClick = (
   ref: React.RefObject<HTMLDivElement>,
-  callback: () => void
+  callback: () => void,
 ) => {
   useEffect(() => {
     const listener = (event: MouseEvent | TouchEvent) => {

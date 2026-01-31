@@ -24,7 +24,7 @@ export default function Landing() {
     //   <Footer />
     // </div>
     <>
-      <main className="mt-[81px] max-w-[1560px] m-auto">
+      <main className="mt-[81px] max-w-[1920px] m-auto">
         <Hero />
         <Footer />
       </main>
