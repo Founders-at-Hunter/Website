@@ -6,23 +6,23 @@ import { cn } from "@/lib/utils";
 
 export default function Events() {
   return (
-    <div className="p-8">
-      <header className="space-y-2.5 mb-6">
-        <h4
-          className="w-fit text-white rounded-full px-4 py-1.5 font-light drop-shadow-2xl drop-shadow-main/30 text-sm mb-1 m-auto"
+    <div className="md:px-8 px-6 md:py-6 py-4">
+      <header className="space-y-2.5 mb-6 max-w-xl m-auto">
+        <h6
+          className="bg-main w-fit text-white rounded-full px-4 py-1.5 font-light drop-shadow-2xl drop-shadow-main/30 text-sm mb-1 m-auto"
           style={{
             backgroundImage:
               "linear-gradient(to top, #5f259f 0%, #9258d2 100%);",
           }}
         >
           4 upcoming events <span className="ml-1.5">🍎</span>
-        </h4>
-        <h2 className="text-3xl font-medium text-center">
+        </h6>
+        <h2 className="md:text-3xl text-2xl font-medium text-center">
           <Highlighter action="underline" color="#FFC72A" iterations={3}>
             Our upcoming events
           </Highlighter>
         </h2>
-        <h3 className="text-lg text-neutral-700 text-center">
+        <h3 className="text-neutral-700 text-center">
           Join us for an exciting lineup of events designed to help you grow as
           an entrepreneur.
         </h3>
@@ -45,26 +45,34 @@ export default function Events() {
                   <h5 className="font-semibold text-xl mb-0.5">
                     {event.title}
                   </h5>
-                  <p className="text-sm text-neutral-500">{event.subtitle}</p>
+                  <p className="text-sm text-[#f0b100] font-medium tracking-wide">
+                    {event.subtitle}
+                  </p>
                 </aside>
               </header>
               <p className="text-neutral-700 mb-4">{event.description}</p>
               <ul className="mb-4 grid grid-cols-3 gap-2 items-stretch">
                 <li className="flex flex-col bg-white px-4 py-2 border-b border-main rounded-2xl">
-                  <p className="text-sm font-light tracking-wider">Date</p>
-                  <span className="font-bold">
+                  <p className="text-sm font-light tracking-wider text-neutral-600">
+                    Date
+                  </p>
+                  <span className="font-bold text-sm">
                     {isPast ? "Event passed" : event.date}
                   </span>
                 </li>
                 <li className="flex flex-col bg-white px-4 py-2 border-b border-main rounded-2xl">
-                  <p className="text-sm font-light tracking-wider">Time</p>
-                  <span className="font-bold">
+                  <p className="text-sm font-light tracking-wider text-neutral-600">
+                    Time
+                  </p>
+                  <span className="font-bold text-sm">
                     {isPast ? "Event passed" : event.time}
                   </span>
                 </li>
                 <li className="flex flex-col bg-white px-4 py-2 border-b border-main rounded-2xl">
-                  <p className="text-sm font-light tracking-wider">Room</p>
-                  <span className="font-bold">
+                  <p className="text-sm font-light tracking-wider text-neutral-600">
+                    Room
+                  </p>
+                  <span className="font-bold text-sm">
                     {isPast ? "Event passed" : event.room}
                   </span>
                 </li>

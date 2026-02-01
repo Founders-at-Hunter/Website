@@ -1,21 +1,20 @@
-import DitherShader from "@/components/ui/dither-shader";
 import { Highlighter } from "@/components/ui/highlighter";
 import React from "react";
 
 export default function Hero() {
   return (
-    <div className="p-8 grid md:grid-cols-2 gap-x-24 gap-y-12 items-center">
+    <div className="md:px-8 px-6 md:py-6 py-4 grid md:grid-cols-2 gap-x-24 gap-y-8 items-center">
       <aside className="space-y-2">
-        <h4
-          className="w-fit text-white rounded-full px-4 py-1.5 font-light drop-shadow-2xl drop-shadow-main/30 text-sm mb-1"
+        <h6
+          className="bg-main w-fit text-white rounded-full px-4 py-1.5 font-light drop-shadow-2xl drop-shadow-main/30 text-sm mb-1"
           style={{
             backgroundImage:
               "linear-gradient(to top, #5f259f 0%, #9258d2 100%);",
           }}
         >
           Founders @ Hunter <span className="ml-1.5">🚀</span>
-        </h4>
-        <h1 className="text-4xl font-bold leading-12 text-neutral-700 tracking-wide">
+        </h6>
+        <h1 className="md:text-4xl text-3xl font-bold md:leading-12 leading-10 text-neutral-700 tracking-wide">
           Building the Next Generation <br className="xl:block hidden" /> of{" "}
           <Highlighter
             action="highlight"
@@ -26,7 +25,7 @@ export default function Hero() {
             Student Entrepreneurs
           </Highlighter>
         </h1>
-        <h3 className="text-lg text-neutral-700">
+        <h3 className="text-neutral-700">
           Connect with like-minded founders, learn from industry leaders, and
           turn your ideas into reality through our workshops, events, and
           community.
@@ -53,15 +52,10 @@ export default function Hero() {
         </div>
       </aside>
       <aside>
-        <DitherShader
+        <img
           src="/DSC00870.JPG"
-          gridSize={1}
-          // ditherMode="bayer"
-          colorMode="duotone"
-          primaryColor="#000000"
-          secondaryColor="#EEEEEE"
-          threshold={0.2}
-          className="w-full max-w-lg h-full aspect-[1629/1741] rounded-[50%_50%_30%_70%/60%_40%_60%_40%] overflow-hidden md:ml-auto"
+          alt="Mission Banner"
+          className="w-full max-w-lg h-full aspect-[1629/1741] rounded-[50%_50%_30%_70%/60%_40%_60%_40%] overflow-hidden md:ml-auto md:mr-0 mx-auto saturate-0"
         />
       </aside>
     </div>

@@ -3,7 +3,7 @@ import React from "react";
 export default function JoinUs() {
   return (
     <section
-      className="m-8 md:p-12 p-8 rounded-2xl overflow-hidden relative"
+      className="md:m-8 m-6 md:p-12 p-8 rounded-2xl overflow-hidden relative bg-main"
       style={{
         backgroundImage: `linear-gradient(to top, #5f259f 0%, #9258d2 100%)`,
       }}

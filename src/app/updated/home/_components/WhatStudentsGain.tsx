@@ -4,14 +4,14 @@ import { FaGraduationCap, FaHandsHelping, FaUserFriends } from "react-icons/fa";
 
 export default function WhatStudentsGain() {
   return (
-    <div className="p-8 space-y-2.5">
+    <div className="md:px-8 px-6 md:py-6 py-4 space-y-2.5">
       <header className="space-y-2.5 mb-6">
-        <h2 className="text-3xl font-medium">
+        <h2 className="md:text-3xl text-2xl font-medium">
           <Highlighter action="underline" color="#FFC72A" iterations={3}>
             What students gain
           </Highlighter>
         </h2>
-        <h3 className="text-lg text-neutral-700">
+        <h3 className="text-neutral-700">
           Join a thriving community designed to accelerate your entrepreneurial
           journey with networking, learning, and growth opportunities.
         </h3>

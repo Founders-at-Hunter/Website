@@ -20,7 +20,7 @@ export default function UpcomingEvents() {
               Our Events:
             </h2>
 
-            <p className="text-gray-600 md:text-lg font-light max-w-full sm:max-w-xl md:max-w-2xl lg:max-w-3xl leading-relaxed mb-6">
+            <p className="text-gray-600  font-light max-w-full sm:max-w-xl md:max-w-2xl lg:max-w-3xl leading-relaxed mb-6">
               Join us for an exciting lineup of events designed to help you grow
               as an entrepreneur.
             </p>
