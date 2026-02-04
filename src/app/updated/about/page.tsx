@@ -1,13 +1,15 @@
 import React from "react";
 import Mission from "./_components/Mission";
 import Values from "./_components/Values";
-import WhoWeAre from "../_components/WhoWeAre";
+import OurStory from "./_components/OurStory";
+import OurTeam from "./_components/OurTeam";
 
 export default function About() {
   return (
     <>
       <Mission />
-      <WhoWeAre />
+      <OurStory />
+      <OurTeam />
       <Values />
     </>
   );

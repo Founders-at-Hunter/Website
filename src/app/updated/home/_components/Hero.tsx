@@ -9,7 +9,7 @@ export default function Hero() {
           className="bg-main w-fit text-white rounded-full px-4 py-1.5 font-light drop-shadow-2xl drop-shadow-main/30 text-sm mb-1"
           style={{
             backgroundImage:
-              "linear-gradient(to top, #5f259f 0%, #9258d2 100%);",
+              "linear-gradient(to top, #5f259f 0%, #9258d2 100%)",
           }}
         >
           Founders @ Hunter <span className="ml-1.5">🚀</span>
@@ -35,7 +35,7 @@ export default function Hero() {
             className="px-5 py-2 rounded-xl text-white cursor-pointer hover:brightness-110 hover:scale-105 transition-all duration-300 ease-in-out"
             style={{
               backgroundImage:
-                "linear-gradient(to top, #000000 0%, #555555 100%);",
+                "linear-gradient(to top, #000000 0%, #555555 100%)",
             }}
           >
             Learn more
@@ -44,7 +44,7 @@ export default function Hero() {
             className="px-5 py-2 rounded-xl text-white cursor-pointer hover:brightness-110 hover:scale-105 transition-all duration-300 ease-in-out"
             style={{
               backgroundImage:
-                "linear-gradient(to top, #5f259f 0%, #9258d2 100%);",
+                "linear-gradient(to top, #5f259f 0%, #9258d2 100%)",
             }}
           >
             Join us

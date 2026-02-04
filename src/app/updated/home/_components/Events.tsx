@@ -12,7 +12,7 @@ export default function Events() {
           className="bg-main w-fit text-white rounded-full px-4 py-1.5 font-light drop-shadow-2xl drop-shadow-main/30 text-sm mb-1 m-auto"
           style={{
             backgroundImage:
-              "linear-gradient(to top, #5f259f 0%, #9258d2 100%);",
+              "linear-gradient(to top, #5f259f 0%, #9258d2 100%)",
           }}
         >
           4 upcoming events <span className="ml-1.5">🍎</span>

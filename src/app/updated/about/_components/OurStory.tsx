@@ -3,17 +3,13 @@ import React from "react";
 
 export default function WhoWeAre() {
   return (
-    <div className="md:px-8 px-6 md:py-6 py-4 space-y-2.5">
+    <div className="md:px-8 px-6 md:py-6 py-4">
       <header className="space-y-2.5 mb-6">
         <h2 className="md:text-3xl text-2xl font-medium">
           <Highlighter action="underline" color="#FFC72A" iterations={3}>
-            Who we are
+            Our story
           </Highlighter>
         </h2>
-        <h3 className="text-neutral-700">
-          Learn about how the club was originally founded and our journey so
-          far.
-        </h3>
       </header>
       <section className="space-y-4 p-6 bg-neutral-100 rounded-2xl">
         <aside className="text-lg tracking-wider leading-8 font-light md:max-w-[70%]">

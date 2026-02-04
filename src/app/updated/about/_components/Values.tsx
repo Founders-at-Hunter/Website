@@ -7,7 +7,7 @@ import { MdLightbulbOutline } from "react-icons/md";
 
 export default function Values() {
   return (
-    <div className="md:px-8 px-6 md:py-6 py-4 space-y-2.5">
+    <div className="md:px-8 px-6 md:py-6 py-4">
       <header className="space-y-2.5 mb-6">
         <h2 className="md:text-3xl text-2xl font-medium">
           <Highlighter action="underline" color="#FFC72A" iterations={3}>
@@ -23,7 +23,7 @@ export default function Values() {
           className="rounded-2xl overflow-hidden relative p-6 bg-red-400 hover:scale-103 transition-all duration-300 ease-in-out space-y-2.5"
           style={{
             backgroundImage:
-              "linear-gradient(to top, #f87171 0%, #fca5a5 100%);",
+              "linear-gradient(to top, #f87171 0%, #fca5a5 100%)",
           }}
         >
           <GoPeople className="text-7xl text-red-400 p-4 rounded-2xl bg-white block" />
@@ -41,7 +41,7 @@ export default function Values() {
           className="rounded-2xl overflow-hidden relative p-6 bg-amber-400 hover:scale-103 transition-all duration-300 ease-in-out space-y-2.5"
           style={{
             backgroundImage:
-              "linear-gradient(to top, #fbbf24 0%, #fcd34d 100%);",
+              "linear-gradient(to top, #fbbf24 0%, #fcd34d 100%)",
           }}
         >
           <LiaHandshakeSolid className="text-7xl text-amber-400 p-4 rounded-2xl bg-white block" />
@@ -57,7 +57,7 @@ export default function Values() {
           className="rounded-2xl overflow-hidden relative p-6 bg-emerald-400 hover:scale-103 transition-all duration-300 ease-in-out space-y-2.5"
           style={{
             backgroundImage:
-              "linear-gradient(to top, #34d399 0%, #6ee7b7 100%);",
+              "linear-gradient(to top, #34d399 0%, #6ee7b7 100%)",
           }}
         >
           <IoShieldCheckmarkOutline className="text-7xl text-emerald-400 p-4 rounded-2xl bg-white block" />
@@ -73,7 +73,7 @@ export default function Values() {
           className="rounded-2xl overflow-hidden relative p-6 bg-sky-400 hover:scale-103 transition-all duration-300 ease-in-out space-y-2.5"
           style={{
             backgroundImage:
-              "linear-gradient(to top, #22d3ee 0%, #7dd3fc 100%);",
+              "linear-gradient(to top, #22d3ee 0%, #7dd3fc 100%)",
           }}
         >
           <MdLightbulbOutline className="text-7xl text-sky-400 p-4 rounded-2xl bg-white block" />

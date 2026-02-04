@@ -12,7 +12,7 @@ export default function Mission() {
         &quot;Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
         autem minima minus blanditiis labore eveniet distinctio pariatur quae
         animi ipsum. Nulla nemo id in.&quot;{" "}
-        <span className="font-normal">Samuel Michnik, Founder</span>
+        <span className="font-normal text-main">Samuel Michnik, Founder</span>
       </p>
     </div>
   );
