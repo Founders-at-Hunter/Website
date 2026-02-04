@@ -6,10 +6,11 @@ import navigationLinks from "@/constants/NavigationLinks.json";
 import { usePathname } from "next/navigation";
 import { TbMenuDeep } from "react-icons/tb";
 import { createPortal } from "react-dom";
-import { MdArrowRightAlt } from "react-icons/md";
-import PopUp from "./PopUp";
-import { AiOutlineClose } from "react-icons/ai";
 import { toast } from "sonner";
+import { Dialog, DialogTrigger } from "./dialog";
+import { cn } from "@/lib/utils";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { GoArrowRight } from "react-icons/go";
 
 export default function NavMenu() {
   const [navOpened, setNavOpened] = useState(false);
@@ -51,7 +52,7 @@ export default function NavMenu() {
       }
       setRegisterCount(data);
     };
-    fetchRegisterCount();
+    // fetchRegisterCount();
   }, []);
 
   useEffect(() => {
@@ -105,6 +106,24 @@ export default function NavMenu() {
           ))}
         </div>
         <aside className="flex items-center gap-4">
+          <Dialog>
+            <DialogTrigger>
+              <button
+                className={cn(
+                  "px-5 py-2 rounded-xl text-white cursor-pointer hover:brightness-110 hover:scale-105 transition-all duration-300 ease-in-out",
+                  navOpened
+                    ? "md:visible md:opacity-100 invisible opacity-0"
+                    : "opacity-100 visible",
+                )}
+                style={{
+                  backgroundImage:
+                    "linear-gradient(to top, #000000 0%, #555555 100%)",
+                }}
+              >
+                Join us
+              </button>
+            </DialogTrigger>
+          </Dialog>
           {/* <PopUp
             content={(togglePopUp) => (
               <>
@@ -236,11 +255,26 @@ export default function NavMenu() {
                     }}
                   >
                     {title}
-                    <MdArrowRightAlt />
+                    <GoArrowRight className="text-xl" />
                   </Link>
                 ))}
               </div>
               <div className="p-4 w-full">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <button
+                      className={cn(
+                        "p-4 w-full rounded-xl text-white cursor-pointer hover:brightness-110 hover:scale-105 transition-all duration-300 ease-in-out",
+                      )}
+                      style={{
+                        backgroundImage:
+                          "linear-gradient(to top, #000000 0%, #555555 100%)",
+                      }}
+                    >
+                      Join us
+                    </button>
+                  </DialogTrigger>
+                </Dialog>
                 {/* <PopUp
                   content={(togglePopUp) => (
                     <>

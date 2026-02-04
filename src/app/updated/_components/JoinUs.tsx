@@ -3,14 +3,14 @@ import React from "react";
 export default function JoinUs() {
   return (
     <section
-      className="md:m-8 m-6 md:p-12 p-8 rounded-2xl overflow-hidden relative"
+      className="md:m-8 m-6 md:p-12 p-8 rounded-xl overflow-hidden relative"
       style={{
         backgroundImage: `linear-gradient(to top, rgba(146,88,210,0.5) 0%, rgba(146,88,210,0.05) 100%)`,
       }}
     >
       <div className="relative z-10 md:space-y-4 space-y-3 text-center max-w-2xl m-auto">
         <h1 className="md:text-3xl text-2xl tracking-wide">
-          Join the Founders Club
+          Be part of the Founders Club
         </h1>
         <p className="text-neutral-700 font-light">
           Connect with like-minded founders, learn from industry leaders, and
