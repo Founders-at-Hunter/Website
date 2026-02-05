@@ -7,7 +7,7 @@ const TEAM = [
   {
     name: "Angst Gregory",
     src: "/team/angstgregory.jpg",
-    bio: "I also made this website and I'm a senior the goat as they say",
+    bio: "I also made this website and I'm a senior the goat as they say.",
     position: "Vice President",
     contact:
       "https://www.linkedin.com/in/angst-gregory?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
@@ -15,7 +15,7 @@ const TEAM = [
   {
     name: "Ray Chu",
     src: "/team/raychu.png",
-    bio: "👋 Hello, I am a freshman studying CS as a Daedalus Scholar. I also made this website",
+    bio: "👋 Hello, I am a freshman studying CS as a Daedalus Scholar. I also made this website.",
     position: "Tech Lead",
     contact: "",
   },
@@ -43,7 +43,7 @@ const TEAM = [
   {
     name: "Lydia Zheng",
     src: "/team/lydiazheng.png",
-    bio: "Hi, I'm Lydia a computer science major student at Hunter College! I am passionate about making creative projects",
+    bio: "Hi, I'm Lydia a computer science major student at Hunter College! I am passionate about making creative projects.",
     position: "Graphic Designer",
     contact: "",
   },

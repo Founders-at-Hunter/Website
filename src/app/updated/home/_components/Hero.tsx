@@ -1,4 +1,6 @@
+import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import { Highlighter } from "@/components/ui/highlighter";
+import JoinUsForm from "@/components/ui/JoinUsForm";
 import React from "react";
 
 export default function Hero() {
@@ -40,15 +42,20 @@ export default function Hero() {
           >
             Learn more
           </button>
-          <button
-            className="px-5 py-2 rounded-xl text-white cursor-pointer hover:brightness-110 hover:scale-105 transition-all duration-300 ease-in-out"
-            style={{
-              backgroundImage:
-                "linear-gradient(to top, #5f259f 0%, #9258d2 100%)",
-            }}
-          >
-            Join us
-          </button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <button
+                className="px-5 py-2 rounded-xl text-white cursor-pointer hover:brightness-110 hover:scale-105 transition-all duration-300 ease-in-out"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(to top, #5f259f 0%, #9258d2 100%)",
+                }}
+              >
+                Join us
+              </button>
+            </DialogTrigger>
+            <JoinUsForm />
+          </Dialog>
         </div>
       </aside>
       <aside>
