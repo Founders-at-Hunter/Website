@@ -107,7 +107,7 @@ export default function NavMenu() {
         </div>
         <aside className="flex items-center gap-4">
           <Dialog>
-            <DialogTrigger>
+            <DialogTrigger asChild>
               <button
                 className={cn(
                   "px-5 py-2 rounded-xl text-white cursor-pointer hover:brightness-110 hover:scale-105 transition-all duration-300 ease-in-out",

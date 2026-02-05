@@ -26,6 +26,27 @@ const TEAM = [
     position: "Social Media Chair",
     contact: "",
   },
+  {
+    name: "Raffi Uddin",
+    src: "/team/rafiuddin.jpg",
+    bio: "Hey, I love playing soccer and learning more about the world. 🤙",
+    position: "Photographer",
+    contact: "",
+  },
+  {
+    name: "Omar Chowdhurry",
+    src: "/team/omarchowdhurry.jpg",
+    bio: "I'm a sophomore majoring in Computer Science.",
+    position: "Secretary",
+    contact: "",
+  },
+  {
+    name: "Lydia Zheng",
+    src: "/team/lydiazheng.png",
+    bio: "Hi, I'm Lydia a computer science major student at Hunter College! I am passionate about making creative projects",
+    position: "Graphic Designer",
+    contact: "",
+  },
 ];
 
 export default function OurTeam() {
