@@ -1,5 +1,4 @@
 import { Highlighter } from "@/components/ui/highlighter";
-import { SparklesText } from "@/components/ui/sparkles-text";
 import Link from "next/link";
 import React from "react";
 

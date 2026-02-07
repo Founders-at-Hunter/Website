@@ -9,15 +9,14 @@ const TEAM = [
     src: "/team/angstgregory.jpg",
     bio: "I also made this website and I'm a senior the goat as they say.",
     position: "Vice President",
-    contact:
-      "https://www.linkedin.com/in/angst-gregory?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    contact: "https://www.linkedin.com/in/angst-gregory",
   },
   {
     name: "Ray Chu",
     src: "/team/raychu.png",
     bio: "👋 Hello, I am a freshman studying CS as a Daedalus Scholar. I also made this website.",
     position: "Tech Lead",
-    contact: "",
+    contact: "https://www.linkedin.com/in/raychu83/",
   },
   {
     name: "Artemis Brisnovali",
@@ -93,7 +92,7 @@ export default function OurTeam() {
                   className={cn(
                     "bg-white py-2 px-4 rounded-full text-sm",
                     teamMember.contact
-                      ? "cursor-pointer"
+                      ? "cursor-pointer hover:scale-103 transition-all duration-300 ease-in-out"
                       : "opacity-50 cursor-default pointer-events-none",
                   )}
                   href={teamMember.contact ?? ""}

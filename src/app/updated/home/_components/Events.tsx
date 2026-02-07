@@ -17,7 +17,7 @@ export default function Events() {
         >
           4 upcoming events <span className="ml-1.5">🍎</span>
         </h6>
-        <h2 className="md:text-3xl text-2xl font-medium text-center">
+        <h2 className="md:text-3xl text-2xl font-semibold text-center tracking-wide">
           <Highlighter action="underline" color="#FFC72A" iterations={3}>
             Our upcoming events
           </Highlighter>
@@ -30,9 +30,10 @@ export default function Events() {
       <section className="grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 items-stretch">
         {events.map((event, index) => {
           const isPast = hasDatePassed(event.date);
+          if (isPast) return null;
           return (
             <div
-              className="rounded-2xl overflow-hidden relative p-6 bg-neutral-100 hover:scale-103 transition-all duration-300 ease-in-out"
+              className="flex flex-col rounded-2xl overflow-hidden relative p-6 bg-neutral-100 hover:scale-103 transition-all duration-300 ease-in-out"
               key={index}
             >
               <header className="flex items-center gap-4 mb-3">
@@ -45,49 +46,42 @@ export default function Events() {
                   <h5 className="font-semibold text-xl mb-0.5">
                     {event.title}
                   </h5>
-                  <p className="text-sm text-[#f0b100] font-medium tracking-wide">
+                  <p className="text-sm text-[#f0b100] font-semibold tracking-wider">
                     {event.subtitle}
                   </p>
                 </aside>
               </header>
-              <p className="text-neutral-700 mb-4">{event.description}</p>
-              <ul className="mb-4 grid grid-cols-3 gap-2 items-stretch">
-                <li className="flex flex-col bg-white px-4 py-2 border-b border-main rounded-2xl">
+              <p className="text-neutral-500 mb-6">{event.description}</p>
+              <ul className="mb-2 grid grid-cols-3 gap-2 items-stretch mt-auto">
+                <li className="flex flex-col bg-white px-4 py-2 border-b border-main rounded-xl">
                   <p className="text-sm font-light tracking-wider text-neutral-600">
                     Date
                   </p>
-                  <span className="font-bold text-sm">
-                    {isPast ? "Event passed" : event.date}
-                  </span>
+                  <span className="font-bold text-sm">{event.date}</span>
                 </li>
-                <li className="flex flex-col bg-white px-4 py-2 border-b border-main rounded-2xl">
+                <li className="flex flex-col bg-white px-4 py-2 border-b border-main rounded-xl">
                   <p className="text-sm font-light tracking-wider text-neutral-600">
                     Time
                   </p>
-                  <span className="font-bold text-sm">
-                    {isPast ? "Event passed" : event.time}
-                  </span>
+                  <span className="font-bold text-sm">{event.time}</span>
                 </li>
-                <li className="flex flex-col bg-white px-4 py-2 border-b border-main rounded-2xl">
+                <li className="flex flex-col bg-white px-4 py-2 border-b border-main rounded-xl">
                   <p className="text-sm font-light tracking-wider text-neutral-600">
                     Room
                   </p>
-                  <span className="font-bold text-sm">
-                    {isPast ? "Event passed" : event.room}
-                  </span>
+                  <span className="font-bold text-sm">{event.room}</span>
                 </li>
               </ul>
-              <div className={cn("", isPast ? "hidden" : "")}>
-                <Link
-                  className={cn(
-                    "bg-white w-full px-4 py-3 rounded-2xl text-main block text-center hover:scale-105 transition-all duration-300 ease-in-out hover:brightness-110",
-                    event.link ? "" : "pointer-events-none opacity-50",
-                  )}
-                  href={event.link}
-                >
-                  Learn more
-                </Link>
-              </div>
+              <Link
+                className={cn(
+                  "bg-main/7.5 w-full px-4 py-3 rounded-xl text-main block text-center hover:scale-105 transition-all duration-300 ease-in-out hover:brightness-110",
+                  event.link ? "" : "pointer-events-none opacity-50",
+                )}
+                href={event.link}
+                target="_blank"
+              >
+                Learn more
+              </Link>
             </div>
           );
         })}

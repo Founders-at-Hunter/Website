@@ -1,3 +1,5 @@
+import { Dialog, DialogTrigger } from "@/components/ui/dialog";
+import JoinUsForm from "@/components/ui/JoinUsForm";
 import React from "react";
 
 export default function JoinUs() {
@@ -9,17 +11,22 @@ export default function JoinUs() {
       }}
     >
       <div className="relative z-10 md:space-y-4 space-y-3 text-center max-w-2xl m-auto">
-        <h1 className="md:text-3xl text-2xl tracking-wide">
-          Be part of the Founders Club
+        <h1 className="md:text-3xl text-2xl tracking-wide font-medium">
+          Be a part of the Founders Club
         </h1>
         <p className="text-neutral-700 font-light">
           Connect with like-minded founders, learn from industry leaders, and
           turn your ideas into reality through our workshops, events, and
           community.
         </p>
-        <button className="px-4 py-2 rounded-2xl bg-white cursor-pointer mb-4 hover:scale-105 hover:brightness-110 transition-all duration-300 ease-in-out text-[#9258D2]">
-          Join now
-        </button>
+        <Dialog>
+          <DialogTrigger asChild>
+            <button className="px-4 py-2 rounded-2xl bg-white cursor-pointer mb-4 hover:scale-105 hover:brightness-110 transition-all duration-300 ease-in-out text-[#9258D2]">
+              Join now
+            </button>
+          </DialogTrigger>
+          <JoinUsForm />
+        </Dialog>
       </div>
       {/* <img
         src="/team2.JPG"
