@@ -46,6 +46,34 @@ const TEAM = [
     position: "Graphic Designer",
     contact: "",
   },
+  {
+    name: "Lisa Lin",
+    src: "/team/lisalin.jpg",
+    bio: "Hi! I'm a sophomore Economics major at Hunter, and I'm always excited to make new connections!",
+    position: "Treasurer Intern",
+    contact: "https://www.linkedin.com/in/lisalin4219/",
+  },
+  {
+    name: "Josiah Balkissoon",
+    src: "/team/josiahbalkissoon.jpg",
+    bio: "Econ & Business Studies major. Former IBM dev. Training in the martial art of Jeet Kune Do. In pursuit of greatness.",
+    position: "Treasurer / Marketing",
+    contact: "https://www.linkedin.com/in/josiah-balkissoon",
+  },
+  {
+    name: "Jaho (Jay) Music",
+    src: "/team/jaho(jay)music.jpg",
+    bio: "Hi, I am a freshman, major undeclared.",
+    position: "Marketing Intern",
+    contact: "",
+  },
+  {
+    name: "Don Suhanda",
+    src: "/team/donsuhanda.jpg",
+    bio: "Hey, I am a junior majoring in CS and minoring in Music. I love playing the piano in my free time and am currently reading Paradise Lost!.",
+    position: "EVENT COORDINATOR",
+    contact: "",
+  },
 ];
 
 export default function OurTeam() {
