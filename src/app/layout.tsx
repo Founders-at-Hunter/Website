@@ -4,6 +4,8 @@ import "./globals.css";
 import { RootProvider } from "fumadocs-ui/provider";
 import { Toaster } from "sonner";
 import NavMenu from "@/components/ui/NavMenu";
+import JoinUs from "./_components/JoinUs";
+import Footer from "./_components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,7 +27,11 @@ export default function RootLayout({
       <body className={inter.className} id="portal-root">
         <RootProvider>
           <NavMenu />
-          <main className="mt-[82px] max-w-[1920px] mx-auto">{children}</main>
+          <main className="mt-[82px] max-w-[1920px] mx-auto">
+            {children}
+            <JoinUs />
+            <Footer />
+          </main>
           <Toaster />
         </RootProvider>
       </body>

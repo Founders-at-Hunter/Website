@@ -18,10 +18,13 @@ export async function POST(request: Request) {
   const supabase = await createClient();
   const body = await request.json();
   const { name, email } = body;
+  console.log(name, email);
   const { data, error } = await supabase
     .from("Emails")
     .insert({ name, email })
     .select();
+
+  console.log(error);
 
   return NextResponse.json(JSON.stringify({ data, error }), {
     status: error ? 400 : 201,

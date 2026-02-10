@@ -2,41 +2,49 @@
   {
     "title": "Sip & Connect",
     "subtitle": "Grow your Network",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus exercitationem totam voluptatum libero unde minus sapiente eaque accusantium quae.",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus labore soluta doloribus laudantium distinctio cum quasi nostrum unde quisquam inventore assumenda consectetur, commodi tempore! Nulla molestiae iure maiores dolorem nemo suscipit tenetur.",
     "date": "Feb 13",
     "room": "W706",
     "time": "12 - 1 PM",
     "photo": "/sip&connect.webp",
-    "link": "https://luma.com/xemv76tt?utm_source=embed"
+    "link": "https://luma.com/xemv76tt?utm_source=embed",
+    "tags": ["Networking", "Professional Development"],
+    "calendarLink": ""
   },
   {
     "title": "Game Night",
     "subtitle": "Unwind and Play",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quos placeat quia veniam veritatis inventore rerum, pariatur illum.",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis cum inventore reiciendis blanditiis velit voluptatem totam at possimus officia sed accusantium dignissimos cupiditate dolor facere ex ipsam dolorem, harum enim?",
     "date": "Mar 7",
     "room": "W118",
     "time": "6 - 8 PM",
     "photo": "/gamenight.jpg",
-    "link": "/"
+    "link": "/",
+    "tags": ["Fun", "Social"],
+    "calendarLink": ""
   },
   {
     "title": "Open Mic Night",
     "subtitle": "Share Your Talent",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe tempore necessitatibus autem accusantium similique libero.",
+    "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo ipsa aliquid fugiat rerum corrupti perspiciatis, modi eos sunt veniam repellat. Nisi omnis alias cumque, eaque quisquam repudiandae aliquam praesentium pariatur mollitia.",
     "date": "Mar 21",
     "room": "W204",
     "time": "7 - 9 PM",
     "photo": "/openmic.jpg",
-    "link": "/"
+    "link": "/",
+    "tags": ["Networking", "Public Speaking"],
+    "calendarLink": ""
   },
   {
     "title": "Creative Workshop",
     "subtitle": "Make Something New",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates repellat ipsum minus dolore consequatur saepe.",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima consequatur earum facilis sed repudiandae labore perspiciatis, exercitationem quasi sequi, praesentium est dignissimos minus temporibus blanditiis inventore dolore voluptates atque asperiores ullam nisi voluptate veritatis non?",
     "date": "Apr 4",
     "room": "W309",
     "time": "3 - 5 PM",
     "photo": "/creativeworkshop.jfif",
-    "link": "/"
+    "link": "/",
+    "tags": ["Creative", "Innovation"],
+    "calendarLink": ""
   }
 ]

@@ -69,7 +69,7 @@ export default function JoinUsForm() {
             {registeredEmail
               ? `You've already registered with: ${registeredEmail}`
               : registerCount
-                ? `Join over ${registerCount} other like-minded students who have already registered`
+                ? `Join over ${Math.round(registerCount / 10) * 10} other like-minded students who have already registered`
                 : "Loading..."}
           </DialogDescription>
         </DialogHeader>
@@ -117,7 +117,8 @@ export default function JoinUsForm() {
             />
           </div>
           <small className="text-neutral-500 italic">
-            If you’ve attended one of our events, no registration is required.
+            If you’ve registered to one of our events, no registration is
+            required.
           </small>
           <DialogFooter>
             <DialogClose asChild>

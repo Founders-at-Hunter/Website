@@ -46,10 +46,10 @@ export default function NavMenu() {
             <Link
               href={href}
               key={index}
-              className={`transition-all duration-300 ${
+              className={`transition-all duration-300 tracking-wider ${
                 pathname === href
                   ? "underline underline-offset-4 text-main font-medium"
-                  : "text-black/60 hover:text-main/60"
+                  : "text-neutral-700 hover:text-main/60"
               }`}
             >
               {title}
