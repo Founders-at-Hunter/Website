@@ -20,21 +20,10 @@ export default function WhoWeAre() {
           Founded on: 10-27-2025
         </h4>
         <p className="text-neutral-700 mb-6 md:text-base text-sm">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis ad quas
-          assumenda laudantium exercitationem sint nemo cumque quasi et
-          doloremque asperiores quisquam repudiandae, accusantium amet ex,
-          dolorem suscipit esse nulla commodi voluptatibus maiores? Unde,
-          distinctio asperiores.
+          Founders @ Hunter was created by two computer science seniors who saw the need for a space where Hunter students could explore tech entrepreneurship beyond traditional corporate careers. After experiencing the energy of hackathons and networking events outside campus, the founders wanted to bring that collaborative spirit back to Hunter creating a community where students don't just network, but collide with ideas and build together.
         </p>
         <p className="text-neutral-700 md:text-base text-sm">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat totam
-          quibusdam laborum maxime assumenda, adipisci quasi, cum voluptates
-          accusantium tempora rem labore itaque sunt est harum officia in alias
-          porro. Cumque eius perspiciatis, nesciunt deleniti blanditiis at
-          deserunt obcaecati? Eius vero quaerat tempore veritatis animi, earum
-          ipsam commodi consequatur distinctio quam. Ratione magni voluptas
-          laudantium consequatur eos excepturi omnis, blanditiis non nostrum
-          eveniet ad.
+          With Professor Arabella Pollack from the Certificate in Business Studies program as our faculty adviser, we launched with a simple but powerful mission: connect students with complementary skills and empower them to explore alternative paths through hands on, community driven experiences. Whether you're a computer science major looking for a marketing genius, a designer seeking technical co-founders, or someone who just loves building things Founders @ Hunter is your launchpad. We're here to show that there are many ways to succeed, and not all of them lead to a corporate position.
         </p>
       </header>
       <aside>

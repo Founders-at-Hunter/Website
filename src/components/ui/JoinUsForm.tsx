@@ -28,7 +28,7 @@ export default function JoinUsForm() {
         const res = await fetch("/api/register", {
           method: "GET",
         });
-        const { data, error } = JSON.parse(await res.json());
+        const { data, error } = await res.json();
         if (error) {
           toast.error("An error occurred", {
             description: "Failed to fetch register user count.",

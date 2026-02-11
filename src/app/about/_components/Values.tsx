@@ -31,10 +31,7 @@ export default function Values() {
             Collaboration
           </h5>
           <p className="text-white font-light md:text-base text-sm">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum
-            voluptatum eius quas ducimus culpa error architecto facere
-            asperiores exercitationem, repellendus a reprehenderit molestias
-            pariatur!
+            We believe the best projects happen when diverse talents collide. Connect with students across majors to find your technical cofounder, marketing genius, or design partner. At Founders, collaboration is more than networking it's about building something together that none of us could create alone.
           </p>
         </div>
         <div
@@ -49,10 +46,7 @@ export default function Values() {
             Equity
           </h5>
           <p className="text-white font-light md:text-base text-sm">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum
-            voluptatum eius quas ducimus culpa error architecto facere
-            asperiores exercitationem, repellendus a reprehenderit molestias
-            pariatur!
+            Everyone deserves a seat at the table. We're committed to making entrepreneurship accessible to all Hunter students, regardless of major, background, or experience level. Whether you're a first time builder or a seasoned hacker, Founders provides the resources, mentorship, and community support to help you succeed on your own terms.
           </p>
         </div>
         <div
@@ -67,10 +61,7 @@ export default function Values() {
             Integrity
           </h5>
           <p className="text-white font-light md:text-base text-sm">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum
-            voluptatum eius quas ducimus culpa error architecto facere
-            asperiores exercitationem, repellendus a reprehenderit molestias
-            pariatur!
+            We build with honesty and transparency at our core. From the products we create to the relationships we foster, integrity guides every decision. We support each other with genuine feedback, celebrate authentic wins, and believe that the best startups are built on trust and ethical innovation.
           </p>
         </div>
         <div
@@ -85,10 +76,7 @@ export default function Values() {
             Innovation
           </h5>
           <p className="text-white font-light md:text-base text-sm">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum
-            voluptatum eius quas ducimus culpa error architecto facere
-            asperiores exercitationem, repellendus a reprehenderit molestias
-            pariatur!
+            We embrace the spirit of experimentation and creative problem solving. From launching new products to exploring unconventional career paths, innovation is about challenging the status quo and learning by doing. At Founders, we encourage bold ideas, celebrate failures as learning opportunities, and push each other to think beyond traditional boundaries.
           </p>
         </div>
       </section>

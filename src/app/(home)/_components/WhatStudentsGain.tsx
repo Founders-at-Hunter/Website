@@ -95,12 +95,10 @@ export default function WhatStudentsGain() {
               <RiCodeSSlashLine />
             </div>
             <h5 className="font-semibold tracking-wide md:text-2xl text-xl mb-1">
-              Lorem, ipsum dolor.
+              Showcase your work
             </h5>
             <p className="text-neutral-700 mb-3 md:text-base text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-              eveniet inventore adipisci iusto nam dolore saepe, voluptatibus
-              sequi?
+              Present your projects at demo days and pitch events. Get feedback from peers, connect with potential investors, and celebrate your wins with the community.
             </p>
             <button className="text-main flex items-center gap-2 cursor-pointer md:text-base text-sm">
               <span>Learn more </span>
