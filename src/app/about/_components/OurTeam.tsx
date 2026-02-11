@@ -26,7 +26,7 @@ const TEAM = [
     contact: "",
   },
   {
-    name: "Raffi Uddin",
+    name: "Rafi Uddin",
     src: "/team/rafiuddin.jpg",
     bio: "Hey, I love playing soccer and learning more about the world. 🤙",
     position: "Photographer",
