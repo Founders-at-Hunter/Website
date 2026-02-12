@@ -3,20 +3,19 @@ import React from "react";
 import events from "@/constants/events.json";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 export default function EventList({
   eventFilter,
 }: {
   eventFilter: "newest" | "past" | "all";
 }) {
-  const router = useRouter();
   return (
     <div className="md:px-8 px-6 md:py-6 py-4 flex flex-col gap-6">
       {events.map((event, index) => (
         <section
           key={index}
-          className="bg-neutral-100 rounded-2xl md:grid grid-cols-10 overflow-hidden hover:scale-101 transition-all duration-300 ease-in-out cursor-pointer"
-          onClick={() => router.push("/events/" + event.title)}
+          className="bg-neutral-100 rounded-2xl md:grid grid-cols-10 overflow-hidden hover:scale-101 transition-all duration-300 ease-in-out"
         >
           <div className="xl:col-span-3 md:col-span-4 relative overflow-hidden">
             <img
@@ -55,13 +54,16 @@ export default function EventList({
             <div className="flex items-center justify-end gap-2">
               <Link
                 className="text-main px-3 py-1.5 rounded-lg hover:brightness-110 hover:scale-105 transition-all duration-300 ease-in-out"
-                href={event.calendarLink}
+                href={`/events/${event.title}`}
               >
-                Add to calendar
+                Learn more
               </Link>
               <Link
                 href={event.link}
-                className="bg-main text-white px-3 py-1.5 rounded-lg hover:brightness-110 hover:scale-105 transition-all duration-300 ease-in-out"
+                className={cn(
+                  "bg-main text-white px-3 py-1.5 rounded-lg hover:brightness-110 hover:scale-105 transition-all duration-300 ease-in-out",
+                  event.link === "" ? "pointer-events-none opacity-50" : "",
+                )}
                 target="_blank"
               >
                 Join event

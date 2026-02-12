@@ -51,39 +51,50 @@ export default function Events() {
                   </p>
                 </aside>
               </header>
-              <p className="text-neutral-500 mb-6 md:text-base text-sm">
+              <p className="text-neutral-500 mb-4 md:text-base text-sm line-clamp-3">
                 {event.description}
               </p>
               <ul className="mb-2 grid grid-cols-3 gap-2 items-stretch mt-auto">
-                <li className="flex flex-col bg-white px-4 py-2 border-b border-main rounded-xl">
-                  <p className="text-sm font-light tracking-wider text-neutral-600">
+                <li className="flex flex-col gap-0.5 bg-white px-4 py-2 border-b border-main rounded-xl">
+                  <p className="text-xs font-light tracking-wider text-neutral-500">
                     Date
                   </p>
                   <span className="font-bold text-sm">{event.date}</span>
                 </li>
-                <li className="flex flex-col bg-white px-4 py-2 border-b border-main rounded-xl">
-                  <p className="text-sm font-light tracking-wider text-neutral-600">
+                <li className="flex flex-col gap-0.5 bg-white px-4 py-2 border-b border-main rounded-xl">
+                  <p className="text-xs font-light tracking-wider text-neutral-500">
                     Time
                   </p>
                   <span className="font-bold text-sm">{event.time}</span>
                 </li>
-                <li className="flex flex-col bg-white px-4 py-2 border-b border-main rounded-xl">
-                  <p className="text-sm font-light tracking-wider text-neutral-600">
+                <li className="flex flex-col gap-0.5 bg-white px-4 py-2 border-b border-main rounded-xl">
+                  <p className="text-xs font-light tracking-wider text-neutral-500">
                     Room
                   </p>
                   <span className="font-bold text-sm">{event.room}</span>
                 </li>
               </ul>
-              <Link
-                className={cn(
-                  "bg-main/7.5 w-full px-4 py-3 rounded-xl text-main block text-center hover:scale-105 transition-all duration-300 ease-in-out hover:brightness-110 md:text-base text-sm",
-                  event.link ? "" : "pointer-events-none opacity-50",
-                )}
-                href={event.link}
-                target="_blank"
-              >
-                Learn more
-              </Link>
+              <div className="grid grid-cols-2 gap-2">
+                <Link
+                  className={cn(
+                    "bg-main/10 w-full px-4 py-3 rounded-xl text-main block text-center hover:scale-105 transition-all duration-300 ease-in-out hover:brightness-110 md:text-base text-sm",
+                  )}
+                  href={`/events/${event.title}`}
+                  target="_blank"
+                >
+                  Learn more
+                </Link>
+                <Link
+                  className={cn(
+                    "bg-main w-full px-4 py-3 rounded-xl text-white block text-center hover:scale-105 transition-all duration-300 ease-in-out hover:brightness-110 md:text-base text-sm",
+                    event.link === "" ? "pointer-events-none opacity-50" : "",
+                  )}
+                  href={event.link}
+                  target="_blank"
+                >
+                  Join event
+                </Link>
+              </div>
             </div>
           );
         })}
@@ -92,7 +103,7 @@ export default function Events() {
   );
 }
 
-function hasDatePassed(dateStr: string) {
+export function hasDatePassed(dateStr: string) {
   const now = new Date();
   const year = now.getFullYear();
 

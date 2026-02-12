@@ -2,8 +2,9 @@ import Link from "next/link";
 import React from "react";
 import { GoArrowLeft } from "react-icons/go";
 import events from "@/constants/events.json";
-import { Calendar } from "@/components/ui/calendar";
 import { LuArrowUpRight, LuShare } from "react-icons/lu";
+import EventAside from "./_components/EventAside";
+import { hasDatePassed } from "@/app/(home)/_components/Events";
 
 export default async function Event({
   params,
@@ -30,54 +31,84 @@ export default async function Event({
         <img
           src={event.photo}
           alt={event.title}
-          className="w-full xl:aspect-[10/2] md:aspect-[8/2] aspect-[6/2] object-cover rounded-2xl mb-3"
+          className="w-full xl:aspect-[10/2] md:aspect-[8/2] aspect-[6/2] object-cover rounded-2xl mb-4"
         />
         <div className="absolute top-4 right-4 flex items-center gap-2">
-          <button className="bg-white outline outline-neutral-200 text-neutral-700 rounded-xl px-3 py-1.5 text-sm cursor-pointer">
+          <button className="rounded-full bg-white/20 backdrop-blur-sm outline outline-white/30 px-4 py-1.5 text-white font-light text-sm">
             <LuShare className="text-lg" />
           </button>
-          <button className="bg-white outline outline-neutral-200 text-neutral-700 rounded-xl px-3 py-1.5 text-sm cursor-pointer">
+          <button className="rounded-full bg-white/20 backdrop-blur-sm outline outline-white/30 px-4 py-1.5 text-white font-light text-sm">
             <LuArrowUpRight className="text-lg" />
           </button>
         </div>
       </div>
-      <div className="grid md:grid-cols-10 gap-x-6 gap-y-4">
-        <div className="xl:col-span-8 md:col-span-7">
-          <header>
-            <h5 className="text-[hsl(44,100%,48%)] font-medium">
+      <div className="grid sm:grid-cols-10 gap-x-6 gap-y-4">
+        <div className="xl:col-span-8 lg:col-span-7 sm:col-span-6 p-2">
+          <header className="mb-2">
+            <h5 className="text-[hsl(44,100%,48%)] font-medium mb-1 md:text-base text-sm">
               {event.subtitle}
             </h5>
-            <h1 className="md:text-3xl text-2xl font-medium tracking-wide mb-2">
+            <h1 className="md:text-3xl text-2xl font-medium tracking-wide mb-1">
               {event.title}
             </h1>
-            <p className="text-neutral-700 text-lg">{event.description}</p>
+            <p className="text-neutral-500 mb-4 md:text-base text-sm">
+              {event.description}
+            </p>
+            {event.itinerary.length ? (
+              <>
+                <ul className="mb-4 text-neutral-500 flex flex-col gap-1 md:text-base text-sm">
+                  {event.itinerary.map((itinerary, index) => (
+                    <li key={index}>{itinerary}</li>
+                  ))}
+                </ul>
+              </>
+            ) : null}
+            <p className="text-neutral-500 md:text-base text-sm">
+              ​Join our communities to keep up with future events here: <br />
+              <Link
+                href="https://linktr.ee/hunter.founders"
+                className="text-main"
+              >
+                https://linktr.ee/hunter.founders
+              </Link>
+            </p>
           </header>
-          <ul className="flex flex-col gap-1">
-            <li>
-              Date:{" "}
-              <span className="font-bold tracking-wide ml-2">{event.date}</span>
-            </li>
-            <li>
-              Time:{" "}
-              <span className="font-bold tracking-wide ml-2">{event.time}</span>
-            </li>
-            <li>
-              Room:{" "}
-              <span className="font-bold tracking-wide ml-2">{event.room}</span>
-            </li>
+          <ul className="flex flex-wrap gap-2 mb-6">
+            {event.tags.map((tag, index) => (
+              <li
+                key={index}
+                className="py-1.5 px-3 rounded-md bg-neutral-100 text-neutral-500 italic md:text-sm text-xs"
+              >
+                # {tag}
+              </li>
+            ))}
           </ul>
+          <h5 className="font-medium mb-2">
+            {hasDatePassed(event.date) ? "Previous events" : "Upcoming events"}
+          </h5>
+          <section className="flex overflow-auto gap-4 mb-4">
+            {events.map((event, index) => (
+              <Link
+                key={index}
+                className="w-full text-left p-3 rounded-2xl bg-neutral-100 flex items-center gap-3 shrink-0 max-w-xs"
+                href={"/events/" + event.title}
+              >
+                <img
+                  src={event.photo}
+                  alt={event.title}
+                  className="aspect-square object-cover size-14 w-fit rounded-lg"
+                />
+                <header className="space-y-0.5">
+                  <h5 className="text-neutral-700 font-medium text-sm">
+                    {event.title}
+                  </h5>
+                  <p className="text-neutral-500 text-xs">{event.subtitle}</p>
+                </header>
+              </Link>
+            ))}
+          </section>
         </div>
-        <aside className="xl:col-span-2 md:col-span-3 w-full">
-          {JSON.stringify(
-            new Date(`${event.date}, ${new Date().getFullYear()}`),
-          )}
-          <Calendar
-            mode="single"
-            className="rounded-lg w-full outline outline-neutral-200 bg-white drop-shadow-xs"
-            selected={new Date()}
-          />
-          {/* Calendar, Past / Upcoming events, Share this event */}
-        </aside>
+        <EventAside event={event} />
       </div>
     </div>
   );
