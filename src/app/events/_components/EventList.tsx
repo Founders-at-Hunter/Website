@@ -1,15 +1,10 @@
-"use client";
 import React from "react";
 import events from "@/constants/events.json";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-export default function EventList({
-  eventFilter,
-}: {
-  eventFilter: "newest" | "past" | "all";
-}) {
+export default function EventList() {
   return (
     <div className="md:px-8 px-6 md:py-6 py-4 flex flex-col gap-6">
       {events.map((event, index) => (
@@ -18,9 +13,11 @@ export default function EventList({
           className="bg-neutral-100 rounded-2xl md:grid grid-cols-10 overflow-hidden hover:scale-101 transition-all duration-300 ease-in-out"
         >
           <div className="xl:col-span-3 md:col-span-4 relative overflow-hidden">
-            <img
+            <Image
               src={event.photo}
               alt={event.title}
+              width={600}
+              height={300}
               className="aspect-[4/2] object-cover w-full h-full"
             />
             <div

@@ -1,16 +1,6 @@
-import { cn } from "@/lib/utils";
 import React from "react";
-import { MdSearch } from "react-icons/md";
 
-export default function EventHeader({
-  eventFilter,
-  setEventFilter,
-}: {
-  eventFilter: "newest" | "past" | "all";
-  setEventFilter: React.Dispatch<
-    React.SetStateAction<"newest" | "past" | "all">
-  >;
-}) {
+export default function EventHeader() {
   return (
     <header className="md:px-8 px-6 md:py-6 py-4">
       <h1 className="md:text-3xl text-2xl tracking-wide font-medium md:mb-3 mb-2">

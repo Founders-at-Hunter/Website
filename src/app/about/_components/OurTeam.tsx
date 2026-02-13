@@ -1,5 +1,6 @@
 import { Highlighter } from "@/components/ui/highlighter";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -13,7 +14,7 @@ const TEAM = [
   },
   {
     name: "Ray Chu",
-    src: "/team/raychu.png",
+    src: "/team/raychu.PNG",
     bio: "👋 Hello, I am a freshman studying CS as a Daedalus Scholar. I also made this website.",
     position: "Tech Lead",
     contact: "https://www.linkedin.com/in/raychu83/",
@@ -95,9 +96,11 @@ export default function OurTeam() {
             className="rounded-2xl overflow-hidden relative hover:scale-103 transition-all duration-300 ease-in-out"
             key={index}
           >
-            <img
+            <Image
               src={teamMember.src}
               alt={teamMember.name}
+              width={400}
+              height={600}
               className="aspect-[2/3] object-cover brightness-125"
             />
             <div

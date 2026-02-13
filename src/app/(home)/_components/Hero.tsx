@@ -1,6 +1,7 @@
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import { Highlighter } from "@/components/ui/highlighter";
 import JoinUsForm from "@/components/ui/JoinUsForm";
+import Image from "next/image";
 import React from "react";
 
 export default function Hero() {
@@ -59,9 +60,11 @@ export default function Hero() {
         </div>
       </aside>
       <aside>
-        <img
+        <Image
           src="/DSC00870.JPG"
           alt="Mission Banner"
+          width={815}
+          height={871}
           className="w-full max-w-lg h-full aspect-[1629/1741] rounded-[50%_50%_30%_70%/60%_40%_60%_40%] overflow-hidden md:ml-auto md:mr-0 mx-auto saturate-0"
         />
       </aside>

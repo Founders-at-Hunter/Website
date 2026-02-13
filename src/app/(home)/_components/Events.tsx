@@ -1,4 +1,5 @@
 import { Highlighter } from "@/components/ui/highlighter";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import events from "@/constants/events.json";
@@ -37,9 +38,11 @@ export default function Events() {
               key={index}
             >
               <header className="flex items-center gap-4 mb-3">
-                <img
+                <Image
                   src={event.photo}
                   alt={`${event.title} event`}
+                  width={80}
+                  height={80}
                   className="object-cover aspect-square md:size-20 size-18 rounded-2xl"
                 />
                 <aside>

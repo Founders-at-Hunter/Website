@@ -31,7 +31,7 @@ export default function Values() {
             Collaboration
           </h5>
           <p className="text-white font-light md:text-base text-sm">
-            We believe the best projects happen when diverse talents collide. Connect with students across majors to find your technical cofounder, marketing genius, or design partner. At Founders, collaboration is more than networking it's about building something together that none of us could create alone.
+            We believe the best projects happen when diverse talents collide. Connect with students across majors to find your technical cofounder, marketing genius, or design partner. At Founders, collaboration is more than networking it&apos;s about building something together that none of us could create alone.
           </p>
         </div>
         <div
@@ -46,7 +46,7 @@ export default function Values() {
             Equity
           </h5>
           <p className="text-white font-light md:text-base text-sm">
-            Everyone deserves a seat at the table. We're committed to making entrepreneurship accessible to all Hunter students, regardless of major, background, or experience level. Whether you're a first time builder or a seasoned hacker, Founders provides the resources, mentorship, and community support to help you succeed on your own terms.
+            Everyone deserves a seat at the table. We&apos;re committed to making entrepreneurship accessible to all Hunter students, regardless of major, background, or experience level. Whether you&apos;re a first time builder or a seasoned hacker, Founders provides the resources, mentorship, and community support to help you succeed on your own terms.
           </p>
         </div>
         <div

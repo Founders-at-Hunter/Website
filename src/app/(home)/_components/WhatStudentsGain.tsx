@@ -1,4 +1,5 @@
 import { Highlighter } from "@/components/ui/highlighter";
+import Image from "next/image";
 import React from "react";
 import { GoArrowRight, GoPeople } from "react-icons/go";
 import { RiCodeSSlashLine } from "react-icons/ri";
@@ -38,9 +39,11 @@ export default function WhatStudentsGain() {
             </button>
           </header>
           <div className="ml-6 relative">
-            <img
+            <Image
               src="/connectwithentrepreneurs.jpg"
               alt="Connect with entrepreneurs photo"
+              width={600}
+              height={400}
               className="absolute h-full right-0 object-cover rounded-tl-4xl drop-shadow-2xl drop-shadow-black/25"
             />
           </div>
@@ -63,9 +66,11 @@ export default function WhatStudentsGain() {
             </button>
           </header>
           <div className="ml-6 xl:mt-6 relative">
-            <img
+            <Image
               src="/hunter-students-group-laptop-lg-768x432.jpg.optimal.jpg"
               alt="Build real projects photo"
+              width={768}
+              height={432}
               className="absolute h-full right-0 object-cover rounded-tl-4xl drop-shadow-2xl drop-shadow-black/25"
             />
           </div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function WhoWeAre() {
@@ -20,16 +21,18 @@ export default function WhoWeAre() {
           Founded on: 10-27-2025
         </h4>
         <p className="text-neutral-700 mb-6 md:text-base text-sm">
-          Founders @ Hunter was created by two computer science seniors who saw the need for a space where Hunter students could explore tech entrepreneurship beyond traditional corporate careers. After experiencing the energy of hackathons and networking events outside campus, the founders wanted to bring that collaborative spirit back to Hunter creating a community where students don't just network, but collide with ideas and build together.
+          Founders @ Hunter was created by two computer science seniors who saw the need for a space where Hunter students could explore tech entrepreneurship beyond traditional corporate careers. After experiencing the energy of hackathons and networking events outside campus, the founders wanted to bring that collaborative spirit back to Hunter creating a community where students don&apos;t just network, but collide with ideas and build together.
         </p>
         <p className="text-neutral-700 md:text-base text-sm">
-          With Professor Arabella Pollack from the Certificate in Business Studies program as our faculty adviser, we launched with a simple but powerful mission: connect students with complementary skills and empower them to explore alternative paths through hands on, community driven experiences. Whether you're a computer science major looking for a marketing genius, a designer seeking technical co-founders, or someone who just loves building things Founders @ Hunter is your launchpad. We're here to show that there are many ways to succeed, and not all of them lead to a corporate position.
+          With Professor Arabella Pollack from the Certificate in Business Studies program as our faculty adviser, we launched with a simple but powerful mission: connect students with complementary skills and empower them to explore alternative paths through hands on, community driven experiences. Whether you&apos;re a computer science major looking for a marketing genius, a designer seeking technical co-founders, or someone who just loves building things Founders @ Hunter is your launchpad. We&apos;re here to show that there are many ways to succeed, and not all of them lead to a corporate position.
         </p>
       </header>
       <aside>
-        <img
-          src="/team.jpg"
+        <Image
+          src="/team.JPG"
           alt="Our team"
+          width={512}
+          height={512}
           className="w-full h-full max-w-lg lg:ml-auto lg:mr-0 mx-auto saturate-0 object-cover rounded-2xl"
         />
       </aside>

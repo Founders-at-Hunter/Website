@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { GoArrowLeft } from "react-icons/go";
@@ -28,9 +29,11 @@ export default async function Event({
         <span>All events</span>
       </Link>
       <div className="relative">
-        <img
+        <Image
           src={event.photo}
           alt={event.title}
+          width={1200}
+          height={240}
           className="w-full xl:aspect-[10/2] md:aspect-[8/2] aspect-[6/2] object-cover rounded-2xl mb-4"
         />
         <div className="absolute top-4 right-4 flex items-center gap-2">
@@ -93,9 +96,11 @@ export default async function Event({
                 className="w-full text-left p-3 rounded-2xl bg-neutral-100 flex items-center gap-3 shrink-0 max-w-xs"
                 href={"/events/" + event.title}
               >
-                <img
+                <Image
                   src={event.photo}
                   alt={event.title}
+                  width={56}
+                  height={56}
                   className="aspect-square object-cover size-14 w-fit rounded-lg"
                 />
                 <header className="space-y-0.5">
