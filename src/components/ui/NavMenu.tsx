@@ -10,6 +10,7 @@ import { Dialog, DialogTrigger } from "./dialog";
 import { cn } from "@/lib/utils";
 import { GoArrowRight } from "react-icons/go";
 import JoinUsForm from "./JoinUsForm";
+import ContactForm from "./ContactForm";
 
 export default function NavMenu() {
   const [navOpened, setNavOpened] = useState(false);
@@ -55,6 +56,16 @@ export default function NavMenu() {
               {title}
             </Link>
           ))}
+          <Dialog>
+            <DialogTrigger asChild>
+              <button
+                className={`transition-all duration-300 tracking-wider text-neutral-700 hover:text-main/60 cursor-pointer`}
+              >
+                Contact
+              </button>
+            </DialogTrigger>
+            <ContactForm />
+          </Dialog>
         </div>
         <aside className="flex items-center gap-4">
           <Dialog>
@@ -112,6 +123,17 @@ export default function NavMenu() {
                     <GoArrowRight className="text-xl" />
                   </Link>
                 ))}
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <button
+                      className={`w-full flex items-center justify-between p-4 transition-all duration-300 hover:bg-main/5 active:bg-main/5 text-black/60 hover:text-main/60`}
+                    >
+                      Contact
+                      <GoArrowRight className="text-xl" />
+                    </button>
+                  </DialogTrigger>
+                  <ContactForm />
+                </Dialog>
               </div>
               <div className="p-4 w-full">
                 <Dialog>

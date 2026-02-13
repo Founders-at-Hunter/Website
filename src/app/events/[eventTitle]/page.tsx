@@ -34,7 +34,7 @@ export default async function Event({
           alt={event.title}
           className="w-full xl:aspect-[10/2] md:aspect-[8/2] aspect-[6/2] object-cover"
         />
-        <div
+        {/* <div
           className="absolute top-0 left-0 w-full h-full z-5"
           style={{
             backgroundImage:
@@ -48,7 +48,7 @@ export default async function Event({
           <button className="rounded-full bg-white/20 backdrop-blur-sm outline outline-white/30 px-4 py-1.5 text-white font-light text-sm">
             <LuArrowUpRight className="text-lg" />
           </button>
-        </div>
+        </div> */}
       </div>
       <div className="grid sm:grid-cols-10 gap-x-6 gap-y-4">
         <div className="xl:col-span-8 lg:col-span-7 sm:col-span-6 p-2">

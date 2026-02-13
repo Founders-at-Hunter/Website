@@ -35,6 +35,7 @@ export default function JoinUsForm() {
           });
           return;
         }
+        console.log(data, error);
         setRegisterCount(data);
       };
       fetchRegisterCount();
@@ -43,6 +44,19 @@ export default function JoinUsForm() {
 
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (registeredEmail) {
+      toast.error("You already have an email registered");
+      return;
+    }
+
+    if (!registerValues.name || !registerValues.email) {
+      toast.error("Your register form is incomplete", {
+        description: "Please try again or refresh",
+      });
+      return;
+    }
+
     const res = await fetch("/api/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -57,6 +71,8 @@ export default function JoinUsForm() {
       toast.error("Failed to register. Please try again.");
     }
   };
+
+  console.log(registerCount);
 
   return (
     <>
@@ -139,7 +155,11 @@ export default function JoinUsForm() {
                   "linear-gradient(to top, #5f259f 0%, #9258d2 100%)",
               }}
               type="submit"
-              disabled={!!registeredEmail}
+              disabled={
+                !!registeredEmail ||
+                !registerValues.name ||
+                !registerValues.email
+              }
             >
               Join
             </button>

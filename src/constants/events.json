@@ -1,5 +1,23 @@
 [
   {
+    "title": "Club Kickoff",
+    "subtitle": "Grow your Network",
+    "description": "Join us for the official kickoff event for Founders @ Hunter! This is your chance to meet the team, learn about our mission, and get a hands-on feel for what our club is about. Hosted by the Founders @ Hunter E-Board, this event is a relaxed but focused introduction to the world of startups and product building. Whether you're a seasoned coder, a business strategist, or just curious about entrepreneurship, you have a place here. This session is designed to be practical, collaborative, and action-oriented. Come ready to brainstorm, meet potential co-founders, and leave with a concrete sketch of a new idea. ​What to Bring: 1. A laptop or notebook for brainstorming 2. Your ideas and curiosity",
+    "itinerary": [
+      "1:30 PM - 2:00 PM: Welcome & Club Vision - Check-in, grab a seat, and meet other creative students. We'll give a brief introduction to the club, our mission, and the exciting events we have planned for the year.",
+      "​​2:00 PM - 2:30 PM: Pizza & Networking - Enjoy some free pizza while participating in a few fun, fast-paced icebreakers designed to get you thinking like a founder.",
+      "​2:30 PM - 3:30 PM: The Build Hour - This is where the action happens. Team up with other students to tackle a problem and brainstorm a startup idea in just 60 minutes. No coding is required — the goal is to flesh out a concept, strategy, and a business model.",
+      "​​3:30 PM - 4:30 PM: Demos, Prizes & Wrap-up - ​Teams will get a chance to present their ideas in a quick-fire pitch session. We'll have a few small prizes for the top ideas and an Audience Favorite award."
+    ],
+    "date": "Nov 4 2025",
+    "room": "TH 205",
+    "time": "1:30 - 4:30PM",
+    "photo": "/kickoff.avif",
+    "link": "https://luma.com/lt0oodaz?from=embed",
+    "tags": ["Tech"],
+    "calendarLink": ""
+  },
+  {
     "title": "Movie Night",
     "subtitle": "Grow your Network",
     "description": "Join Founders @ Hunter for an afternoon of cinema, conversation, and caffeine. We are screening the 2015 biopic Steve Jobs, written by Aaron Sorkin and directed by Danny Boyle. This isn't just a biography; it's a high-stakes look at the backstage drama behind three iconic product launches that defined the digital revolution. It's a case study in vision, the 'reality distortion field,' and the relentless drive required to build something that changes the world. ​Come for the movie, stay to dissect the mind of a founder with your peers. Food and Drinks will be served!",
@@ -32,7 +50,7 @@
     "date": "Feb 13 2026",
     "room": "TH 208/9",
     "time": "2:30 - 4:30 PM",
-    "photo": "/sip&connect.webp",
+    "photo": "/sip&connect.avif",
     "link": "https://luma.com/xemv76tt?utm_source=embed",
     "tags": ["Networking", "Professional Development"],
     "calendarLink": ""

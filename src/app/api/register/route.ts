@@ -8,6 +8,8 @@ export async function GET() {
     .from("Emails")
     .select("*", { count: "exact", head: true });
 
+  console.log(count, error);
+
   return NextResponse.json(JSON.stringify({ data: count, error }), {
     status: error ? 400 : 201,
   });

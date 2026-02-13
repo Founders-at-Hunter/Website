@@ -12,7 +12,7 @@ export default function EventHeader({
 }) {
   return (
     <header className="md:px-8 md:pt-6 pt-4 px-4">
-      <h1 className="md:text-3xl text-2xl tracking-wide font-medium md:mb-3 mb-2">
+      <h1 className="md:text-3xl text-2xl font-medium md:mb-3 mb-2">
         Our Events
       </h1>
       <div className="flex flex-col gap-2">
