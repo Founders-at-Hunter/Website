@@ -1,5 +1,24 @@
 [
   {
+    "title": "Movie Night",
+    "subtitle": "Grow your Network",
+    "description": "Join Founders @ Hunter for an afternoon of cinema, conversation, and caffeine. We are screening the 2015 biopic Steve Jobs, written by Aaron Sorkin and directed by Danny Boyle. This isn't just a biography; it's a high-stakes look at the backstage drama behind three iconic product launches that defined the digital revolution. It's a case study in vision, the 'reality distortion field,' and the relentless drive required to build something that changes the world. ​Come for the movie, stay to dissect the mind of a founder with your peers. Food and Drinks will be served!",
+    "itinerary": [
+      "​1:15 PM: Doors Open",
+      "​1:30 PM: Icebreakers",
+      "​2:00 PM: Screening: Steve Jobs",
+      "​4:00 PM: Founder Discussion",
+      "​​4:30 PM: Closing Remarks"
+    ],
+    "date": "Dec 5 2025",
+    "room": "",
+    "time": "1:30 - 4:30PM",
+    "photo": "/movienight.jpg",
+    "link": "https://luma.com/5k4380lv?from=embed",
+    "tags": ["Founders", "Movie", "Steve Jobs"],
+    "calendarLink": ""
+  },
+  {
     "title": "Sip & Connect",
     "subtitle": "Grow your Network",
     "description": "​Come join us for an afternoon of networking with fellow founders and meet the team behind Founders @ Hunter! Whether you're looking for a co-founder, a mentor, or just a reason to drink the best coffee in NYC, this is where you need to be! Join us for a quick LinkedIn workshop followed by a networking sprint and finish off with some delicious coffees and teas!",
@@ -10,51 +29,12 @@
       "​3:20 — Coffee is served!",
       "​4:15 — Final words and wrap-up!"
     ],
-    "date": "Feb 13",
+    "date": "Feb 13 2026",
     "room": "TH 208/9",
-    "time": "12 - 1 PM",
+    "time": "2:30 - 4:30 PM",
     "photo": "/sip&connect.webp",
     "link": "https://luma.com/xemv76tt?utm_source=embed",
     "tags": ["Networking", "Professional Development"],
-    "calendarLink": ""
-  },
-  {
-    "title": "Game Night",
-    "subtitle": "Unwind and Play",
-    "description": "Take a break from the grind and join us for a fun-filled evening of board games, card games, and video games! Whether you're into strategy, trivia, or just want to hang out, there's something for everyone. Snacks will be provided — just bring your competitive spirit!",
-    "itinerary": [],
-    "date": "Mar 7",
-    "room": "W118",
-    "time": "6 - 8 PM",
-    "photo": "/gamenight.jpg",
-    "link": "",
-    "tags": ["Fun", "Social"],
-    "calendarLink": ""
-  },
-  {
-    "title": "Open Mic Night",
-    "subtitle": "Share Your Talent",
-    "description": "Got a hidden talent? Step up to the mic and show it off! From poetry and stand-up to singing and freestyle, Open Mic Night is your chance to perform in a supportive, hype environment. Come to watch, come to perform, or come to do both — all are welcome!",
-    "itinerary": [],
-    "date": "Mar 21",
-    "room": "W204",
-    "time": "7 - 9 PM",
-    "photo": "/openmic.jpg",
-    "link": "",
-    "tags": ["Networking", "Public Speaking"],
-    "calendarLink": ""
-  },
-  {
-    "title": "Creative Workshop",
-    "subtitle": "Make Something New",
-    "description": "Roll up your sleeves and get creative! In this hands-on workshop, you'll brainstorm, prototype, and build something awesome alongside fellow makers and innovators. No experience needed — just bring your curiosity and imagination. Materials will be provided!",
-    "itinerary": [],
-    "date": "Apr 4",
-    "room": "W309",
-    "time": "3 - 5 PM",
-    "photo": "/creativeworkshop.jfif",
-    "link": "",
-    "tags": ["Creative", "Innovation"],
     "calendarLink": ""
   }
 ]

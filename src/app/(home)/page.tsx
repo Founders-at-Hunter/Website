@@ -5,7 +5,7 @@ import Events from "./_components/Events";
 import WhatStudentsGain from "./_components/WhatStudentsGain";
 
 export const metadata: Metadata = {
-  title: "Home | Founders @ Hunter",
+  title: "Home",
   description:
     "Building the next generation of student entrepreneurs at Hunter College. Join workshops, events, and a community of like-minded founders.",
 };

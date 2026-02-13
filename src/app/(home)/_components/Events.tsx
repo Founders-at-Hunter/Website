@@ -2,8 +2,8 @@ import { Highlighter } from "@/components/ui/highlighter";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import events from "@/constants/events.json";
 import { cn } from "@/lib/utils";
+import { getUpcomingEvents } from "@/constants/index";
 
 export default function Events() {
   return (
@@ -16,7 +16,9 @@ export default function Events() {
               "linear-gradient(to top, #5f259f 0%, #9258d2 100%)",
           }}
         >
-          4 upcoming events <span className="ml-1.5">🍎</span>
+          {getUpcomingEvents().length} upcoming event
+          {getUpcomingEvents().length !== 1 ? "s" : " "}
+          <span className="ml-1.5">🍎</span>
         </h6>
         <h2 className="md:text-3xl text-2xl font-medium mb-1 text-center">
           <Highlighter action="underline" color="#FFC72A" iterations={3}>
@@ -29,9 +31,7 @@ export default function Events() {
         </h3>
       </header>
       <section className="grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 items-stretch">
-        {events.map((event, index) => {
-          const isPast = hasDatePassed(event.date);
-          if (isPast) return null;
+        {getUpcomingEvents().map((event, index) => {
           return (
             <div
               className="flex flex-col rounded-2xl overflow-hidden relative p-6 bg-neutral-100 hover:scale-103 transition-all duration-300 ease-in-out"
@@ -62,19 +62,27 @@ export default function Events() {
                   <p className="text-xs font-light tracking-wider text-neutral-500">
                     Date
                   </p>
-                  <span className="font-bold text-sm">{event.date}</span>
+                  <span className="font-bold text-xs">
+                    {event.date
+                      ? event.date.split(" ").slice(0, 2).join(" ")
+                      : "-"}
+                  </span>
                 </li>
                 <li className="flex flex-col gap-0.5 bg-white px-4 py-2 border-b border-main rounded-xl">
                   <p className="text-xs font-light tracking-wider text-neutral-500">
                     Time
                   </p>
-                  <span className="font-bold text-sm">{event.time}</span>
+                  <span className="font-bold text-xs">
+                    {event.time ? event.time : "-"}
+                  </span>
                 </li>
                 <li className="flex flex-col gap-0.5 bg-white px-4 py-2 border-b border-main rounded-xl">
                   <p className="text-xs font-light tracking-wider text-neutral-500">
                     Room
                   </p>
-                  <span className="font-bold text-sm">{event.room}</span>
+                  <span className="font-bold text-xs">
+                    {event.room ? event.room : "-"}
+                  </span>
                 </li>
               </ul>
               <div className="grid grid-cols-2 gap-2">
@@ -104,17 +112,4 @@ export default function Events() {
       </section>
     </div>
   );
-}
-
-export function hasDatePassed(dateStr: string) {
-  const now = new Date();
-  const year = now.getFullYear();
-
-  const date = new Date(`${dateStr}, ${year}`);
-
-  // Normalize both to midnight so time of day doesn’t matter
-  date.setHours(0, 0, 0, 0);
-  now.setHours(0, 0, 0, 0);
-
-  return date < now;
 }

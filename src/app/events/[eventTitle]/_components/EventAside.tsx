@@ -3,6 +3,7 @@ import { Calendar } from "@/components/ui/calendar";
 import React, { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { hasDatePassed } from "@/constants";
 
 export default function EventAside({
   event,
@@ -22,10 +23,12 @@ export default function EventAside({
 }) {
   const [link, setLink] = useState("Loading...");
   const selectedDate = useMemo(
-    () => new Date(`${event.date}, ${new Date().getFullYear()}`),
+    () => new Date(event.date || Date.now()),
     [event.date],
   );
   const [month, setMonth] = useState(selectedDate);
+
+  const hasEventPassed = event.date ? hasDatePassed(event.date) : false;
 
   useEffect(() => {
     setLink(window.location.href);
@@ -40,7 +43,7 @@ export default function EventAside({
       <Calendar
         mode="single"
         className="rounded-lg w-full bg-white mb-2"
-        selected={selectedDate}
+        selected={event.date ? selectedDate : undefined}
         onSelect={() => {}}
         month={month}
         onMonthChange={setMonth}
@@ -50,24 +53,35 @@ export default function EventAside({
           <p className="text-xs font-light tracking-wider text-neutral-500">
             Date
           </p>
-          <span className="font-bold text-sm">{event.date}</span>
+          <span className="font-bold text-xs">
+            {event.date ? event.date.split(" ").slice(0, 2).join(" ") : "-"}
+          </span>
         </li>
         <li className="flex flex-col gap-0.5 px-4 py-2 bg-neutral-100 rounded-xl">
           <p className="text-xs font-light tracking-wider text-neutral-500">
             Time
           </p>
-          <span className="font-bold text-sm">{event.time}</span>
+          <span className="font-bold text-xs">
+            {event.time ? event.time : "-"}
+          </span>
         </li>
         <li className="flex flex-col gap-0.5 px-4 py-2 bg-neutral-100 rounded-xl">
           <p className="text-xs font-light tracking-wider text-neutral-500">
             Room
           </p>
-          <span className="font-bold text-sm">{event.room}</span>
+          <span className="font-bold text-xs">
+            {event.room ? event.room : "-"}
+          </span>
         </li>
       </ul>
       <div className="grid grid-cols-2 gap-2 mb-4">
         <Link
-          className="text-sm p-3 w-full rounded-xl text-main bg-main/10 block text-center hover:scale-103 transition-all duration-300 ease-in-out"
+          className={cn(
+            `text-sm p-3 w-full rounded-xl text-main bg-main/10 block text-center hover:scale-103 transition-all duration-300 ease-in-out`,
+            event.calendarLink === "" || hasEventPassed
+              ? "pointer-events-none opacity-50"
+              : "",
+          )}
           href={event.calendarLink}
           target="_blank"
         >
@@ -76,12 +90,14 @@ export default function EventAside({
         <Link
           className={cn(
             "text-sm p-3 w-full rounded-xl text-white bg-main block text-center hover:scale-103 transition-all duration-300 ease-in-out",
-            event.link === "" ? "pointer-events-none opacity-50" : "",
+            event.link === "" || hasEventPassed
+              ? "pointer-events-none opacity-50"
+              : "",
           )}
           href={event.calendarLink}
           target="_blank"
         >
-          Join Event
+          {hasEventPassed ? "Event passed" : "Join Event"}
         </Link>
       </div>
       <label htmlFor="share-event" className="mb-2 block font-medium">

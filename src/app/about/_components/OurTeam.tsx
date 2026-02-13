@@ -1,6 +1,5 @@
 import { Highlighter } from "@/components/ui/highlighter";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -96,11 +95,9 @@ export default function OurTeam() {
             className="rounded-2xl overflow-hidden relative hover:scale-103 transition-all duration-300 ease-in-out"
             key={index}
           >
-            <Image
+            <img
               src={teamMember.src}
               alt={teamMember.name}
-              width={400}
-              height={600}
               className="aspect-[2/3] object-cover brightness-125"
             />
             <div

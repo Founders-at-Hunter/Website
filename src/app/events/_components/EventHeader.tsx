@@ -1,19 +1,23 @@
+import { cn } from "@/lib/utils";
 import React from "react";
 
-export default function EventHeader() {
+export default function EventHeader({
+  eventFilter,
+  setEventFilter,
+}: {
+  eventFilter: "upcoming" | "past" | "all";
+  setEventFilter: React.Dispatch<
+    React.SetStateAction<"upcoming" | "past" | "all">
+  >;
+}) {
   return (
-    <header className="md:px-8 px-6 md:py-6 py-4">
+    <header className="md:px-8 md:pt-6 pt-4 px-4">
       <h1 className="md:text-3xl text-2xl tracking-wide font-medium md:mb-3 mb-2">
         Our Events
       </h1>
-      {/* <div className="flex flex-col gap-2">
-        <input
-          type="text"
-          className="w-full bg-neutral-100 px-4 py-2 rounded-full"
-          placeholder="Search events"
-        />
+      <div className="flex flex-col gap-2">
         <aside className="flex flex-wrap items-center gap-x-4 gap-y-2">
-          {["newest", "past", "all"].map((filter, index) => (
+          {["upcoming", "past", "all"].map((filter, index) => (
             <button
               key={index}
               className={cn(
@@ -28,7 +32,7 @@ export default function EventHeader() {
             </button>
           ))}
         </aside>
-      </div> */}
+      </div>
     </header>
   );
 }

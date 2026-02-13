@@ -1,23 +1,36 @@
+"use client";
 import React from "react";
 import events from "@/constants/events.json";
 import Link from "next/link";
-import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { getPastEvents, getUpcomingEvents, hasDatePassed } from "@/constants";
 
-export default function EventList() {
+export default function EventList({
+  eventFilter,
+}: {
+  eventFilter: "upcoming" | "past" | "all";
+}) {
+  const filteredEvents = (() => {
+    switch (eventFilter) {
+      case "upcoming":
+        return getUpcomingEvents();
+      case "past":
+        return getPastEvents();
+      default:
+        return events;
+    }
+  })();
   return (
     <div className="md:px-8 px-6 md:py-6 py-4 flex flex-col gap-6">
-      {events.map((event, index) => (
+      {filteredEvents.map((event, index) => (
         <section
           key={index}
           className="bg-neutral-100 rounded-2xl md:grid grid-cols-10 overflow-hidden hover:scale-101 transition-all duration-300 ease-in-out"
         >
           <div className="xl:col-span-3 md:col-span-4 relative overflow-hidden">
-            <Image
+            <img
               src={event.photo}
               alt={event.title}
-              width={600}
-              height={300}
               className="aspect-[4/2] object-cover w-full h-full"
             />
             <div
@@ -41,7 +54,10 @@ export default function EventList() {
           <aside className="p-6 xl:col-span-7 md:col-span-6 flex flex-col justify-between gap-4">
             <header>
               <h5 className="text-[hsl(44,100%,48%)] font-medium mb-1">
-                {event.date} - {event.subtitle}
+                {event.date
+                  ? event.date.split(" ").slice(0, 2).join(" ") + " - "
+                  : ""}
+                {event.subtitle}
               </h5>
               <h3 className="text-2xl font-medium mb-2 tracking-wide">
                 {event.title}
@@ -59,11 +75,13 @@ export default function EventList() {
                 href={event.link}
                 className={cn(
                   "bg-main text-white px-3 py-1.5 rounded-lg hover:brightness-110 hover:scale-105 transition-all duration-300 ease-in-out",
-                  event.link === "" ? "pointer-events-none opacity-50" : "",
+                  event.link === "" || hasDatePassed(event.date)
+                    ? "pointer-events-none opacity-50"
+                    : "",
                 )}
                 target="_blank"
               >
-                Join event
+                {hasDatePassed(event.date) ? "Event passed" : "Join event"}
               </Link>
             </div>
           </aside>

@@ -5,7 +5,7 @@ import { GoArrowLeft } from "react-icons/go";
 import events from "@/constants/events.json";
 import { LuArrowUpRight, LuShare } from "react-icons/lu";
 import EventAside from "./_components/EventAside";
-import { hasDatePassed } from "@/app/(home)/_components/Events";
+import { getPastEvents, getUpcomingEvents, hasDatePassed } from "@/constants";
 
 export default async function Event({
   params,
@@ -28,13 +28,18 @@ export default async function Event({
         <GoArrowLeft className="inline-block" />
         <span>All events</span>
       </Link>
-      <div className="relative">
-        <Image
+      <div className="relative rounded-2xl overflow-hidden mb-4">
+        <img
           src={event.photo}
           alt={event.title}
-          width={1200}
-          height={240}
-          className="w-full xl:aspect-[10/2] md:aspect-[8/2] aspect-[6/2] object-cover rounded-2xl mb-4"
+          className="w-full xl:aspect-[10/2] md:aspect-[8/2] aspect-[6/2] object-cover"
+        />
+        <div
+          className="absolute top-0 left-0 w-full h-full z-5"
+          style={{
+            backgroundImage:
+              "linear-gradient(to bottom, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%)",
+          }}
         />
         <div className="absolute top-4 right-4 flex items-center gap-2">
           <button className="rounded-full bg-white/20 backdrop-blur-sm outline outline-white/30 px-4 py-1.5 text-white font-light text-sm">
@@ -70,7 +75,7 @@ export default async function Event({
               ​Join our communities to keep up with future events here: <br />
               <Link
                 href="https://linktr.ee/hunter.founders"
-                className="text-main"
+                className="text-main underline"
               >
                 https://linktr.ee/hunter.founders
               </Link>
@@ -87,10 +92,13 @@ export default async function Event({
             ))}
           </ul>
           <h5 className="font-medium mb-2">
-            {hasDatePassed(event.date) ? "Previous events" : "Upcoming events"}
+            {hasDatePassed(event.date) ? "Upcoming events" : "Previous events"}
           </h5>
-          <section className="flex overflow-auto gap-4 mb-4">
-            {events.map((event, index) => (
+          <section className="flex items-center overflow-x-auto gap-2 mb-4 no-scrollbar">
+            {(hasDatePassed(event.date)
+              ? getUpcomingEvents()
+              : getPastEvents()
+            ).map((event, index) => (
               <Link
                 key={index}
                 className="w-full text-left p-3 rounded-2xl bg-neutral-100 flex items-center gap-3 shrink-0 max-w-xs"
