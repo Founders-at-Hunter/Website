@@ -33,6 +33,9 @@ export const metadata: Metadata = {
     "tech",
     "innovation",
   ],
+  verification: {
+    google: "Y0PXTe3oVOvaPexcA2PXF2NqqiuUi4fzFKrY3ePQux4",
+  },
   metadataBase: new URL(siteUrl),
   openGraph: {
     type: "website",
