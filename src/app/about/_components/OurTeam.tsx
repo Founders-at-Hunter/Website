@@ -5,6 +5,13 @@ import React from "react";
 
 const TEAM = [
   {
+    name: "Samuel Michnik",
+    src: "/team/samuelmichnik.jpg",
+    bio: "CS Senior and also the Founder! Let's build together.",
+    position: "President",
+    contact: "https://linkedin.com/in/samuel-michnik",
+  },
+  {
     name: "Angst Gregory",
     src: "/team/angstgregory.jpg",
     bio: "I also made this website and I'm a senior the goat as they say.",
@@ -12,11 +19,39 @@ const TEAM = [
     contact: "https://www.linkedin.com/in/angst-gregory",
   },
   {
-    name: "Ray Chu",
-    src: "/team/raychu.PNG",
-    bio: "👋 Hello, I am a freshman studying CS as a Daedalus Scholar. I also made this website.",
-    position: "Tech Lead",
-    contact: "https://www.linkedin.com/in/raychu83/",
+    name: "Omar Chowdhurry",
+    src: "/team/omarchowdhurry.jpg",
+    bio: "I'm a sophomore majoring in Computer Science.",
+    position: "Secretary",
+    contact: "",
+  },
+  {
+    name: "Josiah Balkissoon",
+    src: "/team/josiahbalkissoon.jpg",
+    bio: "Econ & Business Studies major. Former IBM dev. Training in the martial art of Jeet Kune Do. In pursuit of greatness.",
+    position: "Treasurer / Marketing",
+    contact: "https://www.linkedin.com/in/josiah-balkissoon",
+  },
+  {
+    name: "Lisa Lin",
+    src: "/team/lisalin.jpg",
+    bio: "Hi! I'm a sophomore Economics major at Hunter, and I'm always excited to make new connections!",
+    position: "Treasurer Intern",
+    contact: "https://www.linkedin.com/in/lisalin4219/",
+  },
+  {
+    name: "Don Suhanda",
+    src: "/team/donsuhanda.jpg",
+    bio: "Hey, I am a junior majoring in CS and minoring in Music. I love playing the piano in my free time and am currently reading Paradise Lost!.",
+    position: "EVENT COORDINATOR",
+    contact: "",
+  },
+  {
+    name: "Saad Kashif",
+    src: "/team/saadkashif.jpg",
+    bio: "Hey! 👋, I'm Saad. I'm a Junior studying Computer Science & Economics. I love working on fun impactful projects and expanding my network.",
+    position: "Workshop Lead",
+    contact: "https://saad220905.github.io/my-website/#contact",
   },
   {
     name: "Artemis Brisnovali",
@@ -26,17 +61,10 @@ const TEAM = [
     contact: "",
   },
   {
-    name: "Rafi Uddin",
-    src: "/team/rafiuddin.jpg",
-    bio: "Hey, I love playing soccer and learning more about the world. 🤙",
-    position: "Photographer",
-    contact: "",
-  },
-  {
-    name: "Omar Chowdhurry",
-    src: "/team/omarchowdhurry.jpg",
-    bio: "I'm a sophomore majoring in Computer Science.",
-    position: "Secretary",
+    name: "Jaho (Jay) Music",
+    src: "/team/jaho(jay)music.jpg",
+    bio: "Hi, I am a freshman, major undeclared.",
+    position: "Marketing Intern",
     contact: "",
   },
   {
@@ -47,32 +75,18 @@ const TEAM = [
     contact: "",
   },
   {
-    name: "Lisa Lin",
-    src: "/team/lisalin.jpg",
-    bio: "Hi! I'm a sophomore Economics major at Hunter, and I'm always excited to make new connections!",
-    position: "Treasurer Intern",
-    contact: "https://www.linkedin.com/in/lisalin4219/",
-  },
-  {
-    name: "Josiah Balkissoon",
-    src: "/team/josiahbalkissoon.jpg",
-    bio: "Econ & Business Studies major. Former IBM dev. Training in the martial art of Jeet Kune Do. In pursuit of greatness.",
-    position: "Treasurer / Marketing",
-    contact: "https://www.linkedin.com/in/josiah-balkissoon",
-  },
-  {
-    name: "Jaho (Jay) Music",
-    src: "/team/jaho(jay)music.jpg",
-    bio: "Hi, I am a freshman, major undeclared.",
-    position: "Marketing Intern",
+    name: "Rafi Uddin",
+    src: "/team/rafiuddin.jpg",
+    bio: "Hey, I love playing soccer and learning more about the world. 🤙",
+    position: "Photographer",
     contact: "",
   },
   {
-    name: "Don Suhanda",
-    src: "/team/donsuhanda.jpg",
-    bio: "Hey, I am a junior majoring in CS and minoring in Music. I love playing the piano in my free time and am currently reading Paradise Lost!.",
-    position: "EVENT COORDINATOR",
-    contact: "",
+    name: "Ray Chu",
+    src: "/team/raychu.PNG",
+    bio: "👋 Hello, I am a freshman studying CS as a Daedalus Scholar. I also made this website.",
+    position: "Tech Lead",
+    contact: "https://www.linkedin.com/in/raychu83/",
   },
 ];
 
@@ -92,7 +106,7 @@ export default function OurTeam() {
       <section className="grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 items-stretch">
         {TEAM.map((teamMember, index) => (
           <div
-            className="rounded-2xl overflow-hidden relative hover:scale-103 transition-all duration-300 ease-in-out"
+            className="rounded-2xl overflow-hidden relative hover:scale-103 transition-all duration-300 ease-in-out group"
             key={index}
           >
             <img
@@ -104,14 +118,14 @@ export default function OurTeam() {
               className="absolute size-full top-0 left-0 z-5"
               style={{
                 backgroundImage:
-                  "linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0) 100%)",
+                  "linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0) 50%)",
               }}
             />
             <div className="absolute bottom-0 w-full md:p-6 p-4 z-10">
               <h5 className="text-white font-semibold text-xl tracking-wider mb-1">
                 {teamMember.name}
               </h5>
-              <p className="text-sm text-neutral-200 mb-4 font-light">
+              <p className="text-sm text-neutral-200 mb-4 font-light line-clamp-2 group-hover:line-clamp-none group-focus:line-clamp-none">
                 {teamMember.bio}
               </p>
               <div className="flex justify-between items-center gap-2">
