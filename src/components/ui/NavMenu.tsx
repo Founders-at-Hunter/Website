@@ -72,15 +72,11 @@ export default function NavMenu() {
             <DialogTrigger asChild>
               <button
                 className={cn(
-                  "px-5 py-2 rounded-xl text-white cursor-pointer hover:brightness-110 hover:scale-105 transition-all duration-300 ease-in-out",
+                  "bg-main/10 text-main px-5 py-2 rounded-xl cursor-pointer hover:brightness-110 hover:scale-105 transition-all duration-300 ease-in-out",
                   navOpened
                     ? "md:visible md:opacity-100 invisible opacity-0"
                     : "opacity-100 visible",
                 )}
-                style={{
-                  backgroundImage:
-                    "linear-gradient(to top, #000000 0%, #555555 100%)",
-                }}
               >
                 Join us
               </button>
@@ -140,12 +136,8 @@ export default function NavMenu() {
                   <DialogTrigger asChild>
                     <button
                       className={cn(
-                        "p-4 w-full rounded-xl text-white cursor-pointer hover:brightness-110 hover:scale-105 transition-all duration-300 ease-in-out",
+                        "bg-main/10 text-main p-4 w-full rounded-xl cursor-pointer hover:brightness-110 hover:scale-105 transition-all duration-300 ease-in-out",
                       )}
-                      style={{
-                        backgroundImage:
-                          "linear-gradient(to top, #000000 0%, #555555 100%)",
-                      }}
                     >
                       Join us
                     </button>

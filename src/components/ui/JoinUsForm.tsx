@@ -38,7 +38,7 @@ export default function JoinUsForm() {
         console.log(data, error);
         setRegisterCount(data);
       };
-      fetchRegisterCount();
+      // fetchRegisterCount();
     }
   }, []);
 

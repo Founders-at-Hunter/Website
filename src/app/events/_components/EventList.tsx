@@ -66,7 +66,7 @@ export default function EventList({
             </header>
             <div className="flex items-center justify-end gap-2">
               <Link
-                className="text-main px-3 py-1.5 rounded-lg hover:brightness-110 hover:scale-105 transition-all duration-300 ease-in-out"
+                className="text-main px-5 py-2.5 rounded-lg hover:brightness-110 hover:scale-105 transition-all duration-300 ease-in-out"
                 href={`/events/${event.title}`}
               >
                 Learn more
@@ -74,7 +74,7 @@ export default function EventList({
               <Link
                 href={event.link}
                 className={cn(
-                  "bg-main text-white px-3 py-1.5 rounded-lg hover:brightness-110 hover:scale-105 transition-all duration-300 ease-in-out",
+                  "bg-main text-white px-5 py-2.5 rounded-lg hover:brightness-110 hover:scale-105 transition-all duration-300 ease-in-out",
                   event.link === "" || hasDatePassed(event.date)
                     ? "pointer-events-none opacity-50"
                     : "",

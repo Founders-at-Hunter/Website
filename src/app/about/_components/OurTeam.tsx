@@ -118,7 +118,7 @@ export default function OurTeam() {
               className="absolute size-full top-0 left-0 z-5"
               style={{
                 backgroundImage:
-                  "linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0) 50%)",
+                  "linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%)",
               }}
             />
             <div className="absolute bottom-0 w-full md:p-6 p-4 z-10">
