@@ -5,14 +5,14 @@ import React from "react";
 export default function JoinUs() {
   return (
     <section
-      className="md:m-8 m-6 md:p-12 p-8 rounded-xl overflow-hidden relative"
+      className="md:m-8 m-6 md:p-12 p-8 rounded-2xl overflow-hidden relative"
       style={{
         backgroundImage: `linear-gradient(to top, rgba(146,88,210,0.5) 0%, rgba(146,88,210,0.05) 100%)`,
       }}
     >
       <div className="relative z-10 md:space-y-4 space-y-3 text-center max-w-2xl m-auto">
-        <h1 className="md:text-3xl text-2xl tracking-wide font-medium">
-          Become a part of the Founders Club
+        <h1 className="md:text-3xl text-2xl tracking-wide font-medium mb-2">
+          Be a part of the Founders Club
         </h1>
         <p className="text-neutral-700 font-light md:text-base text-sm">
           Connect with like-minded founders, learn from industry leaders, and
@@ -21,7 +21,7 @@ export default function JoinUs() {
         </p>
         <Dialog>
           <DialogTrigger asChild>
-            <button className="px-4 py-2 rounded-2xl bg-white cursor-pointer mb-4 hover:scale-105 hover:brightness-110 transition-all duration-300 ease-in-out text-[#9258D2] md:text-base text-sm">
+            <button className="px-4 py-2 rounded-xl bg-white cursor-pointer mb-4 hover:scale-105 hover:brightness-110 transition-all duration-300 ease-in-out text-[#9258D2] md:text-base text-sm">
               Join now
             </button>
           </DialogTrigger>

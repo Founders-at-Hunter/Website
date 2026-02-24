@@ -13,7 +13,7 @@ import { toast } from "sonner";
 export default function JoinUsForm() {
   const [registerValues, setRegisterValues] = useState({ name: "", email: "" });
   const [registeredEmail, setRegisteredEmail] = useState("");
-  const [registerCount, setRegisterCount] = useState<number | null>(null);
+  const [registerCount, setRegisterCount] = useState<number | null>(100);
 
   useEffect(() => {
     const cookies = document.cookie.split(";");
@@ -35,10 +35,9 @@ export default function JoinUsForm() {
           });
           return;
         }
-        console.log(data, error);
         setRegisterCount(data);
       };
-      // fetchRegisterCount();
+      fetchRegisterCount();
     }
   }, []);
 
@@ -72,8 +71,6 @@ export default function JoinUsForm() {
     }
   };
 
-  console.log(registerCount);
-
   return (
     <>
       <DialogContent>
@@ -85,7 +82,7 @@ export default function JoinUsForm() {
             {registeredEmail
               ? `You've already registered with: ${registeredEmail}`
               : registerCount
-                ? `Join over ${Math.round(registerCount / 10) * 10} other like-minded students who have already registered`
+                ? `Join over ${Math.round(registerCount / 10) * 10} other students who have already registered`
                 : "Loading..."}
           </DialogDescription>
         </DialogHeader>

@@ -9,13 +9,11 @@ export default function WhatStudentsGain() {
   return (
     <div className="md:px-8 px-6 md:py-6 py-4 space-y-2.5">
       <header className="space-y-2.5 mb-6 max-w-3xl">
-        <h6 className="bg-[#FFC72A]/10 text-[#FFC72A] outline-1 -outline-offset-1 outline-[#FFC72A]/15 w-fit rounded-full px-4 py-1.5 font-light md:text-sm text-xs mb-4 tracking-wide shadow-xs shadow-[#FFC72A]/60">
+        <h6 className="bg-[#FFC72A]/7.5 text-[#FFC72A] outline-1 -outline-offset-1 outline-[#FFC72A]/15 w-fit rounded-full px-4 py-1.5 font-normal md:text-sm text-xs md:mb-4 mb-3 tracking-wide shadow-xs shadow-[#FFC72A]/40">
           What students gain
         </h6>
-        <h2 className="md:text-4xl text-3xl font-medium mb-4">
-          Our community impact
-        </h2>
-        <h3 className="text-neutral-700">
+        <h2 className="text-3xl font-medium mb-2">Our student impact</h2>
+        <h3 className="text-neutral-700 md:text-lg text-base">
           Accelerate your entrepreneurial journey with networking, learning, and
           growth opportunities.
         </h3>
@@ -23,10 +21,10 @@ export default function WhatStudentsGain() {
       <section className="md:grid xl:grid-cols-3 md:grid-cols-2 xl:grid-rows-2 grid-rows-3 mb-4 flex flex-col m-auto gap-6">
         <div className="bg-neutral-100 relative rounded-2xl overflow-hidden group hover:scale-101 transition-all duration-300 md:row-span-2 grid grid-rows-2">
           <header className="md:p-8 p-6">
-            <div className="text-indigo-400 bg-indigo-100 outline outline-indigo-200 w-fit md:text-4xl text-3xl p-3 font-black rounded-lg mb-3">
+            <div className="text-blue-400 bg-blue-100 outline outline-blue-200 w-fit md:text-4xl text-3xl p-3 font-black rounded-lg mb-3">
               <GoPeople />
             </div>
-            <h5 className="font-medium md:text-2xl text-xl mb-3">
+            <h5 className="font-medium md:text-2xl text-xl mb-2">
               Connect with entrepreneurs
             </h5>
             <p className="text-neutral-700 mb-3 md:text-base text-sm">
@@ -54,7 +52,7 @@ export default function WhatStudentsGain() {
             <div className="text-emerald-400 bg-emerald-100 outline outline-emerald-200 w-fit md:text-4xl text-3xl p-3 font-black rounded-lg mb-3">
               <RiCodeSSlashLine />
             </div>
-            <h5 className="font-medium md:text-2xl text-xl mb-3">
+            <h5 className="font-medium md:text-2xl text-xl mb-2">
               Build real projects
             </h5>
             <p className="text-neutral-700 mb-3 md:text-base text-sm">
@@ -78,10 +76,10 @@ export default function WhatStudentsGain() {
         </div>
         <div className="bg-neutral-100 relative rounded-2xl overflow-hidden group hover:scale-101 transition-all duration-300">
           <header className="md:p-8 p-6">
-            <div className="text-amber-400 bg-amber-100 outline outline-amber-200 w-fit md:text-4xl text-3xl p-3 font-black rounded-lg mb-3">
+            <div className="text-orange-400 bg-orange-100 outline outline-orange-200 w-fit md:text-4xl text-3xl p-3 font-black rounded-lg mb-3">
               <PiStudentLight />
             </div>
-            <h5 className="font-medium md:text-2xl text-xl mb-3">
+            <h5 className="font-medium md:text-2xl text-xl mb-2">
               Student workshops
             </h5>
             <p className="text-neutral-700 mb-3 md:text-base text-sm">
@@ -97,10 +95,10 @@ export default function WhatStudentsGain() {
         </div>
         <div className="bg-neutral-100 relative rounded-2xl overflow-hidden group hover:scale-101 transition-all duration-300">
           <header className="md:p-8 p-6">
-            <div className="text-red-400 bg-red-100 outline outline-red-200 w-fit md:text-4xl text-3xl p-3 font-black rounded-lg mb-3">
+            <div className="text-pink-400 bg-pink-100 outline outline-pink-200 w-fit md:text-4xl text-3xl p-3 font-black rounded-lg mb-3">
               <TbDeviceDesktopShare />
             </div>
-            <h5 className="font-medium md:text-2xl text-xl mb-3">
+            <h5 className="font-medium md:text-2xl text-xl mb-2">
               Present your work
             </h5>
             <p className="text-neutral-700 mb-3 md:text-base text-sm">

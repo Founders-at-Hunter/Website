@@ -1,117 +1,24 @@
-import { Highlighter } from "@/components/ui/highlighter";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { cn } from "@/lib/utils";
-import {
-  getPastEvents,
-  getUpcomingEvents,
-  hasDatePassed,
-} from "@/constants/index";
+import { hasDatePassed } from "@/constants/index";
 import events from "@/constants/events.json";
 import { GoArrowRight, GoArrowUpRight } from "react-icons/go";
 
 export default function Events() {
   return (
-    <div className="md:px-8 px-6 md:py-6 py-4">
+    <div className="md:px-8 px-6 md:py-6 py-4 scroll-mt-24" id="events">
       <header className="space-y-2.5 mb-6">
-        <h6 className="bg-[#FFC72A]/10 text-[#FFC72A] outline-1 -outline-offset-1 outline-[#FFC72A]/15 w-fit rounded-full px-4 py-1.5 font-light md:text-sm text-xs mb-4 tracking-wide shadow-xs shadow-[#FFC72A]/60">
+        <h6 className="bg-[#FFC72A]/7.5 text-[#FFC72A] outline-1 -outline-offset-1 outline-[#FFC72A]/15 w-fit rounded-full px-4 py-1.5 font-normal md:text-sm text-xs md:mb-4 mb-3 tracking-wide shadow-xs shadow-[#FFC72A]/40">
           Featured Events
         </h6>
-        <h2 className="md:text-4xl text-3xl font-medium mb-4">
+        <h2 className="text-3xl font-medium mb-2">
           Explore the latest from us
         </h2>
-        <h3 className="text-neutral-700 md:text-base text-sm">
+        <h3 className="text-neutral-700 md:text-lg text-base">
           Our events are designed to help you grow as an entrepreneur.
         </h3>
       </header>
-      {/* <section className="grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 items-stretch">
-        {(getUpcomingEvents().length === 0
-          ? getPastEvents().reverse()
-          : getUpcomingEvents()
-        ).map((event, index) => {
-          const hasEventPassed = event.date ? hasDatePassed(event.date) : false;
-          return (
-            <div
-              className="flex flex-col rounded-2xl overflow-hidden relative p-6 bg-neutral-100 hover:scale-103 transition-all duration-300 ease-in-out"
-              key={index}
-            >
-              <header className="flex items-center gap-4 mb-3">
-                <Image
-                  src={event.photo}
-                  alt={`${event.title} event`}
-                  width={80}
-                  height={80}
-                  className="object-cover aspect-square md:size-20 size-18 rounded-2xl"
-                />
-                <aside>
-                  <h5 className="font-semibold md:text-xl text-lg">
-                    {event.title}
-                  </h5>
-                  <p className="md:text-base text-sm text-[hsl(44,100%,48%)] tracking-wide">
-                    {event.subtitle}
-                  </p>
-                </aside>
-              </header>
-              <p className="text-neutral-500 mb-4 md:text-base text-sm line-clamp-3">
-                {event.description}
-              </p>
-              <ul className="mb-2 grid grid-cols-3 gap-2 items-stretch mt-auto">
-                <li className="flex flex-col gap-0.5 bg-white px-4 py-2 border-b border-main rounded-xl">
-                  <p className="text-xs font-light tracking-wider text-neutral-500">
-                    Date
-                  </p>
-                  <span className="font-bold text-xs">
-                    {event.date
-                      ? event.date.split(" ").slice(0, 2).join(" ")
-                      : "-"}
-                  </span>
-                </li>
-                <li className="flex flex-col gap-0.5 bg-white px-4 py-2 border-b border-main rounded-xl">
-                  <p className="text-xs font-light tracking-wider text-neutral-500">
-                    Time
-                  </p>
-                  <span className="font-bold text-xs">
-                    {event.time ? event.time : "-"}
-                  </span>
-                </li>
-                <li className="flex flex-col gap-0.5 bg-white px-4 py-2 border-b border-main rounded-xl">
-                  <p className="text-xs font-light tracking-wider text-neutral-500">
-                    Room
-                  </p>
-                  <span className="font-bold text-xs">
-                    {event.room ? event.room : "-"}
-                  </span>
-                </li>
-              </ul>
-              <div className="grid grid-cols-2 gap-2">
-                <Link
-                  className={cn(
-                    "bg-main/10 w-full px-4 py-3 rounded-xl text-main block text-center hover:scale-105 transition-all duration-300 ease-in-out hover:brightness-110 md:text-base text-sm",
-                  )}
-                  href={`/events/${event.title}`}
-                  target="_blank"
-                >
-                  Learn more
-                </Link>
-                <Link
-                  className={cn(
-                    "bg-main w-full px-4 py-3 rounded-xl text-white block text-center hover:scale-105 transition-all duration-300 ease-in-out hover:brightness-110 md:text-base text-sm",
-                    hasEventPassed || event.link === ""
-                      ? "pointer-events-none opacity-50"
-                      : "",
-                  )}
-                  href={event.link}
-                  target="_blank"
-                >
-                  {hasEventPassed ? "Event passed" : "Join Event"}
-                </Link>
-              </div>
-            </div>
-          );
-        })}
-      </section> */}
-      <section className="grid lg:grid-cols-2 grid-rows-2 gap-6">
+      <section className="grid lg:grid-cols-2 grid-rows-2 md:gap-6 gap-4">
         <RecentEvent />
         <OtherEvents />
       </section>
@@ -141,7 +48,7 @@ function RecentEvent() {
       </p>
       <header className="absolute md:bottom-8 bottom-6 md:px-8 px-6 z-10 flex justify-between items-end w-full">
         <div>
-          <h6 className="tracking-wider text-[#FFC72A] mb-2">
+          <h6 className="tracking-wider text-[#FFC72A] mb-2 md:text-base text-sm">
             {latestEvent.subtitle}
           </h6>
           <h2 className="md:text-3xl text-2xl text-white">
@@ -166,7 +73,7 @@ function OtherEvents() {
   return otherEvents.map((event, index) => (
     <aside
       key={index}
-      className="col-span-1 row-span-1 grid grid-cols-2 gap-6 hover:scale-101 transition-all ease-in-out duration-300"
+      className="col-span-1 row-span-1 grid grid-cols-2 md:gap-6 gap-4 hover:scale-101 transition-all ease-in-out duration-300"
     >
       <Link
         className="relative group"

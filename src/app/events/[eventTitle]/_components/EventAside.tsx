@@ -39,7 +39,7 @@ export default function EventAside({
   }, [selectedDate]);
 
   return (
-    <aside className="xl:col-span-2 lg:col-span-3 sm:col-span-4 w-full p-2">
+    <aside className="xl:col-span-2 lg:col-span-3 md:col-span-4 sm:col-span-5 w-full p-2">
       <Calendar
         mode="single"
         className="rounded-lg w-full bg-white mb-2"

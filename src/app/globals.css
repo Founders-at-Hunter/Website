@@ -89,6 +89,14 @@
       transform: translate(-50%, -50%) scale(0.9);
     }
   }
+  @keyframes blob {
+    0% {
+      border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
+    }
+    100% {
+      border-radius: 100% 30% 60% 70% / 50% 40% 70% 70%;
+    }
+  }
 }
 
 /* Hero Section Animation Classes */
@@ -131,11 +139,15 @@
   animation-play-state: paused;
 }
 
+.animate-blob {
+  animation: blob 6s ease-in-out infinite alternate;
+}
+
 html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  scroll-padding-top: 0;
+  scroll-behavior: smooth !important;
 }
 
 body {

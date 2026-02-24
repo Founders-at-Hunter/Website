@@ -8,7 +8,7 @@ export default function Mission() {
         alt="Mission Banner"
         className="rounded-2xl saturate-0 mb-4 xl:aspect-[10/2] md:aspect-[8/2] aspect-[6/2] object-cover"
       />
-      <p className="font-light md:w-[70%] md:text-2xl text-xl italic">
+      <p className="md:w-[70%] md:text-2xl text-xl italic leading-8 tracking-wide">
         &quot;Hunter is full of people with big ideas and real talent they just
         need a room full of people who get it. That&apos;s what we built. A
         place where you can show up with nothing but a napkin sketch and leave

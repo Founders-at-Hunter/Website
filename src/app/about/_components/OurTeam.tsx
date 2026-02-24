@@ -93,26 +93,25 @@ const TEAM = [
 export default function OurTeam() {
   return (
     <div className="md:px-8 px-6 md:py-6 py-4">
-      <header className="space-y-2.5 mb-6">
-        <h2 className="md:text-3xl text-2xl font-medium mb-1">
-          <Highlighter action="underline" color="#FFC72A" iterations={3}>
-            Meet our team
-          </Highlighter>
-        </h2>
-        <h3 className="text-neutral-700 md:text-base text-sm">
+      <header className="mb-6">
+        <h6 className="bg-[#FFC72A]/7.5 text-[#FFC72A] outline-1 -outline-offset-1 outline-[#FFC72A]/15  w-fit rounded-full px-4 py-1.5 font-normal md:text-sm text-xs md:mb-4 mb-3 tracking-wide shadow-xs shadow-[#FFC72A]/40">
+          Our team
+        </h6>
+        <h1 className="text-3xl font-medium mb-2">Get to know our team</h1>
+        <h3 className="text-neutral-700 md:text-lg text-base">
           See who is running the club behind the scenes
         </h3>
       </header>
-      <section className="grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 items-stretch">
+      <section className="flex flex-nowrap overflow-auto gap-4 items-stretch no-scrollbar snap-x snap-mandatory">
         {TEAM.map((teamMember, index) => (
           <div
-            className="rounded-2xl overflow-hidden relative hover:scale-103 transition-all duration-300 ease-in-out group"
+            className="rounded-2xl overflow-hidden relative group 2xl:w-[18%] xl:w-[22.5%] lg:w-[30%] sm:w-[40%] w-[75%] shrink-0 snap-start"
             key={index}
           >
             <img
               src={teamMember.src}
               alt={teamMember.name}
-              className="aspect-[2/3] object-cover brightness-125"
+              className="aspect-[2/3] object-cover brightness-125 size-full"
             />
             <div
               className="absolute size-full top-0 left-0 z-5"
@@ -125,11 +124,11 @@ export default function OurTeam() {
               <h5 className="text-white font-semibold text-xl tracking-wider mb-1">
                 {teamMember.name}
               </h5>
-              <p className="text-sm text-neutral-200 mb-4 font-light line-clamp-2 group-hover:line-clamp-none group-focus:line-clamp-none">
+              <p className="text-sm text-neutral-200 mb-4 font-light">
                 {teamMember.bio}
               </p>
               <div className="flex justify-between items-center gap-2">
-                <h4 className="text-neutral-100 text-sm font-semibold tracking-wide uppercase">
+                <h4 className="md:text-sm text-xs underline underline-offset-4 font-semibold tracking-wider decoration-1 uppercase text-[#FFC72A]">
                   {teamMember.position}
                 </h4>
                 <Link

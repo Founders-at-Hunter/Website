@@ -3,9 +3,8 @@ import Link from "next/link";
 import React from "react";
 import { GoArrowLeft } from "react-icons/go";
 import events from "@/constants/events.json";
-import { LuArrowUpRight, LuShare } from "react-icons/lu";
 import EventAside from "./_components/EventAside";
-import { getPastEvents, getUpcomingEvents, hasDatePassed } from "@/constants";
+import { getPastEvents } from "@/constants";
 
 export default async function Event({
   params,
@@ -51,7 +50,7 @@ export default async function Event({
         </div> */}
       </div>
       <div className="grid sm:grid-cols-10 gap-x-6 gap-y-4">
-        <div className="xl:col-span-8 lg:col-span-7 sm:col-span-6 p-2">
+        <div className="xl:col-span-8 lg:col-span-7 md:col-span-6 sm:col-span-5 p-2">
           <header className="mb-2">
             <h5 className="text-[hsl(44,100%,48%)] font-medium mb-1 md:text-base text-sm">
               {event.subtitle}
@@ -91,34 +90,31 @@ export default async function Event({
               </li>
             ))}
           </ul>
-          <h5 className="font-medium mb-2">
-            {hasDatePassed(event.date) ? "Upcoming events" : "Previous events"}
-          </h5>
+          <h5 className="font-medium mb-2">Recent events</h5>
           <section className="flex items-center overflow-x-auto gap-2 mb-4 no-scrollbar">
-            {(hasDatePassed(event.date)
-              ? getUpcomingEvents()
-              : getPastEvents()
-            ).map((event, index) => (
-              <Link
-                key={index}
-                className="w-full text-left p-3 rounded-2xl bg-neutral-100 flex items-center gap-3 shrink-0 max-w-xs"
-                href={"/events/" + event.title}
-              >
-                <Image
-                  src={event.photo}
-                  alt={event.title}
-                  width={56}
-                  height={56}
-                  className="aspect-square object-cover size-14 w-fit rounded-lg"
-                />
-                <header className="space-y-0.5">
-                  <h5 className="text-neutral-700 font-medium text-sm">
-                    {event.title}
-                  </h5>
-                  <p className="text-neutral-500 text-xs">{event.subtitle}</p>
-                </header>
-              </Link>
-            ))}
+            {getPastEvents()
+              .reverse()
+              .map((event, index) => (
+                <Link
+                  key={index}
+                  className="w-full text-left p-3 rounded-2xl bg-neutral-100 flex items-center gap-3 shrink-0 max-w-xs"
+                  href={"/events/" + event.title}
+                >
+                  <Image
+                    src={event.photo}
+                    alt={event.title}
+                    width={56}
+                    height={56}
+                    className="aspect-square object-cover size-14 w-fit rounded-lg"
+                  />
+                  <header className="space-y-0.5">
+                    <h5 className="text-neutral-700 font-medium text-sm">
+                      {event.title}
+                    </h5>
+                    <p className="text-neutral-500 text-xs">{event.subtitle}</p>
+                  </header>
+                </Link>
+              ))}
           </section>
         </div>
         <EventAside event={event} />

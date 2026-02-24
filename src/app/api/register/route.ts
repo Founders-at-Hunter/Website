@@ -8,11 +8,10 @@ export async function GET() {
     .from("Emails")
     .select("*", { count: "exact", head: true });
 
-  console.log(count, error);
-
-  return NextResponse.json(JSON.stringify({ data: count, error }), {
-    status: error ? 400 : 201,
-  });
+  return NextResponse.json(
+    { data: count, error },
+    { status: error ? 400 : 200 },
+  );
 }
 
 export async function POST(request: Request) {
@@ -20,7 +19,6 @@ export async function POST(request: Request) {
   const supabase = await createClient();
   const body = await request.json();
   const { name, email } = body;
-  console.log(name, email);
   const { data, error } = await supabase
     .from("Emails")
     .insert({ name, email })
