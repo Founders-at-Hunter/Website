@@ -128,7 +128,7 @@ export default function OurTeam() {
                 {teamMember.bio}
               </p>
               <div className="flex justify-between items-center gap-2">
-                <h4 className="md:text-sm text-xs underline underline-offset-4 font-semibold tracking-wider decoration-1 uppercase text-[#FFC72A]">
+                <h4 className="text-xs underline underline-offset-4 font-semibold tracking-wider decoration-1 uppercase text-[#FFC72A]">
                   {teamMember.position}
                 </h4>
                 <Link
