@@ -76,14 +76,14 @@ function OtherEvents() {
       className="col-span-1 row-span-1 grid grid-cols-2 md:gap-6 gap-4 hover:scale-101 transition-all ease-in-out duration-300"
     >
       <Link
-        className="relative group"
+        className="relative group overflow-hidden rounded-2xl"
         href={`/events/${event.title}`}
         target="_blank"
       >
         <img
           src={event.photo}
           alt={event.title}
-          className="aspect-video object-cover rounded-2xl size-full relative z-0 group-hover:brightness-50 transition-all duration-300 ease-in-out"
+          className="aspect-video object-cover size-full relative z-0 group-hover:brightness-50 transition-all duration-300 ease-in-out group-hover:scale-105"
         />
         <GoArrowUpRight className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-6xl text-white z-10 group-hover:opacity-100 opacity-0 transition-all duration-300 ease-in-out" />
       </Link>

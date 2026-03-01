@@ -37,7 +37,7 @@ export default function JoinUsForm() {
         }
         setRegisterCount(data);
       };
-      fetchRegisterCount();
+      // fetchRegisterCount();
     }
   }, []);
 
@@ -78,11 +78,11 @@ export default function JoinUsForm() {
           <DialogTitle className="font-medium text-xl leading-4 mb-2">
             Join the Founders Club
           </DialogTitle>
-          <DialogDescription className="font-normal text-sm text-neutral-700">
+          <DialogDescription className="font-normal text-neutral-700">
             {registeredEmail
               ? `You've already registered with: ${registeredEmail}`
               : registerCount
-                ? `Join over ${Math.round(registerCount / 10) * 10} other students who have already registered`
+                ? `Be apart of ${Math.round(registerCount / 10) * 10} other students who have already registered`
                 : "Loading..."}
           </DialogDescription>
         </DialogHeader>
