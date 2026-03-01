@@ -16,3 +16,13 @@ export function getUpcomingEvents() {
 export function getPastEvents() {
   return events.filter((event) => hasDatePassed(event.date));
 }
+export function getPopularTags() {
+  const freqMap = new Map();
+  for (const e of events) {
+    for (const tag of e.tags) {
+      freqMap.set(tag, (freqMap.get(tag) || 0) + 1);
+    }
+  }
+  console.log(freqMap);
+  return [...freqMap.entries()].sort((a, b) => b[1] - a[1]).map(([key]) => key);
+}

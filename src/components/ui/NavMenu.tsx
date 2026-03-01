@@ -25,7 +25,7 @@ export default function NavMenu() {
   }, []);
 
   return (
-    <nav className="bg-white/85 backdrop-blur-xl backdrop-saturate-200 fixed top-0 w-full z-20">
+    <nav className="bg-white fixed top-0 w-full z-20">
       <div className="flex items-center justify-between max-w-[1920px] m-auto py-4 px-8">
         <Link href="/" className="flex items-center justify-center gap-2">
           <Image
@@ -47,10 +47,8 @@ export default function NavMenu() {
             <Link
               href={href}
               key={index}
-              className={`transition-all duration-300 tracking-wider ${
-                pathname === href
-                  ? "underline underline-offset-4 text-main font-medium"
-                  : "text-neutral-700 hover:text-main/60"
+              className={`transition-all duration-300 tracking-widest ${
+                pathname === href ? "underline underline-offset-8" : ""
               }`}
             >
               {title}
@@ -59,7 +57,7 @@ export default function NavMenu() {
           <Dialog>
             <DialogTrigger asChild>
               <button
-                className={`transition-all duration-300 tracking-wider text-neutral-700 hover:text-main/60 cursor-pointer`}
+                className={`transition-all duration-300 tracking-widest text-neutral-700`}
               >
                 Contact
               </button>
@@ -72,7 +70,7 @@ export default function NavMenu() {
             <DialogTrigger asChild>
               <button
                 className={cn(
-                  "bg-main/10 text-main px-5 py-2 rounded-xl cursor-pointer hover:brightness-110 hover:scale-105 transition-all duration-300 ease-in-out",
+                  "bg-main/10 text-main px-5 py-2 rounded-xl cursor-pointer hover:brightness-110 hover:scale-105 transition-all duration-300 ease-in-out md:text-base text-sm",
                   navOpened
                     ? "md:visible md:opacity-100 invisible opacity-0"
                     : "opacity-100 visible",
@@ -84,7 +82,7 @@ export default function NavMenu() {
             <JoinUsForm />
           </Dialog>
           <button
-            className="text-black text-2xl md:hidden block cursor-pointer hover:scale-95 active:scale-95 transition-all"
+            className="text-black md:text-2xl text-xl md:hidden block cursor-pointer hover:scale-95 active:scale-95 transition"
             onClick={() => {
               setNavOpened((prev) => !prev);
             }}
@@ -95,7 +93,7 @@ export default function NavMenu() {
         {portalRoot &&
           createPortal(
             <div
-              className={`bg-white/90 backdrop-blur-xl backdrop-saturate-200 fixed w-full h-[calc(100dvh-81.38px)] top-[81.38px] flex flex-col items-center justify-between z-10 transition-all duration-300 ${
+              className={`bg-white fixed w-full h-[calc(100dvh-81.38px)] top-[81.38px] flex flex-col items-center justify-between z-10 transition-all duration-300 ${
                 navOpened
                   ? "opacity-100 visible left-0 md:-left-full"
                   : "opacity-0 invisible -left-full"
@@ -108,8 +106,8 @@ export default function NavMenu() {
                     key={index}
                     className={`w-full flex items-center justify-between p-4 transition-all duration-300 hover:bg-main/5 active:bg-main/5 ${
                       pathname === href
-                        ? "underline underline-offset-4 text-main font-medium"
-                        : "text-black/60 hover:text-main/60"
+                        ? "underline underline-offset-8 text-main font-medium"
+                        : "text-neutral-700"
                     }`}
                     onClick={() => {
                       setNavOpened(false);
@@ -122,7 +120,7 @@ export default function NavMenu() {
                 <Dialog>
                   <DialogTrigger asChild>
                     <button
-                      className={`w-full flex items-center justify-between p-4 transition-all duration-300 hover:bg-main/5 active:bg-main/5 text-black/60 hover:text-main/60`}
+                      className={`w-full flex items-center justify-between p-4 transition-all duration-300 hover:bg-main/5 active:bg-main/5 text-neutral-700`}
                     >
                       Contact
                       <GoArrowRight className="text-xl" />

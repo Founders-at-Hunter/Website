@@ -5,7 +5,7 @@ import EventList from "./_components/EventList";
 export default function Events() {
   return (
     <div>
-      <EventHeader/>
+      <EventHeader />
       <EventList />
     </div>
   );
