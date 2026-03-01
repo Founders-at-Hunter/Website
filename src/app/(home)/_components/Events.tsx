@@ -48,7 +48,7 @@ function RecentEvent() {
       </p>
       <header className="absolute md:bottom-8 bottom-6 md:px-8 px-6 z-10 flex justify-between items-end w-full">
         <div>
-          <h6 className="tracking-wider text-[#FFC72A] mb-2 md:text-base text-sm">
+          <h6 className="tracking-wider text-[#FFC72A] brightness-95 mb-2 md:text-base text-sm">
             {latestEvent.subtitle}
           </h6>
           <h2 className="md:text-3xl text-2xl text-white">
@@ -89,7 +89,7 @@ function OtherEvents() {
       </Link>
       <div className="flex flex-col justify-between py-4 gap-4">
         <header>
-          <h6 className="tracking-wider text-[#FFC72A] mb-2 text-sm">
+          <h6 className="tracking-wider text-[#FFC72A] mb-2 text-sm brightness-95">
             {event.subtitle}
           </h6>
           <h2 className="md:text-2xl text-xl mb-2">{event.title}</h2>

@@ -55,7 +55,7 @@ export default async function Event({
             <h5 className="text-[hsl(44,100%,48%)] font-medium mb-1 md:text-base text-sm">
               {event.subtitle}
             </h5>
-            <h1 className="md:text-3xl text-2xl font-medium tracking-wide mb-1">
+            <h1 className="md:text-3xl text-2xl font-medium tracking-wide mb-3">
               {event.title}
             </h1>
             <p className="text-neutral-500 mb-4 md:text-base text-sm">
