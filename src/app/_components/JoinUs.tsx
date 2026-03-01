@@ -11,7 +11,7 @@ export default function JoinUs() {
       }}
     >
       <div className="relative z-10 md:space-y-4 space-y-3 text-center max-w-2xl m-auto">
-        <h1 className="md:text-3xl text-2xl tracking-wide font-medium mb-2">
+        <h1 className="md:text-3xl text-2xl tracking-wide font-medium mb-2 text-neutral-700">
           Be a part of the Founders Club
         </h1>
         <p className="text-neutral-700 font-light md:text-base text-sm">

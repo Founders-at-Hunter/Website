@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <div className="md:px-8 px-6 md:py-6 py-4 grid md:grid-cols-2 gap-x-24 gap-y-8 items-center">
       <aside className="space-y-2">
-        <h6 className="bg-[#FFC72A]/7.5 text-[#FFC72A] outline-1 -outline-offset-1 outline-[#FFC72A]/15  w-fit rounded-full px-4 py-1.5 font-normal md:text-sm text-xs md:mb-4 mb-3 tracking-wide shadow-xs shadow-[#FFC72A]/40">
+        <h6 className="bg-[#FFC72A]/7.5 text-[#FFC72A] brightness-95 outline-1 -outline-offset-1 outline-[#FFC72A]/15  w-fit rounded-full px-4 py-1.5 font-normal md:text-sm text-xs md:mb-4 mb-3 tracking-wide shadow-xs shadow-[#FFC72A]/40">
           Founders @ Hunter College
         </h6>
         <h1 className="md:text-4xl text-3xl font-medium md:leading-11 leading-9 text-neutral-700 mb-2">

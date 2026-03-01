@@ -4,13 +4,13 @@ export default function WhoWeAre() {
   return (
     <div className="md:px-8 px-6 md:py-6 py-4 grid lg:grid-cols-10 items-center gap-x-12">
       <header className="mb-4 lg:col-span-4">
-        <h6 className="bg-[#FFC72A]/7.5 text-[#FFC72A] outline-1 -outline-offset-1 outline-[#FFC72A]/15  w-fit rounded-full px-4 py-1.5 font-normal md:text-sm text-xs md:mb-4 mb-3 tracking-wide shadow-xs shadow-[#FFC72A]/40">
+        <h6 className="bg-[#FFC72A]/7.5 text-[#FFC72A] brightness-95 outline-1 -outline-offset-1 outline-[#FFC72A]/15  w-fit rounded-full px-4 py-1.5 font-normal md:text-sm text-xs md:mb-4 mb-3 tracking-wide shadow-xs shadow-[#FFC72A]/40">
           Our backstory
         </h6>
-        <h1 className="text-3xl font-medium mb-2">
+        <h1 className="md:text-3xl text-2xl font-medium text-neutral-700 mb-2">
           Launching Founders @ Hunter
         </h1>
-        <h4 className="text-main md:text-lg text-base mb-4">Est. Fall 2025</h4>
+        <h4 className="text-main md:text-lg text-base mb-3">Est. Fall 2025</h4>
         <p className="text-neutral-700 mb-6 md:text-base text-sm">
           Founders @ Hunter was created by two computer science seniors who saw
           the need for a space where Hunter students could explore tech
