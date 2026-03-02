@@ -1,5 +1,4 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 import events from "@/constants/events.json";
 import Link from "next/link";
 import { GoArrowUpRight } from "react-icons/go";
@@ -7,7 +6,7 @@ import { HiHashtag } from "react-icons/hi";
 import { getPopularTags, getUpcomingEvents, hasDatePassed } from "@/constants";
 
 export default function EventList() {
-  const [featuredEvents, setFeaturedEvents] = useState(events.reverse());
+  const featuredEvents = [...events].reverse();
   const popularTags = getPopularTags();
   return (
     <div className="md:grid flex flex-col grid-cols-10 md:px-8 px-6 md:py-6 py-4 md:gap-6 gap-4 relative">
@@ -30,6 +29,9 @@ export default function EventList() {
               <GoArrowUpRight className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-6xl text-white z-10 group-hover:opacity-100 opacity-0 transition-all duration-300 ease-in-out" />
             </div>
             <header className="p-2">
+              <h6 className="tracking-wider text-[#FFC72A] mb-2 text-sm brightness-95">
+                {event.subtitle}
+              </h6>
               <h2 className="md:text-2xl text-xl text-neutral-700 mb-2 font-medium">
                 {event.title}
               </h2>

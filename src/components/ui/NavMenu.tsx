@@ -26,7 +26,7 @@ export default function NavMenu() {
 
   return (
     <nav className="bg-white fixed top-0 w-full z-20">
-      <div className="flex items-center justify-between max-w-[1920px] m-auto py-4 px-8">
+      <div className="flex items-center justify-between max-w-[1896px] m-auto py-4 px-8">
         <Link href="/" className="flex items-center justify-center gap-2">
           <Image
             src="/founders_logo_icon.png"

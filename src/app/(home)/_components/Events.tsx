@@ -6,7 +6,7 @@ import { GoArrowRight, GoArrowUpRight } from "react-icons/go";
 
 export default function Events() {
   return (
-    <div className="md:px-8 px-6 md:py-6 py-4 scroll-mt-24" id="events">
+    <div className="md:px-8 px-6 md:py-6 py-4">
       <header className="space-y-2.5 mb-6">
         <h6 className="bg-[#FFC72A]/7.5 text-[#FFC72A] brightness-95 outline-1 -outline-offset-1 outline-[#FFC72A]/15 w-fit rounded-full px-4 py-1.5 font-normal md:text-sm text-xs md:mb-4 mb-3 tracking-wide shadow-xs shadow-[#FFC72A]/40">
           Featured Events

@@ -23,6 +23,5 @@ export function getPopularTags() {
       freqMap.set(tag, (freqMap.get(tag) || 0) + 1);
     }
   }
-  console.log(freqMap);
   return [...freqMap.entries()].sort((a, b) => b[1] - a[1]).map(([key]) => key);
 }

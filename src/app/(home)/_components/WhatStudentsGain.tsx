@@ -245,8 +245,9 @@ export default function WhatStudentsGain() {
               Present your work
             </h5>
             <p className="text-neutral-700 mb-3 md:text-base text-sm">
-              Share to the world your projects, ideas, and goals. Hear back from
-              peers, connect with investors, and celebrate your wins with us.
+              Share to the world your projects, ideas, and your goals. Hear back
+              from peers, connect with investors, and celebrate your wins with
+              us.
             </p>
             <Dialog>
               <DialogTrigger asChild>

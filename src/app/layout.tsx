@@ -85,7 +85,7 @@ export default function RootLayout({
       <body className={font.className} id="portal-root">
         <RootProvider>
           <NavMenu />
-          <main className="mt-[82px] max-w-[1920px] mx-auto">
+          <main className="mt-[82px] max-w-[1896px] mx-auto">
             {children}
             <JoinUs />
             <Footer />

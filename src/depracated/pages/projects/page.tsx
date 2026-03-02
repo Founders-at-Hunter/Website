@@ -12,7 +12,7 @@
 //   return (
 //     <>
 //       {/* mt-[105px] (NavMenu: 81px) */}
-//       <main className="mt-[81px] max-w-[1920px] m-auto">
+//       <main className="mt-[81px] max-w-[1896px] m-auto">
 //         <ProjectsHeader />
 //         <Projects />
 //         <Footer />

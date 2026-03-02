@@ -9,7 +9,7 @@
 // export default function ContactPage() {
 //   return (
 //     <>
-//       <main className="max-w-[1920px] m-auto">
+//       <main className="max-w-[1896px] m-auto">
 //         <ContactForm />
 //         <Footer />
 //       </main>

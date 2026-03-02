@@ -96,7 +96,7 @@
 //           onScroll={handleScroll}
 //           data-carousel-container
 //         >
-//           <div className="flex flex-row justify-start gap-4 pl-4 pr-4 max-w-[1920px] mx-auto">
+//           <div className="flex flex-row justify-start gap-4 pl-4 pr-4 max-w-[1896px] mx-auto">
 //             {items.map((item, index) => (
 //               <div key={"card" + index} style={{ scrollSnapAlign: "start" }}>
 //                 {item}

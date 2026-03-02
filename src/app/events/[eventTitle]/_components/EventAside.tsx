@@ -4,6 +4,8 @@ import React, { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { hasDatePassed } from "@/constants";
+import { IoLocationSharp } from "react-icons/io5";
+import { HiClock } from "react-icons/hi";
 
 export default function EventAside({
   event,
@@ -14,7 +16,8 @@ export default function EventAside({
     description: string;
     date: string;
     room: string;
-    time: string;
+    startTime: string;
+    endTime: string;
     photo: string;
     link: string;
     tags: string[];
@@ -49,27 +52,30 @@ export default function EventAside({
         onMonthChange={setMonth}
       />
       <ul className="mb-2 grid grid-cols-3 gap-2 items-stretch mt-auto">
-        <li className="flex flex-col gap-0.5 px-4 py-2 bg-neutral-100 rounded-xl">
-          <p className="text-xs font-light tracking-wider text-neutral-500">
-            Date
+        <li className="flex flex-col gap-0.5 px-4 py-2 bg-neutral-100 rounded-xl justify-between">
+          <p className="text-xs font-light tracking-wider text-neutral-500 mb-2">
+            Start
           </p>
-          <span className="font-bold text-xs">
-            {event.date ? event.date.split(" ").slice(0, 2).join(" ") : "-"}
+          <span className="font-bold text-xs text-neutral-700">
+            <HiClock className="inline-flex mr-1" />
+            {event.startTime ? event.startTime : "-"}
           </span>
         </li>
-        <li className="flex flex-col gap-0.5 px-4 py-2 bg-neutral-100 rounded-xl">
-          <p className="text-xs font-light tracking-wider text-neutral-500">
-            Time
+        <li className="flex flex-col gap-0.5 px-4 py-2 bg-neutral-100 rounded-xl justify-between">
+          <p className="text-xs font-light tracking-wider text-neutral-500 mb-2">
+            End
           </p>
-          <span className="font-bold text-xs">
-            {event.time ? event.time : "-"}
+          <span className="font-bold text-xs text-neutral-700">
+            <HiClock className="inline-flex mr-1" />
+            {event.endTime ? event.endTime : "-"}
           </span>
         </li>
-        <li className="flex flex-col gap-0.5 px-4 py-2 bg-neutral-100 rounded-xl">
-          <p className="text-xs font-light tracking-wider text-neutral-500">
+        <li className="flex flex-col gap-0.5 px-4 py-2 bg-neutral-100 rounded-xl justify-between">
+          <p className="text-xs font-light tracking-wider text-neutral-500 mb-2">
             Room
           </p>
-          <span className="font-bold text-xs">
+          <span className="font-bold text-xs text-neutral-700">
+            <IoLocationSharp className="inline-flex mr-1" />
             {event.room ? event.room : "-"}
           </span>
         </li>

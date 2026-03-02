@@ -25,9 +25,9 @@ export default function Hero() {
         <div className="space-x-3">
           <Link
             className="px-5 py-2 rounded-xl bg-main/10 text-main cursor-pointer hover:brightness-110 hover:scale-105 transition-all duration-300 ease-in-out md:text-base text-sm inline-block"
-            href="#events"
+            href="https://www.hunter.cuny.edu/news/two-hunter-college-seniors-start-club-for-tech-entrepreneurs/"
           >
-            Learn more
+            Our story
           </Link>
           <Dialog>
             <DialogTrigger asChild>

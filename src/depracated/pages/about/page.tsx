@@ -12,7 +12,7 @@
 // export default function About() {
 //   return (
 //     <>
-//       <main className="mt-[81px] max-w-[1920px] m-auto">
+//       <main className="mt-[81px] max-w-[1896px] m-auto">
 //         <Mission />
 //         <CoreValues />
 //         <Team />

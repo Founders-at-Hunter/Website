@@ -24,7 +24,7 @@
 //     //   <Footer />
 //     // </div>
 //     <>
-//       <main className="mt-[81px] max-w-[1920px] m-auto">
+//       <main className="mt-[81px] max-w-[1896px] m-auto">
 //         <Hero />
 //         <Footer />
 //       </main>
