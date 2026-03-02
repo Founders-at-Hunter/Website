@@ -6,7 +6,7 @@ export default function Mission() {
       <img
         src="/about_mission_banner.JPG"
         alt="Mission Banner"
-        className="rounded-2xl mb-4 xl:aspect-[10/2] md:aspect-[8/2] aspect-[6/2] object-cover"
+        className="rounded-2xl mb-4 xl:aspect-[10/2] md:aspect-[8/2] aspect-[6/2] object-cover saturate-0"
       />
       <p className="md:w-[70%] md:text-2xl text-xl md:leading-8 leading-7 tracking-wide font-light text-neutral-700">
         &quot;Hunter is full of people with big ideas and real talent they just

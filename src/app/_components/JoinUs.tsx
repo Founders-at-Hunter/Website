@@ -1,38 +1,75 @@
+import React from "react";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import Link from "next/link";
+import { FaDiscord, FaLinkedin } from "react-icons/fa";
+import { RiInstagramFill, RiWhatsappFill } from "react-icons/ri";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import JoinUsForm from "@/components/ui/JoinUsForm";
-import React from "react";
 
 export default function JoinUs() {
   return (
-    <section
-      className="md:m-8 m-6 md:p-12 p-8 rounded-2xl overflow-hidden relative"
-      style={{
-        backgroundImage: `linear-gradient(to top, rgba(146,88,210,0.5) 0%, rgba(146,88,210,0.05) 100%)`,
-      }}
-    >
-      <div className="relative z-10 md:space-y-4 space-y-3 text-center max-w-2xl m-auto">
-        <h1 className="md:text-3xl text-2xl tracking-wide font-medium mb-2 text-neutral-700">
-          Be a part of the Founders Club
+    <section className="bg-neutral-100 md:m-8 m-6 rounded-2xl relative overflow-hidden grid grid-rows-2 md:grid-cols-2">
+      <header className="md:p-12 p-8 md:row-span-2">
+        <h1 className="md:text-4xl text-3xl mb-2 md:leading-12 leading-10">
+          Accelerate your start up journey
         </h1>
-        <p className="text-neutral-700 font-light md:text-base text-sm">
-          Connect with like-minded founders, learn from industry leaders, and
-          turn your ideas into reality through our workshops, events, and
-          community.
-        </p>
         <Dialog>
           <DialogTrigger asChild>
-            <button className="px-4 py-2 rounded-xl bg-white cursor-pointer mb-4 hover:scale-105 hover:brightness-110 transition-all duration-300 ease-in-out text-[#9258D2] md:text-base text-sm">
-              Join now
+            <button className="md:text-2xl text-xl text-main cursor-pointer mb-8">
+              <span>Join our club today</span>{" "}
+              <MdOutlineKeyboardArrowRight className="inline-block" />
             </button>
           </DialogTrigger>
           <JoinUsForm />
         </Dialog>
+        <div className="flex items-center gap-8">
+          <Link
+            href="https://www.linkedin.com/company/founders-hunter-1/"
+            className="md:text-xl text-lg p-2 rounded-lg hover:bg-neutral-200 hover:scale-105 transition-all duration-300 ease-in-out text-neutral-500"
+            target="_blank"
+          >
+            <FaLinkedin className="block" />
+          </Link>
+          <Link
+            href="https://www.instagram.com/hunter.founders/"
+            className="md:text-xl text-lg p-2 rounded-lg hover:bg-neutral-200 hover:scale-105 transition-all duration-300 ease-in-out text-neutral-500"
+            target="_blank"
+          >
+            <RiInstagramFill className="block" />
+          </Link>
+          <Link
+            href="https://discord.com/invite/c4ax3fSCqN"
+            className="md:text-xl text-lg p-2 rounded-lg hover:bg-neutral-200 hover:scale-105 transition-all duration-300 ease-in-out text-neutral-500"
+            target="_blank"
+          >
+            <FaDiscord className="block" />
+          </Link>
+          <Link
+            href="https://chat.whatsapp.com/GyaXWGdD84cFlcYtOBNA4f"
+            className="md:text-2xl text-xl p-2 rounded-lg hover:bg-neutral-200 hover:scale-105 transition-all duration-300 ease-in-out text-neutral-500"
+            target="_blank"
+          >
+            <RiWhatsappFill className="block" />
+          </Link>
+        </div>
+      </header>
+      <div className="relative md:row-span-2">
+        <img
+          src="/apps.png"
+          alt="Apps"
+          className="absolute w-full h-full object-cover"
+        />
+        <div
+          className="absolute inset-0 w-full h-full"
+          style={{
+            background: `
+    radial-gradient(circle at center, rgba(245,245,245,0) 50%, #f5f5f5 100%),
+    linear-gradient(to bottom, #f5f5f5 5%, rgba(245,245,245,0) 40%, rgba(245,245,245,0) 60%, #f5f5f5 95%),
+    linear-gradient(to right, #f5f5f5 0%, rgba(245,245,245,0) 20%, rgba(245,245,245,0) 80%, #f5f5f5 100%)
+  `,
+          }}
+        />
       </div>
-      {/* <img
-        src="/team2.JPG"
-        alt="Founders Team"
-        className="absolute w-full h-full top-0 left-0 object-cover opacity-10 select-none pointer-events-none saturate-0 z-0"
-      /> */}
     </section>
   );
 }

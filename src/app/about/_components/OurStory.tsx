@@ -2,7 +2,7 @@ import React from "react";
 
 export default function WhoWeAre() {
   return (
-    <div className="md:px-8 px-6 md:py-6 py-4 grid lg:grid-cols-10 items-center gap-x-12">
+    <div className="md:px-8 px-6 md:py-6 py-4 grid lg:grid-cols-10 items-center gap-x-12 gap-y-6">
       <header className="mb-4 lg:col-span-4">
         <h6 className="bg-[#FFC72A]/7.5 text-[#FFC72A] brightness-95 outline-1 -outline-offset-1 outline-[#FFC72A]/15  w-fit rounded-full px-4 py-1.5 font-normal md:text-sm text-xs md:mb-4 mb-3 tracking-wide shadow-xs shadow-[#FFC72A]/40">
           Our backstory
@@ -32,11 +32,12 @@ export default function WhoWeAre() {
           ways to succeed, and not all of them lead to a corporate position.
         </p>
       </header>
-      <aside className="lg:col-span-6">
+      <aside className="lg:col-span-6 relative">
         <img
-          src="/team.png"
+          src="/team.JPG"
           alt="Our team"
-          className="w-full h-full max-w-2xl lg:ml-auto lg:mr-0 mx-auto object-cover rounded-2xl"
+          className="w-full h-full max-w-2xl lg:ml-auto lg:mr-0 mx-auto object-cover rounded-2xl saturate-75"
+          style={{ borderRadius: "50% 20% / 10% 40%" }}
         />
       </aside>
     </div>

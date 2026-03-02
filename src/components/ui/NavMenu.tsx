@@ -47,7 +47,7 @@ export default function NavMenu() {
             <Link
               href={href}
               key={index}
-              className={`transition-all duration-300 tracking-widest ${
+              className={`transition-all duration-300 tracking-widest text-neutral-700 ${
                 pathname === href ? "underline underline-offset-8" : ""
               }`}
             >
