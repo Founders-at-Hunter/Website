@@ -12,8 +12,8 @@ export default function JoinUs() {
       <hr className="opacity-20 mb-2 md:mx-8 mx-6" />
       <section className="bg-neutral-100 md:mx-8 mx-6 md:my-6 my-4 rounded-2xl relative overflow-hidden grid grid-rows-2 md:grid-cols-2">
         <header className="md:p-12 p-6 md:row-span-2">
-          <h1 className="md:text-4xl text-3xl mb-2 md:leading-12 leading-10 font-medium tracking-wide">
-            Accelerate your Entrepreneurship
+          <h1 className="md:text-3xl text-2xl mb-2 md:leading-10 leading-8">
+            Accelerate your Entrepreneurship Journey
           </h1>
           <Dialog>
             <DialogTrigger asChild>

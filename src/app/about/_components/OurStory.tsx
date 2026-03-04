@@ -36,7 +36,7 @@ export default function WhoWeAre() {
         <img
           src="/team.JPG"
           alt="Our team"
-          className="w-full h-full max-w-2xl lg:ml-auto lg:mr-0 mx-auto object-cover rounded-2xl saturate-75 drop-shadow-2xl"
+          className="w-full h-full max-w-2xl lg:ml-auto lg:mr-0 mx-auto object-cover rounded-2xl saturate-75"
           style={{ borderRadius: "50% 20% / 10% 40%" }}
         />
       </aside>

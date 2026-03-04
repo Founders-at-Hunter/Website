@@ -1,11 +1,11 @@
 "use client";
-import { Calendar } from "@/components/ui/calendar";
 import React, { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { hasDatePassed } from "@/constants";
 import { IoLocationSharp } from "react-icons/io5";
 import { HiClock } from "react-icons/hi";
+import { Calendar } from "@/components/ui/calendar";
 
 export default function EventAside({
   event,
@@ -45,7 +45,7 @@ export default function EventAside({
     <aside className="xl:col-span-2 lg:col-span-3 md:col-span-4 sm:col-span-5 w-full p-2">
       <Calendar
         mode="single"
-        className="rounded-lg w-full bg-white mb-2"
+        className="rounded-lg w-full bg-white mb-2 aspect-square"
         selected={event.date ? selectedDate : undefined}
         onSelect={() => {}}
         month={month}
@@ -56,28 +56,33 @@ export default function EventAside({
           <p className="text-xs font-light tracking-wider text-neutral-500 mb-2">
             Start
           </p>
-          <span className="font-bold text-xs text-neutral-700">
-            <HiClock className="inline-flex mr-1" />
-            {event.startTime ? event.startTime : "-"}
-          </span>
+          <p className="font-bold text-xs text-neutral-700 flex items-center gap-1">
+            <HiClock className="inline-flex" />
+            <span className="mt-0.5">
+              {" "}
+              {event.startTime ? event.startTime : "-"}
+            </span>
+          </p>
         </li>
         <li className="flex flex-col gap-0.5 px-4 py-2 bg-neutral-100 rounded-xl justify-between">
           <p className="text-xs font-light tracking-wider text-neutral-500 mb-2">
             End
           </p>
-          <span className="font-bold text-xs text-neutral-700">
-            <HiClock className="inline-flex mr-1" />
-            {event.endTime ? event.endTime : "-"}
-          </span>
+          <p className="font-bold text-xs text-neutral-700 flex items-center gap-1">
+            <HiClock className="inline-flex" />
+            <span className="mt-0.5">
+              {event.endTime ? event.endTime : "-"}
+            </span>
+          </p>
         </li>
         <li className="flex flex-col gap-0.5 px-4 py-2 bg-neutral-100 rounded-xl justify-between">
           <p className="text-xs font-light tracking-wider text-neutral-500 mb-2">
             Room
           </p>
-          <span className="font-bold text-xs text-neutral-700">
-            <IoLocationSharp className="inline-flex mr-1" />
-            {event.room ? event.room : "-"}
-          </span>
+          <p className="font-bold text-xs text-neutral-700 flex items-center gap-1">
+            <IoLocationSharp className="inline-flex" />
+            <span className="mt-0.5"> {event.room ? event.room : "-"}</span>
+          </p>
         </li>
       </ul>
       <div className="grid grid-cols-2 gap-2 mb-4">
@@ -134,7 +139,13 @@ export default function EventAside({
           Copy
         </button>
       </div>
-      {/* Calendar, Past / Upcoming events, Share this event */}
+      {/* <Calendar
+        mode="single"
+        selected={event.date ? new Date(event.date) : undefined}
+        onSelect={() => {}}
+        captionLayout="dropdown"
+        className="w-full aspect-square"
+      /> */}
     </aside>
   );
 }

@@ -1,3 +1,10 @@
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarGroup,
+  AvatarGroupCount,
+  AvatarImage,
+} from "@/components/ui/avatar";
 import { Highlighter } from "@/components/ui/highlighter";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -94,9 +101,21 @@ export default function OurTeam() {
   return (
     <div className="md:px-8 px-6 md:py-6 py-4">
       <header className="mb-6">
-        <h6 className="bg-[#FFC72A]/7.5 text-[#FFC72A] brightness-95 outline-1 -outline-offset-1 outline-[#FFC72A]/15  w-fit rounded-full px-4 py-1.5 font-normal md:text-sm text-xs md:mb-4 mb-3 tracking-wide shadow-xs shadow-[#FFC72A]/40">
-          Our team
-        </h6>
+        <AvatarGroup className="md:mb-4 mb-3">
+          <Avatar>
+            <AvatarImage src="/student-one.jpg" alt="Student 1" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+          <Avatar>
+            <AvatarImage src="/student-two.jpg" alt="Student 2" />
+            <AvatarFallback>ER</AvatarFallback>
+          </Avatar>
+          <Avatar>
+            <AvatarImage src="/student-three.jpg" alt="Student 3" />
+            <AvatarFallback>SG</AvatarFallback>
+          </Avatar>
+          <AvatarGroupCount>+9</AvatarGroupCount>
+        </AvatarGroup>
         <h1 className="md:text-3xl text-2xl font-medium text-neutral-700 mb-2">
           Get to know our team
         </h1>

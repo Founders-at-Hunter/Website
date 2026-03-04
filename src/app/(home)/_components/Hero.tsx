@@ -3,6 +3,12 @@ import JoinUsForm from "@/components/ui/JoinUsForm";
 import { SparklesText } from "@/components/ui/sparkles-text";
 import Link from "next/link";
 import React from "react";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarGroup,
+  AvatarImage,
+} from "@/components/ui/avatar";
 
 export default function Hero() {
   return (
@@ -22,23 +28,38 @@ export default function Hero() {
           turn your ideas into reality <br className="2xl:block hidden" />{" "}
           through our workshops, events, and community.
         </h3>
-        <div className="space-x-3">
+        <div className="flex items-center gap-4">
           <Link
-            className="px-5 py-2 rounded-xl bg-main/10 text-main cursor-pointer hover:brightness-110 hover:scale-105 transition-all duration-300 ease-in-out md:text-base text-sm inline-block"
+            className="px-5 py-2.5 rounded-xl bg-main/10 text-main cursor-pointer hover:brightness-110 hover:scale-105 transition-all duration-300 ease-in-out md:text-base text-sm inline-block"
             href="https://www.hunter.cuny.edu/news/two-hunter-college-seniors-start-club-for-tech-entrepreneurs/"
+            target="_blank"
           >
-            Our story
+            Our Story
           </Link>
           <Dialog>
             <DialogTrigger asChild>
               <button
-                className="px-5 py-2 rounded-xl text-white cursor-pointer hover:brightness-110 hover:scale-105 transition-all duration-300 ease-in-out md:text-base text-sm"
+                className="px-5 py-2.5 rounded-xl text-white cursor-pointer hover:brightness-110 hover:scale-105 transition-all duration-300 ease-in-out md:text-base text-sm flex items-center gap-2.5"
                 style={{
                   backgroundImage:
                     "linear-gradient(to top, #5f259f 0%, #9258d2 100%)",
                 }}
               >
-                Join us
+                <span>Join Us</span>
+                <AvatarGroup>
+                  <Avatar size="xs">
+                    <AvatarImage src="/student-one.jpg" alt="Student 1" />
+                    <AvatarFallback>CN</AvatarFallback>
+                  </Avatar>
+                  <Avatar size="xs">
+                    <AvatarImage src="/student-two.jpg" alt="Student 2" />
+                    <AvatarFallback>ER</AvatarFallback>
+                  </Avatar>
+                  <Avatar size="xs">
+                    <AvatarImage src="/student-three.jpg" alt="Student 3" />
+                    <AvatarFallback>ER</AvatarFallback>
+                  </Avatar>
+                </AvatarGroup>
               </button>
             </DialogTrigger>
             <JoinUsForm />
