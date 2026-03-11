@@ -8,7 +8,7 @@ export default function Footer() {
           © 2026 Founders @ Hunter College. All rights reserved.
         </p>
         <p className="text-sm tracking-wider text-neutral-600 font-light overflow-hidden">
-          Website built by Ray Chu
+          Website built by Ray Chu & Angst Gregory
         </p>
       </div>
     </footer>
