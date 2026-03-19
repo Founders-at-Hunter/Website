@@ -57,5 +57,23 @@
     "link": "https://luma.com/xemv76tt?utm_source=embed",
     "tags": ["Networking", "Entrepreneurship", "LinkedIn"],
     "calendarLink": ""
+  },
+  {
+    "title": "Maker Monday 1",
+    "subtitle": "Build, Share, and Demo",
+    "description": "​This is our first event of the Maker Monday series! Got a project you're working on? Got an idea you want to share? Join us for an evening of building and have the chance to demo your work to a group of your peers!",
+    "itinerary": [
+      "​3:00-3:30: Check-in",
+      "​3:30-6:30: Coworking",
+      "​​6:30-7:00: Optional (but highly encouraged) demos"
+    ],
+    "date": "Mar 23 2026",
+    "room": "TH 307",
+    "startTime": "3:00",
+    "endTime": "7:00",
+    "photo": "/makermonday.jfif",
+    "link": "https://luma.com/q3vc2xjj",
+    "tags": ["Developing", "Building", "Entrepreneurship"],
+    "calendarLink": ""
   }
 ]

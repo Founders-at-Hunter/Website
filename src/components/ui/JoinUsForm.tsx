@@ -37,7 +37,7 @@ export default function JoinUsForm() {
         }
         setRegisterCount(data);
       };
-      // fetchRegisterCount();
+      fetchRegisterCount();
     }
   }, []);
 

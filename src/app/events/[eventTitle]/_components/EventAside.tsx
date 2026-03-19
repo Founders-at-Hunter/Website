@@ -105,7 +105,7 @@ export default function EventAside({
               ? "pointer-events-none opacity-50"
               : "",
           )}
-          href={event.calendarLink}
+          href={event.link}
           target="_blank"
         >
           {hasEventPassed ? "Event passed" : "Join Event"}
