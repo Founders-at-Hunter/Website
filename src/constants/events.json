@@ -75,5 +75,23 @@
     "link": "https://luma.com/q3vc2xjj",
     "tags": ["Developing", "Building", "Entrepreneurship"],
     "calendarLink": ""
+  },
+  {
+    "title": "Coworking with Matcha 🍵",
+    "subtitle": "Work, connect, sip matcha",
+    "description": "​Got any projects you're working on? Got schoolwork that needs to get done? You're in luck! Come cowork with us and enjoy some matcha with us, on us.",
+    "itinerary": [
+      "​3:00-3:30: Check-in",
+      "​3:30-4:00: Meet the team for a special surprise :)",
+      "​​4:00-5:00: Matcha & Coworking"
+    ],
+    "date": "Mar 31 2026",
+    "room": "TH-314",
+    "startTime": "3:00",
+    "endTime": "5:00",
+    "photo": "/matcha.jfif",
+    "link": "https://luma.com/ps65s9ji",
+    "tags": ["Networking", "Entrepreneurship", "Coworking"],
+    "calendarLink": ""
   }
 ]
