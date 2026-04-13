@@ -93,5 +93,23 @@
     "link": "https://luma.com/ps65s9ji",
     "tags": ["Networking", "Entrepreneurship", "Coworking"],
     "calendarLink": ""
+  },
+   {
+    "title": "Maker Monday 2",
+    "subtitle": "Build, Share, and Demo",
+    "description": "​Maker Monday is back! Join us next Monday for some more coworking. Got a project you're working on? Got an idea you want to share? Join us for an evening of building and have the chance to demo your work to a group of your peers!",
+    "itinerary": [
+      "​3:00-3:30: Check-in",
+      "​3:30-6:30: Coworking",
+      "​​6:30-7:00: Optional (but highly encouraged) demos"
+    ],
+    "date": "Apr 13 2026",
+    "room": "TH 307",
+    "startTime": "3:00",
+    "endTime": "7:00",
+    "photo": "/makermonday.jpeg",
+    "link": "https://luma.com/1sjw6ksj",
+    "tags": ["Developing", "Building", "Entrepreneurship"],
+    "calendarLink": ""
   }
 ]

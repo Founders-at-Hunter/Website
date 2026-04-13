@@ -42,7 +42,7 @@ export default function EventList() {
           </Link>
         ))}
       </aside>
-      <aside className="2xl:col-span-2 col-span-3 flex flex-col gap-6 sticky top-0 w-full">
+      <aside className="2xl:col-span-2 col-span-3 flex flex-col gap-6 sticky top-0 w-full h-fit">
         <div className="p-6 rounded-2xl bg-neutral-100">
           <p className="mb-8 text-sm text-neutral-700 tracking-wider font-medium">
             Upcoming events:
