@@ -19,6 +19,26 @@
     "calendarLink": ""
   },
   {
+    "title": "Vibe-Coding Workshop",
+    "subtitle": "AI for Everyone",
+    "description": "Get ready for a hands-on, no-pressure dive into the world of AI. This isn't a lecture. This is a vibe-coding session where we'll show you how to use AI as your personal coding partner. We're here to demystify programming and help you build a functional project, regardless of your major. No coding experience? No problem. That's the whole point of vibe-coding! You bring the ideas, and the AI helps you write the actual code. All you need is a laptop and an idea (and we'll even help with the idea part).",
+    "itinerary": [
+      "​4:45-5:00pm: Doors Open, Arrive, grab a seat, and get your device connected. ​Meet someone new! Find a potential teammate or just just with fellow builders.",
+      "​5:00-5:30pm: Workshop. ​Our workshop lead will kick things off with a fast-paced, engaging presentation. ​We'll cover how AI can be used to write, debug, and translate code in plain English. ​We'll introduce the simple AI tools you can use tonight to build real applications, even if you've never written a line of code before.",
+      "​5:30-6:30pm: Build Hour. ​This is your hour! Team up with new friends or fly solo. ​The challenge: Use an AI tool to write the code for a simple project. This could be anything: ​A simple web app that generates poetry ​A Python script that generates business ideas for your major. ​A simple AI-powered chatbot ​A basic webpage that uses an AI art-generation API ​Workshop leads and mentors will be walking around to help you get unstuck, debug your AI's code, and refine your prompts.",
+      "​6:30-7:00pm: Show-and-Tell & Networking. ​Got something working? Want to share what you built? This is the time for super-quick, informal demos (3-5 minutes max). ​This is a workshop, not a competition. All efforts are celebrated! ​After the demos, stick around, share your project, find a future co-founder, or just chat with the Founders @ Hunter community.",
+      "​7:00pm: Wrap-up. Good vibes, new skills, and (hopefully) a cool new thing you built with code!"
+    ],
+    "date": "Nov 13 2025",
+    "room": "TH 302",
+    "startTime": "5:00",
+    "endTime": "7:00",
+    "photo": "/vibecoding.avif",
+    "link": "https://luma.com/aj0jbv16",
+    "tags": ["AI", "Vibe coding", "Building"],
+    "calendarLink": ""
+  },
+  {
     "title": "Movie Night",
     "subtitle": "The Rise of Apple",
     "description": "Join Founders @ Hunter for an afternoon of cinema, conversation, and caffeine. We are screening the 2015 biopic Steve Jobs, written by Aaron Sorkin and directed by Danny Boyle. This isn't just a biography; it's a high-stakes look at the backstage drama behind three iconic product launches that defined the digital revolution. It's a case study in vision, the 'reality distortion field,' and the relentless drive required to build something that changes the world. ​Come for the movie, stay to dissect the mind of a founder with your peers. Food and Drinks will be served!",
@@ -94,7 +114,7 @@
     "tags": ["Networking", "Entrepreneurship", "Coworking"],
     "calendarLink": ""
   },
-   {
+  {
     "title": "Maker Monday 2",
     "subtitle": "Build, Share, and Demo",
     "description": "​Maker Monday is back! Join us next Monday for some more coworking. Got a project you're working on? Got an idea you want to share? Join us for an evening of building and have the chance to demo your work to a group of your peers!",
